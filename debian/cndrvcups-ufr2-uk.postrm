@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -d /usr/share/ppd ] ; then
+	rm -rf /usr/share/ppd/CN*ZK.ppd
+fi
+
+exit 0
+
+

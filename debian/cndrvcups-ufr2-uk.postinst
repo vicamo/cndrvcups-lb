@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -d /usr/share/ppd ] ; then
+	cd /usr/share/cups/model
+	for fn in CN*ZK.ppd ; do \
+		ln -sf "/usr/share/cups/model/"$fn /usr/share/ppd/$fn ;
+	done
+fi
+chmod 4755 /usr/bin/cnpkmoduleufr2
+
+exit 0
+

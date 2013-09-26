@@ -1,0 +1,1291 @@
+*PPD-Adobe: "4.3"
+*%
+*%  Copyright (C) 2004-2011 CANON INC.
+*%  CUPS printer driver for Canon printer devices
+*%
+*%  This program is free software; you can redistribute it and/or modify
+*%  it under the terms of the GNU General Public License as published by
+*%  the Free Software Foundation; either version 2 of the License, or
+*%  (at your option) any later version.
+*%
+*%  This program is distributed in the hope that it will be useful,
+*%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*%  GNU General Public License for more details.
+*%
+*%  You should have received a copy of the GNU General Public License
+*%  along with this program; if not, write to the Free Software
+*%  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*%
+
+*FormatVersion: "4.3"
+*FileVersion: "2.4"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "CNC203ZJ.PPD"
+*Manufacturer: "Canon"
+*Product: "(ir-adv c2020/2030)"
+*cupsVersion: 1.1
+*cupsManualCopies: True
+*cupsModelNumber: 1018
+*cupsFilter: "application/vnd.cups-postscript 0 pstoufr2cpca"
+*ModelName: "Canon iR-ADV C2020/2030 LIPSLX"
+*ShortNickName: "iR-ADV C2020/2030"
+*NickName: "Canon iR-ADV C2020/2030 LIPSLX ver.2.4"
+*PSVersion: "(3010.000) 550"
+*PSVersion: "(3010.000) 651"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "30"
+*LandscapeOrientation: Plus90
+*VariablePaperSize: False
+*TTRasterizer: Type42
+*%CNGPLPLIBNAME: "uictlufr2"
+*%CNGPLPLIBNAMEVER: "1.0.0"
+*%CNPrintLang: UFR2
+*opvpDevice: "opvp"
+*opvpDriver: "libcanonc3pl"
+*opvpModel: "iR-ADVC2020/2030"
+
+*OpenGroup: InstallableOptions/Attached Options
+
+*OpenUI *CNFinisher/Output Option: PickOne
+*DefaultCNFinisher: None
+*CNFinisher None/Not Installed: "<< >>setpagedevice"
+*CNFinisher IN2TRAY/Inner 2way Tray: "<< >>setpagedevice"
+*CNFinisher In2CT/Inner 2way Tray + Copy Tray: "<< >>setpagedevice"
+*CNFinisher CPYTRAY/CopyTray: "<< >>setpagedevice"
+*CNFinisher IFINC1/Inner Finisher-C1: "<< >>setpagedevice"
+*CNFinisher IFINC1CT/Inner Finisher-C1 + Copy Tray: "<< >>setpagedevice"
+*CNFinisher IFINC1AT/Inner Finisher-C1 + Inner Finisher Additional Tray: "<< >>setpagedevice"
+*CNFinisher IFINC1CTAT/Inner Finisher-C1 + Copy Tray + Inner Finisher Additional Tray: "<< >>setpagedevice"
+*CloseUI: *CNFinisher
+
+*OpenUI *CNEnableTrustPrint/Secure Watermark Function of Device: Boolean
+*DefaultCNEnableTrustPrint: False
+*CNEnableTrustPrint False/Off: "<< >>setpagedevice"
+*CNEnableTrustPrint True/On: "<< >>setpagedevice"
+*CloseUI: *CNEnableTrustPrint
+
+*CloseGroup: InstallableOptions
+
+*OpenUI *Resolution/Resolution : PickOne
+*DefaultResolution: 600
+*Resolution 600/600 dpi: "<</HWResolution[600 600]>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *CNMonitorProfile/Monitor Profile: PickOne
+*DefaultCNMonitorProfile: sRGBv3.0(Canon)
+*CNMonitorProfile sRGBv1.20(Canon)/sRGB v1.20 (Canon): ""
+*CNMonitorProfile sRGBv3.0(Canon)/sRGB v3.0 (Canon): ""
+*CNMonitorProfile HDTVgamma1.5/Canon HDTV gamma 1.5 Monitor: ""
+*CNMonitorProfile HDTVgamma1.8/Canon HDTV gamma 1.8 Monitor: ""
+*CNMonitorProfile HDTVgamma2.1/Canon HDTV gamma 2.1 Monitor: ""
+*CNMonitorProfile HDTVgamma2.4/Canon HDTV gamma 2.4 Monitor: ""
+*CNMonitorProfile None/Printer Default: ""
+*CloseUI: *CNMonitorProfile
+
+*OpenUI *CNMatchingMethod/Matching Method: PickOne
+*DefaultCNMatchingMethod: Photographic
+*CNMatchingMethod Saturation/Saturation: ""
+*CNMatchingMethod Monitor/Perceptual (Monitor Color Matched): ""
+*CNMatchingMethod Photographic/Perceptual (Photographic): ""
+*CNMatchingMethod Colorimetric/Colorimetric: ""
+*CNMatchingMethod Vividphoto/Vivid Photo: ""
+*CNMatchingMethod None/Printer Default: ""
+*CloseUI: *CNMatchingMethod
+
+*OpenUI *CNTonerSaving/Toner Save : PickOne
+*DefaultCNTonerSaving: False
+*CNTonerSaving Auto/Auto: "<< >>setpagedevice"
+*CNTonerSaving True/ON: "<< >>setpagedevice"
+*CNTonerSaving False/OFF: "<< >>setpagedevice"
+*CloseUI: *CNTonerSaving
+
+*OpenUI *MediaType/Media Type : PickOne
+*DefaultMediaType: Auto
+*MediaType Auto/Auto: "<</MediaType(Auto)>>setpagedevice"
+*MediaType PlainPaper1/Plain Paper 1: "<</MediaType(PlainPaper1)>>setpagedevice"
+*MediaType PlainPaper2/Plain Paper 2: "<</MediaType(PlainPaper2)>>setpagedevice"
+*MediaType PlainPaper3/Plain Paper 3: "<</MediaType(PlainPaper3)>>setpagedevice"
+*MediaType RECYCLED/Recycled Paper: "<</MediaType(RECYCLED)>>setpagedevice"
+*MediaType COLOR/Color Paper: "<</MediaType(COLOR)>>setpagedevice"
+*MediaType PREPUNCHED/Pre-Punched Paper: "<</MediaType(PREPUNCHED)>>setpagedevice"
+*MediaType HEAVY1/Heavy Paper 1: "<</MediaType(HEAVY1)>>setpagedevice"
+*MediaType HEAVY2/Heavy Paper 2: "<</MediaType(HEAVY2)>>setpagedevice"
+*MediaType HEAVY3/Heavy Paper 3: "<</MediaType(HEAVY3)>>setpagedevice"
+*MediaType OHP/OHP: "<</MediaType(OHP)>>setpagedevice"
+*MediaType TRACING/Tracing: "<</MediaType(TRACING)>>setpagedevice"
+*MediaType LABELS/Labels: "<</MediaType(LABELS)>>setpagedevice"
+*MediaType PlainPaperL/Thin: "<</MediaType(PlainPaperL)>>setpagedevice"
+*MediaType POSTCARD/Postcard: "<</MediaType(POSTCARD)>>setpagedevice"
+*MediaType ENVELOPE/Envelope: "<</MediaType(ENVELOPE)>>setpagedevice"
+*MediaType 1SIDECOATED1/1-sided Coated 1: "<</MediaType(1SIDECOATED1)>>setpagedevice"
+*MediaType 1SIDECOATED2/1-sided Coated 2: "<</MediaType(1SIDECOATED2)>>setpagedevice"
+*MediaType 2SIDECOATED1/2-sided Coated 1: "<</MediaType(2SIDECOATED1)>>setpagedevice"
+*MediaType 2SIDECOATED2/2-sided Coated 2: "<</MediaType(2SIDECOATED2)>>setpagedevice"
+*CloseUI: *MediaType
+
+*OpenUI *InputSlot/Paper Source: PickOne
+*DefaultInputSlot: Auto
+*InputSlot Auto/Auto : ""
+*InputSlot Manual/Manual : ""
+*InputSlot Cas1/Drawer 1 : ""
+*InputSlot Cas2/Drawer 2 : ""
+*InputSlot Cas3/Drawer 3 : ""
+*InputSlot Cas4/Drawer 4 : ""
+*CloseUI: *InputSlot
+
+*OpenUI *CNInterleafSheet/Insert Interleaf Sheets: PickOne
+*DefaultCNInterleafSheet: None
+*CNInterleafSheet None/None : "<< >>setpagedevice"
+*CNInterleafSheet True/ON : "<< >>setpagedevice"
+*CNInterleafSheet False/OFF : "<< >>setpagedevice"
+*CloseUI: *CNInterleafSheet
+
+*OpenUI *CNInterleafMediaType/Interleaf Media Type: PickOne
+*DefaultCNInterleafMediaType: PlainPaper1
+*CNInterleafMediaType PlainPaper1/Plain Paper 1: "<< >>setpagedevice"
+*CNInterleafMediaType PlainPaper2/Plain Paper 2: "<< >>setpagedevice"
+*CNInterleafMediaType PlainPaper3/Plain Paper 3: "<< >>setpagedevice"
+*CNInterleafMediaType RECYCLED/Recycled Paper: "<< >>setpagedevice"
+*CNInterleafMediaType COLOR/Color Paper: "<< >>setpagedevice"
+*CNInterleafMediaType PREPUNCHED/Pre Punched Paper: "<< >>setpagedevice"
+*CNInterleafMediaType HEAVY1/Heavy Paper 1: "<< >>setpagedevice"
+*CNInterleafMediaType HEAVY2/Heavy Paper 2: "<< >>setpagedevice"
+*CNInterleafMediaType PlainPaperL/Thin: "<< >>setpagedevice"
+*CloseUI: *CNInterleafMediaType
+
+*OpenUI *CNInterleafPrint/Print on Interleaf Sheets: PickOne
+*DefaultCNInterleafPrint: None
+*CNInterleafPrint None/None : "<< >>setpagedevice"
+*CNInterleafPrint True/ON : "<< >>setpagedevice"
+*CNInterleafPrint False/OFF : "<< >>setpagedevice"
+*CloseUI: *CNInterleafPrint
+
+*OpenUI *OutputBin/Paper Destination: PickOne
+*DefaultOutputBin: Auto
+*OutputBin Auto/Auto : "<< >>setpagedevice"
+*OutputBin TrayA/Tray A: "<< >>setpagedevice"
+*OutputBin TrayB/Tray B: "<< >>setpagedevice"
+*OutputBin TrayC/Tray C: "<< >>setpagedevice"
+*CloseUI: *OutputBin
+
+*OpenUI *Duplex/Duplex: PickOne
+*DefaultDuplex: None
+*Duplex None/OFF: "<</Duplex false>>setpagedevice"
+*Duplex DuplexNoTumble/ON (Long-edged Binding): "<</Duplex true/Tumble false>>setpagedevice"
+*Duplex DuplexTumble/ON (Short-edged Binding): "<</Duplex true/Tumble true>>setpagedevice"
+*CloseUI: *Duplex
+
+*OpenUI *BindEdge/BindingEdge: PickOne
+*DefaultBindEdge: Left
+*BindEdge Left/Left: "<< >>setpagedevice"
+*BindEdge Right/Right: "<< >>setpagedevice"
+*BindEdge Top/Top: "<< >>setpagedevice"
+*BindEdge Bottom/Bottom: "<< >>setpagedevice"
+*CloseUI: *BindEdge
+
+*OpenUI *CNOutputPartition/Output Partition: PickOne
+*DefaultCNOutputPartition: None
+*CNOutputPartition None/None: "<< >>setpagedevice"
+*CNOutputPartition offset/Offset: "<< >>setpagedevice"
+*CNOutputPartition rotation/Rotation: "<< >>setpagedevice"
+*CloseUI: *CNOutputPartition
+
+*OpenUI *Collate/Collate: PickOne
+*DefaultCollate: True
+*Collate True/Collate: "<< >>setpagedevice"
+*Collate Group/Group: "<< >>setpagedevice"
+*Collate StapleCollate/Staple & Collate: "<< >>setpagedevice"
+*Collate StapleGroup/Staple & Group: "<< >>setpagedevice"
+*CloseUI: *Collate
+
+*OpenUI *StapleLocation/Staple Location: PickOne
+*DefaultStapleLocation: TopLeft
+*StapleLocation None/No Stapling : "<< >>setpagedevice"
+*StapleLocation TopLeft/Upper Left (Single) : "<< >>setpagedevice"
+*StapleLocation Top/Top (Double) : "<< >>setpagedevice"
+*StapleLocation TopRight/Upper Right (Single) : "<< >>setpagedevice"
+*StapleLocation Left/Left (Double) : "<< >>setpagedevice"
+*StapleLocation Right/Right (Double) : "<< >>setpagedevice"
+*StapleLocation BottomLeft/Lower Left (Single) : "<< >>setpagedevice"
+*StapleLocation Bottom/Bottom (Double) : "<< >>setpagedevice"
+*StapleLocation BottomRight/Lower Right (Single) : "<< >>setpagedevice"
+*CloseUI: *StapleLocation
+
+*OpenUI *CNColorMode/Color Mode: PickOne
+*DefaultCNColorMode: Auto
+*CNColorMode Auto/Auto: "<< >>setpagedevice"
+*CNColorMode color/Color: "<< >>setpagedevice"
+*CNColorMode mono/Black and White: "<< >>setpagedevice"
+*CloseUI: *CNColorMode
+
+*OpenUI *CNCopySetNumbering/Copy Set Numbering: PickOne
+*DefaultCNCopySetNumbering: None
+*CNCopySetNumbering None/None: "<< >>setpagedevice"
+*CNCopySetNumbering True/ON: "<< >>setpagedevice"
+*CNCopySetNumbering False/OFF: "<< >>setpagedevice"
+*CloseUI: *CNCopySetNumbering
+
+*OpenUI *CNShiftStartPrintPosition/Shift the Position to Start Printing: Boolean
+*DefaultCNShiftStartPrintPosition: False
+*CNShiftStartPrintPosition True/True: "<< >>setpagedevice"
+*CNShiftStartPrintPosition False/False: "<< >>setpagedevice"
+*CloseUI: *CNShiftStartPrintPosition
+
+*OpenUI *CNTrustPrint/Use Secure Watermark Function of Device: Boolean
+*DefaultCNTrustPrint: False
+*CNTrustPrint False/Off: "<< >>setpagedevice"
+*CNTrustPrint True/On: "<< >>setpagedevice"
+*CloseUI: *CNTrustPrint
+
+*OpenUI *CNAdvancedSmoothing/Advanced Smoothing: PickOne
+*DefaultCNAdvancedSmoothing: None
+*CNAdvancedSmoothing None/Printer Default : "<< >>setpagedevice"
+*CNAdvancedSmoothing Off/Off : "<< >>setpagedevice"
+*CNAdvancedSmoothing Smooth1/Smooth1 : "<< >>setpagedevice"
+*CNAdvancedSmoothing Smooth2/Smooth2 : "<< >>setpagedevice"
+*CloseUI: *CNAdvancedSmoothing
+
+*OpenUI *CNColorHalftone/Color Halftones : PickOne
+*DefaultCNColorHalftone: None
+*CNColorHalftone None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNColorHalftone
+
+*OpenUI *CNHalftone/Halftones : PickOne
+*DefaultCNHalftone: None
+*CNHalftone None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNHalftone
+
+*OpenUI *CNSpecialSmooth/Special Smoothing Mode: PickOne
+*DefaultCNSpecialSmooth: None
+*CNSpecialSmooth None/Printer Default: "<< >>setpagedevice"
+*CNSpecialSmooth Mode1/Mode 1: "<< >>setpagedevice"
+*CNSpecialSmooth Mode2/Mode 2: "<< >>setpagedevice"
+*CNSpecialSmooth Mode3/Mode 3: "<< >>setpagedevice"
+*CNSpecialSmooth Mode4/Mode 4: "<< >>setpagedevice"
+*CNSpecialSmooth Mode5/Mode 5: "<< >>setpagedevice"
+*CNSpecialSmooth Mode6/Mode 6: "<< >>setpagedevice"
+*CloseUI: *CNSpecialSmooth
+
+*OpenUI *CNLineControl/Line Control: PickOne
+*DefaultCNLineControl: None
+*CNLineControl None/Printer Default: "<< >>setpagedevice"
+*CNLineControl Resolution/Resolution Priority: "<< >>setpagedevice"
+*CNLineControl Gradation/Gradation Priority: "<< >>setpagedevice"
+*CloseUI: *CNLineControl
+
+*OpenUI *CNJobExecMode/Job Execution Mode: PickOne
+*DefaultCNJobExecMode: print
+*CNJobExecMode print/Print: "<< >>setpagedevice"
+*CNJobExecMode secured/Secured Print: "<< >>setpagedevice"
+*CloseUI: *CNJobExecMode
+
+*OpenUI *PageSize/Page Size: PickOne
+*DefaultPageSize: A4
+*PageSize Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize Ledger: "<</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*PageSize Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageSize A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize B4: "<</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*PageSize A3: "<</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*PageSize Postcard: "<</PageSize[283 421]/ImagingBBox null>>setpagedevice"
+*PageSize dbl_postcard: "<</PageSize[421 567]/ImagingBBox null>>setpagedevice"
+*PageSize 4x_postcard: "<</PageSize[567 842]/ImagingBBox null>>setpagedevice"
+*PageSize jenv_you_chou3: "<</PageSize[340 666]/ImagingBBox null>>setpagedevice"
+*PageSize jenv_kaku2: "<</PageSize[680 941]/ImagingBBox null>>setpagedevice"
+*PageSize jenv_chou3: "<</PageSize[340 666]/ImagingBBox null>>setpagedevice"
+*PageSize SRA3: "<</PageSize[907 1276]/ImagingBBox null>>setpagedevice"
+*PageSize 12x18: "<</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*DefaultPageRegion: A4
+*PageRegion Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion Ledger: "<</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*PageRegion Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageRegion A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion B4: "<</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*PageRegion A3: "<</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*PageRegion Postcard: "<</PageSize[283 421]/ImagingBBox null>>setpagedevice"
+*PageRegion dbl_postcard: "<</PageSize[421 567]/ImagingBBox null>>setpagedevice"
+*PageRegion 4x_postcard: "<</PageSize[567 842]/ImagingBBox null>>setpagedevice"
+*PageRegion jenv_you_chou3: "<</PageSize[340 666]/ImagingBBox null>>setpagedevice"
+*PageRegion jenv_kaku2: "<</PageSize[680 941]/ImagingBBox null>>setpagedevice"
+*PageRegion jenv_chou3: "<</PageSize[340 666]/ImagingBBox null>>setpagedevice"
+*PageRegion SRA3: "<</PageSize[907 1276]/ImagingBBox null>>setpagedevice"
+*PageRegion 12x18: "<</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: A4
+*ImageableArea Letter: "14.173 14.173 597.827 777.827"
+*ImageableArea Ledger: "14.173 14.173 777.827 1209.827"
+*ImageableArea Legal: "14.173 14.173 597.827 993.827"
+*ImageableArea A5: "14.173 13.898 406.771 580.827"
+*ImageableArea B5: "14.173 14.67 501.732 714.827"
+*ImageableArea A4: "14.173 14.284 581.102 827.827"
+*ImageableArea B4: "14.173 14.362 714.33 1017.827"
+*ImageableArea A3: "14.173 14.622 827.716 1176.827"
+*ImageableArea Postcard: "14.173 14.229 269.291 406.827"
+*ImageableArea dbl_postcard: "14.173 14.244 406.771 552.827"
+*ImageableArea 4x_postcard: "14.173 14.284 552.756 827.827"
+*ImageableArea jenv_you_chou3: "28.346 28.205 311.811 637.654"
+*ImageableArea jenv_kaku2: "28.346 28.245 651.968 912.654"
+*ImageableArea jenv_chou3: "28.346 28.205 311.811 637.654"
+*ImageableArea SRA3: "28.346 28.756 878.74 1247.654"
+*ImageableArea 12x18: "28.346 28.347 835.653 1267.654"
+
+*DefaultPaperDimension: A4
+*PaperDimension Letter: "612 792"
+*PaperDimension Ledger: "792 1224"
+*PaperDimension Legal: "612 1008"
+*PaperDimension A5: "420 595"
+*PaperDimension B5: "516 729"
+*PaperDimension A4: "595 842"
+*PaperDimension B4: "729 1032"
+*PaperDimension A3: "842 1191"
+*PaperDimension Postcard: "283 421"
+*PaperDimension dbl_postcard: "421 567"
+*PaperDimension 4x_postcard: "567 842"
+*PaperDimension jenv_you_chou3: "340 666"
+*PaperDimension jenv_kaku2: "680 941"
+*PaperDimension jenv_chou3: "340 666"
+*PaperDimension SRA3: "907 1276"
+*PaperDimension 12x18: "864 1296"
+
+*%CNJobAccount: True
+*%CNSecuredPrint: True
+*%CNMailBox: False
+*%CNInputSelect: True
+*%CNDisableJobAccountingBW: True
+
+*CNOEFLibName: "ufr2filter"
+*CNOptDevType: "0"
+*CNOptCalibType: "0"
+*CNPrinterName: "Canon iR-ADV C2020/2030 LIPSLX"
+*CNPDLType: "UFR2"
+*CNPrtColorSpace: "RGB"
+*CN_PdlWrapper_PdlPath: "libcanonufr2"
+
+*CNFeedDirection: "Executive:3"
+*CNFeedDirection: "4x_postcard:3"
+*CNTblFormat: "2"
+*CNTblInputSlot: "1"
+*CNTblDuplex: "1"
+*CNTblOutputBin: "10"
+*CNTblOutputPartition: "2"
+*CNTblSubstitute: "1"
+*CNTblMediaType: "12294"
+*CNModelMethod: "139580"
+*CNMaxBoxNum: "0"
+*CNMaxDocStr: "32"
+*CNMaxCopies: "9999"
+*CNMaxGutter: "50"
+*CNShiftStartPrintPosType: "1"
+*CNExecuteMethod: "0"
+*CNListIDMediaType: "4"
+*CNUFR2ModelMethod: "0"
+*CNTblTrayAlias: "2"
+
+*% Number of Copies for Offset
+*%CNUIValue: *EnableCNOffsetNum(True):False
+*%CNUIValue: *CNUIOffsetMax(9999):False
+
+*% Shift the Position to Start Printing
+*%CNUIValue: *CNShiftPositionMin(-50):False
+*%CNUIValue: *CNShiftPositionMax(50):False
+
+*% Finishing Details
+*%CNUIValue: *CNFinDetails(True):False
+
+*UIConstraints: *Collate StapleCollate *CNFinisher None
+*UIConstraints: *CNFinisher None *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *CNFinisher None
+*UIConstraints: *CNFinisher None *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *CNFinisher IN2TRAY
+*UIConstraints: *CNFinisher IN2TRAY *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *CNFinisher IN2TRAY
+*UIConstraints: *CNFinisher IN2TRAY *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *CNFinisher In2CT
+*UIConstraints: *CNFinisher In2CT *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *CNFinisher In2CT
+*UIConstraints: *CNFinisher In2CT *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *CNFinisher CPYTRAY
+*UIConstraints: *CNFinisher CPYTRAY *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *CNFinisher CPYTRAY
+*UIConstraints: *CNFinisher CPYTRAY *Collate StapleGroup
+
+*UIConstraints: *OutputBin TrayA *CNFinisher None
+*UIConstraints: *CNFinisher None *OutputBin TrayA
+*UIConstraints: *OutputBin TrayB *CNFinisher None
+*UIConstraints: *CNFinisher None *OutputBin TrayB
+*UIConstraints: *OutputBin TrayC *CNFinisher None
+*UIConstraints: *CNFinisher None *OutputBin TrayC
+*UIConstraints: *OutputBin TrayC *CNFinisher IN2TRAY
+*UIConstraints: *CNFinisher IN2TRAY *OutputBin TrayC
+*UIConstraints: *OutputBin TrayC *CNFinisher CPYTRAY
+*UIConstraints: *CNFinisher CPYTRAY *OutputBin TrayC
+*UIConstraints: *OutputBin TrayA *CNFinisher IFINC1
+*UIConstraints: *CNFinisher IFINC1 *OutputBin TrayA
+*UIConstraints: *OutputBin TrayB *CNFinisher IFINC1
+*UIConstraints: *CNFinisher IFINC1 *OutputBin TrayB
+*UIConstraints: *OutputBin TrayC *CNFinisher IFINC1
+*UIConstraints: *CNFinisher IFINC1 *OutputBin TrayC
+*UIConstraints: *OutputBin TrayC *CNFinisher IFINC1CT
+*UIConstraints: *CNFinisher IFINC1CT *OutputBin TrayC
+*UIConstraints: *OutputBin TrayC *CNFinisher IFINC1AT
+*UIConstraints: *CNFinisher IFINC1AT *OutputBin TrayC
+
+*UIConstraints: *CNOutputPartition offset *CNFinisher None
+*UIConstraints: *CNFinisher None *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition offset *CNFinisher IN2TRAY
+*UIConstraints: *CNFinisher IN2TRAY *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition offset *CNFinisher In2CT
+*UIConstraints: *CNFinisher In2CT *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition offset *CNFinisher CPYTRAY
+*UIConstraints: *CNFinisher CPYTRAY *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *CNFinisher IFINC1
+*UIConstraints: *CNFinisher IFINC1 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *CNFinisher IFINC1CT
+*UIConstraints: *CNFinisher IFINC1CT *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *CNFinisher IFINC1AT
+*UIConstraints: *CNFinisher IFINC1AT *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *CNFinisher IFINC1CTAT
+*UIConstraints: *CNFinisher IFINC1CTAT *CNOutputPartition rotation
+
+*UIConstraints: *CNTrustPrint True *CNEnableTrustPrint False
+*UIConstraints: *CNEnableTrustPrint False *CNTrustPrint True
+
+*UIConstraints: *CNOutputPartition rotation *InputSlot Manual
+*UIConstraints: *InputSlot Manual *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *InputSlot Cas1
+*UIConstraints: *InputSlot Cas1 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *InputSlot Cas2
+*UIConstraints: *InputSlot Cas2 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *InputSlot Cas3
+*UIConstraints: *InputSlot Cas3 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *InputSlot Cas4
+*UIConstraints: *InputSlot Cas4 *CNOutputPartition rotation
+
+*UIConstraints: *InputSlot Cas1 *PageSize Postcard
+*UIConstraints: *PageSize Postcard *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize Postcard
+*UIConstraints: *PageSize Postcard *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize Postcard
+*UIConstraints: *PageSize Postcard *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize Postcard
+*UIConstraints: *PageSize Postcard *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *PageSize 12x18
+*UIConstraints: *PageSize 12x18 *InputSlot Cas1
+
+*UIConstraints: *Duplex DuplexTumble *PageSize Postcard
+*UIConstraints: *PageSize Postcard *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Postcard
+*UIConstraints: *PageSize Postcard *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *Duplex DuplexNoTumble
+
+*UIConstraints: *Collate StapleCollate *PageSize A5
+*UIConstraints: *PageSize A5 *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize A5
+*UIConstraints: *PageSize A5 *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize Postcard
+*UIConstraints: *PageSize Postcard *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize Postcard
+*UIConstraints: *PageSize Postcard *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *PageSize 12x18
+*UIConstraints: *PageSize 12x18 *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *PageSize 12x18
+*UIConstraints: *PageSize 12x18 *Collate StapleGroup
+
+*UIConstraints: *CNOutputPartition rotation *PageSize Ledger
+*UIConstraints: *PageSize Ledger *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *PageSize Legal
+*UIConstraints: *PageSize Legal *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize A5
+*UIConstraints: *PageSize A5 *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize A5
+*UIConstraints: *PageSize A5 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *PageSize B4
+*UIConstraints: *PageSize B4 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *PageSize A3
+*UIConstraints: *PageSize A3 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize Postcard
+*UIConstraints: *PageSize Postcard *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize Postcard
+*UIConstraints: *PageSize Postcard *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize dbl_postcard
+*UIConstraints: *PageSize dbl_postcard *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize 4x_postcard
+*UIConstraints: *PageSize 4x_postcard *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_kaku2 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_chou3 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize jenv_you_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize SRA3
+*UIConstraints: *PageSize SRA3 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *PageSize 12x18
+*UIConstraints: *PageSize 12x18 *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *PageSize 12x18
+*UIConstraints: *PageSize 12x18 *CNOutputPartition rotation
+
+*UIConstraints: *StapleLocation Left *PageSize Ledger
+*UIConstraints: *PageSize Ledger *StapleLocation Left
+*UIConstraints: *StapleLocation Right *PageSize Ledger
+*UIConstraints: *PageSize Ledger *StapleLocation Right
+*UIConstraints: *StapleLocation Left *PageSize Legal
+*UIConstraints: *PageSize Legal *StapleLocation Left
+*UIConstraints: *StapleLocation Right *PageSize Legal
+*UIConstraints: *PageSize Legal *StapleLocation Right
+*UIConstraints: *StapleLocation Top *PageSize B5
+*UIConstraints: *PageSize B5 *StapleLocation Top
+*UIConstraints: *StapleLocation Bottom *PageSize B5
+*UIConstraints: *PageSize B5 *StapleLocation Bottom
+*UIConstraints: *StapleLocation Left *PageSize B4
+*UIConstraints: *PageSize B4 *StapleLocation Left
+*UIConstraints: *StapleLocation Right *PageSize B4
+*UIConstraints: *PageSize B4 *StapleLocation Right
+*UIConstraints: *StapleLocation Left *PageSize A3
+*UIConstraints: *PageSize A3 *StapleLocation Left
+*UIConstraints: *StapleLocation Right *PageSize A3
+*UIConstraints: *PageSize A3 *StapleLocation Right
+
+*UIConstraints: *PageSize Postcard *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType COLOR
+*UIConstraints: *MediaType COLOR *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType COLOR
+*UIConstraints: *MediaType COLOR *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType COLOR
+*UIConstraints: *MediaType COLOR *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType COLOR
+*UIConstraints: *MediaType COLOR *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType COLOR
+*UIConstraints: *MediaType COLOR *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType COLOR
+*UIConstraints: *MediaType COLOR *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Ledger *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize Ledger
+*UIConstraints: *PageSize Legal *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize Legal
+*UIConstraints: *PageSize A5 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize A5
+*UIConstraints: *PageSize B5 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize B5
+*UIConstraints: *PageSize B4 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize B4
+*UIConstraints: *PageSize A3 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize A3
+*UIConstraints: *PageSize Postcard *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize jenv_you_chou3
+*UIConstraints: *PageSize SRA3 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize SRA3
+*UIConstraints: *PageSize 12x18 *MediaType OHP
+*UIConstraints: *MediaType OHP *PageSize 12x18
+*UIConstraints: *PageSize Postcard *MediaType TRACING
+*UIConstraints: *MediaType TRACING *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType TRACING
+*UIConstraints: *MediaType TRACING *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType TRACING
+*UIConstraints: *MediaType TRACING *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType LABELS
+*UIConstraints: *MediaType LABELS *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType LABELS
+*UIConstraints: *MediaType LABELS *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType LABELS
+*UIConstraints: *MediaType LABELS *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Letter *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize Letter
+*UIConstraints: *PageSize Ledger *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize Ledger
+*UIConstraints: *PageSize Legal *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize Legal
+*UIConstraints: *PageSize A5 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize A5
+*UIConstraints: *PageSize B5 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize B5
+*UIConstraints: *PageSize A4 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize A4
+*UIConstraints: *PageSize B4 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize B4
+*UIConstraints: *PageSize A3 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize A3
+*UIConstraints: *PageSize jenv_kaku2 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize jenv_you_chou3
+*UIConstraints: *PageSize SRA3 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize SRA3
+*UIConstraints: *PageSize 12x18 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *PageSize 12x18
+*UIConstraints: *PageSize Letter *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize Letter
+*UIConstraints: *PageSize Ledger *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize Ledger
+*UIConstraints: *PageSize Legal *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize Legal
+*UIConstraints: *PageSize A5 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize A5
+*UIConstraints: *PageSize B5 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize B5
+*UIConstraints: *PageSize A4 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize A4
+*UIConstraints: *PageSize B4 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize B4
+*UIConstraints: *PageSize A3 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize A3
+*UIConstraints: *PageSize Postcard *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize 4x_postcard
+*UIConstraints: *PageSize SRA3 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize SRA3
+*UIConstraints: *PageSize 12x18 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize 12x18
+*UIConstraints: *PageSize Postcard *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *PageSize jenv_you_chou3
+*UIConstraints: *PageSize Postcard *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *PageSize Postcard
+*UIConstraints: *PageSize dbl_postcard *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *PageSize dbl_postcard
+*UIConstraints: *PageSize 4x_postcard *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *PageSize 4x_postcard
+*UIConstraints: *PageSize jenv_kaku2 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *PageSize jenv_kaku2
+*UIConstraints: *PageSize jenv_chou3 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *PageSize jenv_chou3
+*UIConstraints: *PageSize jenv_you_chou3 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *PageSize jenv_you_chou3
+
+*UIConstraints: *Duplex DuplexTumble *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType OHP
+*UIConstraints: *MediaType OHP *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType OHP
+*UIConstraints: *MediaType OHP *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType TRACING
+*UIConstraints: *MediaType TRACING *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType TRACING
+*UIConstraints: *MediaType TRACING *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType LABELS
+*UIConstraints: *MediaType LABELS *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType LABELS
+*UIConstraints: *MediaType LABELS *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *Duplex DuplexNoTumble
+
+*UIConstraints: *CNOutputPartition rotation *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *MediaType OHP
+*UIConstraints: *MediaType OHP *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *MediaType OHP
+*UIConstraints: *MediaType OHP *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *MediaType TRACING
+*UIConstraints: *MediaType TRACING *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *MediaType TRACING
+*UIConstraints: *MediaType TRACING *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *MediaType LABELS
+*UIConstraints: *MediaType LABELS *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *MediaType LABELS
+*UIConstraints: *MediaType LABELS *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition offset *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition rotation *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *CNOutputPartition rotation
+
+*UIConstraints: *InputSlot Cas1 *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas1 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType OHP
+*UIConstraints: *MediaType OHP *InputSlot Cas1
+*UIConstraints: *InputSlot Cas1 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType TRACING
+*UIConstraints: *MediaType TRACING *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType LABELS
+*UIConstraints: *MediaType LABELS *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *InputSlot Cas4
+*UIConstraints: *InputSlot Cas1 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas3 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *InputSlot Cas3
+*UIConstraints: *InputSlot Cas4 *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *InputSlot Cas4
+
+*UIConstraints: *Collate StapleCollate *MediaType OHP
+*UIConstraints: *MediaType OHP *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *MediaType OHP
+*UIConstraints: *MediaType OHP *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *MediaType TRACING
+*UIConstraints: *MediaType TRACING *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *MediaType TRACING
+*UIConstraints: *MediaType TRACING *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *MediaType LABELS
+*UIConstraints: *MediaType LABELS *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *MediaType LABELS
+*UIConstraints: *MediaType LABELS *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *Collate StapleGroup
+
+*UIConstraints: *CNInterleafSheet True *MediaType Auto
+*UIConstraints: *MediaType Auto *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PlainPaper1
+*UIConstraints: *MediaType PlainPaper1 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PlainPaper2
+*UIConstraints: *MediaType PlainPaper2 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PlainPaper3
+*UIConstraints: *MediaType PlainPaper3 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType RECYCLED
+*UIConstraints: *MediaType RECYCLED *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType COLOR
+*UIConstraints: *MediaType COLOR *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PREPUNCHED
+*UIConstraints: *MediaType PREPUNCHED *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType HEAVY3
+*UIConstraints: *MediaType HEAVY3 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType TRACING
+*UIConstraints: *MediaType TRACING *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType LABELS
+*UIConstraints: *MediaType LABELS *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType POSTCARD
+*UIConstraints: *MediaType POSTCARD *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType 1SIDECOATED1
+*UIConstraints: *MediaType 1SIDECOATED1 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType 1SIDECOATED2
+*UIConstraints: *MediaType 1SIDECOATED2 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType 2SIDECOATED1
+*UIConstraints: *MediaType 2SIDECOATED1 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType 2SIDECOATED2
+*UIConstraints: *MediaType 2SIDECOATED2 *CNInterleafSheet True
+
+*UIConstraints: *MediaType OHP *CNCopySetNumbering True
+*UIConstraints: *CNCopySetNumbering True *MediaType OHP
+
+*UIConstraints: *CNMonitorProfile sRGBv1.20(Canon) *CNMatchingMethod Photographic
+*UIConstraints: *CNMatchingMethod Photographic *CNMonitorProfile sRGBv1.20(Canon)
+*UIConstraints: *CNMonitorProfile HDTVgamma1.5 *CNMatchingMethod Photographic
+*UIConstraints: *CNMatchingMethod Photographic *CNMonitorProfile HDTVgamma1.5
+*UIConstraints: *CNMonitorProfile HDTVgamma1.8 *CNMatchingMethod Photographic
+*UIConstraints: *CNMatchingMethod Photographic *CNMonitorProfile HDTVgamma1.8
+*UIConstraints: *CNMonitorProfile HDTVgamma2.1 *CNMatchingMethod Photographic
+*UIConstraints: *CNMatchingMethod Photographic *CNMonitorProfile HDTVgamma2.1
+*UIConstraints: *CNMonitorProfile HDTVgamma2.4 *CNMatchingMethod Photographic
+*UIConstraints: *CNMatchingMethod Photographic *CNMonitorProfile HDTVgamma2.4
+*UIConstraints: *CNMonitorProfile sRGBv1.20(Canon) *CNMatchingMethod Vividphoto
+*UIConstraints: *CNMatchingMethod Vividphoto *CNMonitorProfile sRGBv1.20(Canon)
+*UIConstraints: *CNMonitorProfile HDTVgamma1.5 *CNMatchingMethod Vividphoto
+*UIConstraints: *CNMatchingMethod Vividphoto *CNMonitorProfile HDTVgamma1.5
+*UIConstraints: *CNMonitorProfile HDTVgamma1.8 *CNMatchingMethod Vividphoto
+*UIConstraints: *CNMatchingMethod Vividphoto *CNMonitorProfile HDTVgamma1.8
+*UIConstraints: *CNMonitorProfile HDTVgamma2.1 *CNMatchingMethod Vividphoto
+*UIConstraints: *CNMatchingMethod Vividphoto *CNMonitorProfile HDTVgamma2.1
+*UIConstraints: *CNMonitorProfile HDTVgamma2.4 *CNMatchingMethod Vividphoto
+*UIConstraints: *CNMatchingMethod Vividphoto *CNMonitorProfile HDTVgamma2.4
+
+*UIConstraints: *BindEdge Left *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *BindEdge Left
+*UIConstraints: *BindEdge Right *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble *BindEdge Right
+*UIConstraints: *BindEdge Top *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *BindEdge Top
+*UIConstraints: *BindEdge Bottom *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexNoTumble *BindEdge Bottom
+
+*UIConstraints: *CNCopySetNumbering True *Collate StapleGroup
+*UIConstraints: *Collate StapleGroup *CNCopySetNumbering True
+*UIConstraints: *CNCopySetNumbering True *Collate Group
+*UIConstraints: *Collate Group *CNCopySetNumbering True
+
+*UIConstraints: *Collate StapleCollate *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *CNOutputPartition rotation
+*UIConstraints: *CNOutputPartition rotation *Collate StapleGroup
+*UIConstraints: *Collate StapleCollate *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition offset *Collate StapleCollate
+*UIConstraints: *Collate StapleGroup *CNOutputPartition offset
+*UIConstraints: *CNOutputPartition offset *Collate StapleGroup
+
+*UIConstraints: *StapleLocation Left *BindEdge Top
+*UIConstraints: *BindEdge Top *StapleLocation Left
+*UIConstraints: *StapleLocation Right *BindEdge Top
+*UIConstraints: *BindEdge Top *StapleLocation Right
+*UIConstraints: *StapleLocation BottomLeft *BindEdge Top
+*UIConstraints: *BindEdge Top *StapleLocation BottomLeft
+*UIConstraints: *StapleLocation BottomRight *BindEdge Top
+*UIConstraints: *BindEdge Top *StapleLocation BottomRight
+*UIConstraints: *StapleLocation Bottom *BindEdge Top
+*UIConstraints: *BindEdge Top *StapleLocation Bottom
+*UIConstraints: *StapleLocation Left *BindEdge Bottom
+*UIConstraints: *BindEdge Bottom *StapleLocation Left
+*UIConstraints: *StapleLocation Right *BindEdge Bottom
+*UIConstraints: *BindEdge Bottom *StapleLocation Right
+*UIConstraints: *StapleLocation Top *BindEdge Bottom
+*UIConstraints: *BindEdge Bottom *StapleLocation Top
+*UIConstraints: *StapleLocation TopRight *BindEdge Bottom
+*UIConstraints: *BindEdge Bottom *StapleLocation TopRight
+*UIConstraints: *StapleLocation TopLeft *BindEdge Bottom
+*UIConstraints: *BindEdge Bottom *StapleLocation TopLeft
+*UIConstraints: *StapleLocation Right *BindEdge Left
+*UIConstraints: *BindEdge Left *StapleLocation Right
+*UIConstraints: *StapleLocation BottomRight *BindEdge Left
+*UIConstraints: *BindEdge Left *StapleLocation BottomRight
+*UIConstraints: *StapleLocation Top *BindEdge Left
+*UIConstraints: *BindEdge Left *StapleLocation Top
+*UIConstraints: *StapleLocation TopRight *BindEdge Left
+*UIConstraints: *BindEdge Left *StapleLocation TopRight
+*UIConstraints: *StapleLocation Bottom *BindEdge Left
+*UIConstraints: *BindEdge Left *StapleLocation Bottom
+*UIConstraints: *StapleLocation Left *BindEdge Right
+*UIConstraints: *BindEdge Right *StapleLocation Left
+*UIConstraints: *StapleLocation BottomLeft *BindEdge Right
+*UIConstraints: *BindEdge Right *StapleLocation BottomLeft
+*UIConstraints: *StapleLocation Top *BindEdge Right
+*UIConstraints: *BindEdge Right *StapleLocation Top
+*UIConstraints: *StapleLocation TopLeft *BindEdge Right
+*UIConstraints: *BindEdge Right *StapleLocation TopLeft
+*UIConstraints: *StapleLocation Bottom *BindEdge Right
+*UIConstraints: *BindEdge Right *StapleLocation Bottom
+
+*UIConstraints: *CNCopySetNumbering True *CNTrustPrint True
+*UIConstraints: *CNTrustPrint True *CNCopySetNumbering True
+
+*UIConstraints: *CNInterleafPrint True *CNInterleafSheet None
+*UIConstraints: *CNInterleafSheet None *CNInterleafPrint True
+*UIConstraints: *CNInterleafPrint True *CNInterleafSheet False
+*UIConstraints: *CNInterleafSheet False *CNInterleafPrint True
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Standard ROM
+
+*%
+*% End of PPD file.
+*%

@@ -1,0 +1,519 @@
+*PPD-Adobe: "4.3"
+*%
+*%  Copyright (C) 2004-2011 CANON INC.
+*%  CUPS printer driver for Canon printer devices
+*%
+*%  This program is free software; you can redistribute it and/or modify
+*%  it under the terms of the GNU General Public License as published by
+*%  the Free Software Foundation; either version 2 of the License, or
+*%  (at your option) any later version.
+*%
+*%  This program is distributed in the hope that it will be useful,
+*%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*%  GNU General Public License for more details.
+*%
+*%  You should have received a copy of the GNU General Public License
+*%  along with this program; if not, write to the Free Software
+*%  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*%
+
+*FormatVersion: "4.3"
+*FileVersion: "2.4"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "CNL7750CZK.PPD"
+*Manufacturer: "Canon"
+*Product: "(lbp7750c/5460)"
+*cupsVersion: 1.1
+*cupsManualCopies: True
+*cupsModelNumber: 101
+*cupsFilter: "application/vnd.cups-postscript 0 pstoufr2cpca"
+*ModelName: "Canon LBP7750C/5460 UFR II"
+*ShortNickName: "LBP7750C/5460"
+*NickName: "Canon LBP7750C/5460 UFR II ver.2.4"
+*PSVersion: "(3010.000) 550"
+*PSVersion: "(3010.000) 651"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "30"
+*LandscapeOrientation: Plus90
+*VariablePaperSize: False
+*TTRasterizer: Type42
+*%CNGPLPLIBNAME: "uictlufr2"
+*%CNGPLPLIBNAMEVER: "1.0.0"
+
+*%CNPrintLang: UFR2
+
+*opvpDevice: "opvp"
+*opvpDriver: "libcanonc3pl"
+*opvpModel: "LBP7750C/5460"
+
+*OpenGroup: InstallableOptions/Attached Options
+
+*CloseGroup: InstallableOptions
+
+*OpenUI *Resolution/Resolution : PickOne
+*DefaultResolution: 600
+*Resolution 600/600 dpi: "<</HWResolution[600 600]>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *CNDraftMode/Toner Save: PickOne
+*DefaultCNDraftMode: False
+*CNDraftMode Auto/Auto: "<< >>setpagedevice"
+*CNDraftMode True/ON: "<< >>setpagedevice"
+*CNDraftMode False/OFF: "<< >>setpagedevice"
+*CloseUI: *CNDraftMode
+
+*OpenUI *MediaType/Media Type : PickOne
+*DefaultMediaType: None
+*MediaType None/Panel Setting: "<</MediaType(None)>>setpagedevice"
+*MediaType PlainPaper/Plain Paper: "<</MediaType(PlainPaper)>>setpagedevice"
+*MediaType PlainPaperL/Plain Paper L: "<</MediaType(PlainPaperL)>>setpagedevice"
+*MediaType HEAVY1/Heavy Paper 1: "<</MediaType(HEAVY1)>>setpagedevice"
+*MediaType HEAVY2/Heavy Paper2: "<</MediaType(HEAVY2)>>setpagedevice"
+*MediaType OHP/OHP: "<</MediaType(OHP)>>setpagedevice"
+*MediaType LABELS/Labels: "<</MediaType(LABELS)>>setpagedevice"
+*MediaType ENVELOPE/Envelope: "<</MediaType(ENVELOPE)>>setpagedevice"
+*MediaType ROUGH/Rough Paper: "<</MediaType(ROUGH)>>setpagedevice"
+*CloseUI: *MediaType
+
+*OpenUI *InputSlot/Paper Source: PickOne
+*DefaultInputSlot: Auto
+*InputSlot Auto/Auto : ""
+*InputSlot Manual/Multi-purpose Tray: ""
+*InputSlot Cas1/Drawer 1 : ""
+*InputSlot Cas2/Drawer 2 : ""
+*CloseUI: *InputSlot
+
+*OpenUI *CNInterleafSheet/Insert Interleaf Sheets: PickOne
+*DefaultCNInterleafSheet: None
+*CNInterleafSheet None/None : "<< >>setpagedevice"
+*CNInterleafSheet True/ON : "<< >>setpagedevice"
+*CNInterleafSheet False/OFF : "<< >>setpagedevice"
+*CloseUI: *CNInterleafSheet
+
+*OpenUI *CNInterleafMediaType/Interleaf Media Type: PickOne
+*DefaultCNInterleafMediaType: None
+*CNInterleafMediaType None/Panel Setting: "<</MediaType(None)>>setpagedevice"
+*CNInterleafMediaType PlainPaper/Plain Paper: "<< >>setpagedevice"
+*CNInterleafMediaType PlainPaperL/Plain Paper L: "<< >>setpagedevice"
+*CNInterleafMediaType HEAVY1/Heavy Paper1: "<< >>setpagedevice"
+*CNInterleafMediaType HEAVY2/Heavy Paper 2: "<< >>setpagedevice"
+*CNInterleafMediaType ROUGH/Rough Paper: "<< >>setpagedevice"
+*CloseUI: *CNInterleafMediaType
+
+*OpenUI *CNInterleafPrint/Print on Interleaf Sheets: PickOne
+*DefaultCNInterleafPrint: None
+*CNInterleafPrint None/None : "<< >>setpagedevice"
+*CNInterleafPrint True/ON : "<< >>setpagedevice"
+*CNInterleafPrint False/OFF : "<< >>setpagedevice"
+*CloseUI: *CNInterleafPrint
+
+*OpenUI *OutputBin/Paper Destination: PickOne
+*DefaultOutputBin: Auto
+*OutputBin Auto/Auto : "<< >>setpagedevice"
+*CloseUI: *OutputBin
+
+*OpenUI *Duplex/Duplex: PickOne
+*DefaultDuplex: None
+*Duplex None/OFF: "<</Duplex false>>setpagedevice"
+*Duplex DuplexNoTumble/ON (Long-edged Binding): "<</Duplex true/Tumble false>>setpagedevice"
+*Duplex DuplexTumble/ON (Short-edged Binding): "<</Duplex true/Tumble true>>setpagedevice"
+*CloseUI: *Duplex
+
+*OpenUI *BindEdge/BindingEdge: PickOne
+*DefaultBindEdge: Left
+*BindEdge Left/Left: "<< >>setpagedevice"
+*BindEdge Top/Top: "<< >>setpagedevice"
+*CloseUI: *BindEdge
+
+*OpenUI *Collate/Collate: PickOne
+*DefaultCollate: True
+*Collate True/Collate: "<< >>setpagedevice"
+*Collate Group/Group: "<< >>setpagedevice"
+*CloseUI: *Collate
+
+*OpenUI *CNColorMode/Color Mode: PickOne
+*DefaultCNColorMode: Auto
+*CNColorMode color/Color: "<< >>setpagedevice"
+*CNColorMode mono/Black and White: "<< >>setpagedevice"
+*CNColorMode Auto/Auto Detect: "<< >>setpagedevice"
+*CloseUI: *CNColorMode
+
+*OpenUI *CNAdvancedSmoothing/Advanced Smoothing: PickOne
+*DefaultCNAdvancedSmoothing: None
+*CNAdvancedSmoothing None/Printer Default : "<< >>setpagedevice"
+*CNAdvancedSmoothing Off/Off : "<< >>setpagedevice"
+*CNAdvancedSmoothing Smooth1/Smooth1 : "<< >>setpagedevice"
+*CNAdvancedSmoothing Smooth2/Smooth2 : "<< >>setpagedevice"
+*CloseUI: *CNAdvancedSmoothing
+
+*OpenUI *CNColorHalftone/Color Halftones : PickOne
+*DefaultCNColorHalftone: None
+*CNColorHalftone None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNColorHalftone
+
+*OpenUI *CNHalftone/Halftones : PickOne
+*DefaultCNHalftone: None
+*CNHalftone None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNHalftone
+
+*OpenUI *CNLineControl/Line Control: PickOne
+*DefaultCNLineControl: None
+*CNLineControl None/Printer Default: "<< >>setpagedevice"
+*CNLineControl Resolution/Resolution Priority: "<< >>setpagedevice"
+*CNLineControl Gradation/Gradation Priority: "<< >>setpagedevice"
+*CloseUI: *CNLineControl
+
+*OpenUI *PageSize/Page Size: PickOne
+*DefaultPageSize: A4
+*PageSize Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageSize Statement: "<</PageSize[396 612]/ImagingBBox null>>setpagedevice"
+*PageSize Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize Monarch: "<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageSize Com10: "<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageSize dl_envelope: "<</PageSize[312 624]/ImagingBBox null>>setpagedevice"
+*PageSize Envelope_C5: "<</PageSize[459 649]/ImagingBBox null>>setpagedevice"
+*PageSize Envelope_B5: "<</PageSize[499 709]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*DefaultPageRegion: A4
+*PageRegion Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageRegion Statement: "<</PageSize[396 612]/ImagingBBox null>>setpagedevice"
+*PageRegion Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion Monarch: "<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageRegion Com10: "<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageRegion dl_envelope: "<</PageSize[312 624]/ImagingBBox null>>setpagedevice"
+*PageRegion Envelope_C5: "<</PageSize[459 649]/ImagingBBox null>>setpagedevice"
+*PageRegion Envelope_B5: "<</PageSize[499 709]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: A4
+*ImageableArea Letter: "14.173 14.173 597.827 777.827"
+*ImageableArea Legal: "14.173 14.173 597.827 993.827"
+*ImageableArea Statement: "14.173 14.173 381.827 597.827"
+*ImageableArea Executive: "14.173 14.323 507.401 742.827"
+*ImageableArea A5: "14.173 13.898 406.771 580.827"
+*ImageableArea B5: "14.173 14.67 501.732 714.827"
+*ImageableArea A4: "14.173 14.284 581.102 827.827"
+*ImageableArea Monarch: "28.346 28.347 250.582 511.654"
+*ImageableArea Com10: "28.346 28.347 268.44 655.654"
+*ImageableArea dl_envelope: "28.346 28.725 283.464 595.654"
+*ImageableArea Envelope_C5: "28.346 28.213 430.866 620.654"
+*ImageableArea Envelope_B5: "28.346 28.685 470.551 680.654"
+
+*DefaultPaperDimension: A4
+*PaperDimension Letter: "612 792"
+*PaperDimension Legal: "612 1008"
+*PaperDimension Statement: "396 612"
+*PaperDimension Executive: "522 756"
+*PaperDimension A5: "420 595"
+*PaperDimension B5: "516 729"
+*PaperDimension A4: "595 842"
+*PaperDimension Monarch: "279 540"
+*PaperDimension Com10: "297 684"
+*PaperDimension dl_envelope: "312 624"
+*PaperDimension Envelope_C5: "459 649"
+*PaperDimension Envelope_B5: "499 709"
+
+*%CNJobAccount: False
+*%CNSecuredPrint: False
+*%CNMailBox: False
+*%CNInputSelect: False
+
+*CNOEFLibName: "ufr2filter"
+*CNOptDevType: "0"
+*CNOptCalibType: "0"
+*CNPrinterName: "Canon LBP7750C/5460 UFR II"
+*CNPDLType: "UFR2"
+*CNPrtColorSpace: "RGB"
+*CN_PdlWrapper_PdlPath: "libcanonufr2"
+
+*CNFeedDirection: "Custom:3"
+
+*CNTblFormat: "2"
+*CNTblInputSlot: "3"
+*CNTblDuplex: "1"
+*CNTblOutputBin: "0"
+*CNTblOutputPartition: "0"
+*CNTblSubstitute: "1"
+*CNTblMediaType: "6"
+*CNModelMethod: "12"
+*CNMaxBoxNum: "99"
+*CNMaxDocStr: "32"
+*CNMaxCopies: "9999"
+*CNMaxGutter: "50"
+*CNExecuteMethod: "96"
+*CNListIDMediaType: "0"
+*CNUFR2ModelMethod: "0"
+*CNListIDPageSize: "4"
+
+*UIConstraints: *Duplex DuplexTumble *BindEdge Left
+*UIConstraints: *BindEdge Left *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *BindEdge Top
+*UIConstraints: *BindEdge Top *Duplex DuplexNoTumble
+
+*UIConstraints: *Duplex DuplexTumble *PageSize A5
+*UIConstraints: *PageSize A5 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize A5
+*UIConstraints: *PageSize A5 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize Statement
+*UIConstraints: *PageSize Statement *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Statement
+*UIConstraints: *PageSize Statement *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize Monarch
+*UIConstraints: *PageSize Monarch *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Monarch
+*UIConstraints: *PageSize Monarch *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize Com10
+*UIConstraints: *PageSize Com10 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Com10
+*UIConstraints: *PageSize Com10 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *Duplex DuplexNoTumble
+
+*UIConstraints: *Duplex DuplexTumble *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType OHP
+*UIConstraints: *MediaType OHP *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType OHP
+*UIConstraints: *MediaType OHP *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType LABELS
+*UIConstraints: *MediaType LABELS *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType LABELS
+*UIConstraints: *MediaType LABELS *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexNoTumble *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *Duplex DuplexNoTumble
+
+*UIConstraints: *InputSlot Cas1 *PageSize Monarch
+*UIConstraints: *PageSize Monarch *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize Monarch
+*UIConstraints: *PageSize Monarch *InputSlot Cas2
+*UIConstraints: *InputSlot Cas1 *PageSize Com10
+*UIConstraints: *PageSize Com10 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize Com10
+*UIConstraints: *PageSize Com10 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas1 *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *InputSlot Cas2
+*UIConstraints: *InputSlot Cas1 *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *InputSlot Cas2
+*UIConstraints: *InputSlot Cas1 *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *InputSlot Cas1
+*UIConstraints: *InputSlot Cas2 *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *InputSlot Cas2
+
+*UIConstraints: *MediaType OHP *InputSlot Cas1
+*UIConstraints: *InputSlot Cas1 *MediaType OHP
+*UIConstraints: *MediaType LABELS *InputSlot Cas1
+*UIConstraints: *InputSlot Cas1 *MediaType LABELS
+*UIConstraints: *MediaType ENVELOPE *InputSlot Cas1
+*UIConstraints: *InputSlot Cas1 *MediaType ENVELOPE
+*UIConstraints: *MediaType OHP *InputSlot Cas2
+*UIConstraints: *InputSlot Cas2 *MediaType OHP
+*UIConstraints: *MediaType LABELS *InputSlot Cas2
+*UIConstraints: *InputSlot Cas2 *MediaType LABELS
+*UIConstraints: *MediaType ENVELOPE *InputSlot Cas2
+*UIConstraints: *InputSlot Cas2 *MediaType ENVELOPE
+
+*UIConstraints: *MediaType ENVELOPE *PageSize A4
+*UIConstraints: *PageSize A4 *MediaType ENVELOPE
+*UIConstraints: *MediaType OHP *PageSize B5
+*UIConstraints: *PageSize B5 *MediaType OHP
+*UIConstraints: *MediaType ENVELOPE *PageSize B5
+*UIConstraints: *PageSize B5 *MediaType ENVELOPE
+*UIConstraints: *MediaType OHP *PageSize A5
+*UIConstraints: *PageSize A5 *MediaType OHP
+*UIConstraints: *MediaType ENVELOPE *PageSize A5
+*UIConstraints: *PageSize A5 *MediaType ENVELOPE
+*UIConstraints: *MediaType OHP *PageSize Legal
+*UIConstraints: *PageSize Legal *MediaType OHP
+*UIConstraints: *MediaType ENVELOPE *PageSize Legal
+*UIConstraints: *PageSize Legal *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *PageSize Letter
+*UIConstraints: *PageSize Letter *MediaType ENVELOPE
+*UIConstraints: *MediaType OHP *PageSize Executive
+*UIConstraints: *PageSize Executive *MediaType OHP
+*UIConstraints: *MediaType ENVELOPE *PageSize Executive
+*UIConstraints: *PageSize Executive *MediaType ENVELOPE
+*UIConstraints: *MediaType OHP *PageSize Statement
+*UIConstraints: *PageSize Statement *MediaType OHP
+*UIConstraints: *MediaType ENVELOPE *PageSize Statement
+*UIConstraints: *PageSize Statement *MediaType ENVELOPE
+*UIConstraints: *MediaType HEAVY1 *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY2 *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType HEAVY2
+*UIConstraints: *MediaType PlainPaper *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType PlainPaper
+*UIConstraints: *MediaType PlainPaperL *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType PlainPaperL
+*UIConstraints: *MediaType OHP *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType OHP
+*UIConstraints: *MediaType LABELS *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType LABELS
+*UIConstraints: *MediaType ROUGH *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType ROUGH
+*UIConstraints: *MediaType None *PageSize Monarch
+*UIConstraints: *PageSize Monarch *MediaType None
+*UIConstraints: *MediaType HEAVY1 *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY2 *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType HEAVY2
+*UIConstraints: *MediaType PlainPaper *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType PlainPaper
+*UIConstraints: *MediaType PlainPaperL *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType PlainPaperL
+*UIConstraints: *MediaType OHP *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType OHP
+*UIConstraints: *MediaType LABELS *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType LABELS
+*UIConstraints: *MediaType ROUGH *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType ROUGH
+*UIConstraints: *MediaType None *PageSize Com10
+*UIConstraints: *PageSize Com10 *MediaType None
+*UIConstraints: *MediaType HEAVY1 *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY2 *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType HEAVY2
+*UIConstraints: *MediaType PlainPaper *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType PlainPaper
+*UIConstraints: *MediaType PlainPaperL *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType PlainPaperL
+*UIConstraints: *MediaType OHP *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType OHP
+*UIConstraints: *MediaType LABELS *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType LABELS
+*UIConstraints: *MediaType ROUGH *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType ROUGH
+*UIConstraints: *MediaType None *PageSize dl_envelope
+*UIConstraints: *PageSize dl_envelope *MediaType None
+*UIConstraints: *MediaType HEAVY1 *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY2 *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType HEAVY2
+*UIConstraints: *MediaType PlainPaper *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType PlainPaper
+*UIConstraints: *MediaType PlainPaperL *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType PlainPaperL
+*UIConstraints: *MediaType OHP *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType OHP
+*UIConstraints: *MediaType LABELS *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType LABELS
+*UIConstraints: *MediaType ROUGH *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType ROUGH
+*UIConstraints: *MediaType None *PageSize Envelope_C5
+*UIConstraints: *PageSize Envelope_C5 *MediaType None
+*UIConstraints: *MediaType HEAVY1 *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY2 *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType HEAVY2
+*UIConstraints: *MediaType PlainPaper *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType PlainPaper
+*UIConstraints: *MediaType PlainPaperL *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType PlainPaperL
+*UIConstraints: *MediaType OHP *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType OHP
+*UIConstraints: *MediaType LABELS *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType LABELS
+*UIConstraints: *MediaType ROUGH *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType ROUGH
+*UIConstraints: *MediaType None *PageSize Envelope_B5
+*UIConstraints: *PageSize Envelope_B5 *MediaType None
+
+*UIConstraints: *CNColorMode color *MediaType OHP
+*UIConstraints: *MediaType OHP *CNColorMode color
+*UIConstraints: *CNColorMode Auto *MediaType OHP
+*UIConstraints: *MediaType OHP *CNColorMode Auto
+
+*UIConstraints: *CNInterleafSheet True *MediaType None
+*UIConstraints: *MediaType None *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PlainPaper
+*UIConstraints: *MediaType PlainPaper *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType PlainPaperL
+*UIConstraints: *MediaType PlainPaperL *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType HEAVY1
+*UIConstraints: *MediaType HEAVY1 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType HEAVY2
+*UIConstraints: *MediaType HEAVY2 *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType LABELS
+*UIConstraints: *MediaType LABELS *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType ENVELOPE
+*UIConstraints: *MediaType ENVELOPE *CNInterleafSheet True
+*UIConstraints: *CNInterleafSheet True *MediaType ROUGH
+*UIConstraints: *MediaType ROUGH *CNInterleafSheet True
+
+*UIConstraints: *CNInterleafPrint True *CNInterleafSheet None
+*UIConstraints: *CNInterleafSheet None *CNInterleafPrint True
+*UIConstraints: *CNInterleafPrint True *CNInterleafSheet False
+*UIConstraints: *CNInterleafSheet False *CNInterleafPrint True
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Standard ROM
+
+*%
+*% End of PPD file.
+*%

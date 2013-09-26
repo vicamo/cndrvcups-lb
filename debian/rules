@@ -1,0 +1,224 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+
+
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	# Add here commands to configure the package.
+	./allgen.sh -deb
+
+	touch configure-stamp
+
+
+build: build-stamp
+
+build-stamp: configure-stamp 
+	dh_testdir
+
+	# Add here commands to compile the package.
+	for d in ppd pstoufr2cpca backend cpca cngplp; do \
+		(cd $$d && $(MAKE)); \
+	done
+	#$(MAKE)
+	#docbook-to-man debian/cndrvcups-lb.sgml > cndrvcups-lb.1
+
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	# Add here commands to clean up after the build process.
+	#-$(MAKE) clean
+	-for d in ppd pstoufr2cpca backend cpca cngplp; do \
+		(cd $$d && $(MAKE) distclean); \
+	done
+
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	# Add here commands to install the package into debian/cndrvcups-lb.
+	#$(MAKE) install DESTDIR=$(CURDIR)/debian/cndrvcups-lb
+	for d in ppd pstoufr2cpca backend cpca cngplp; do \
+		(cd $$d && $(MAKE) install DESTDIR=$(CURDIR)/debian/cndrvcups-lipslx); \
+		($(MAKE) install DESTDIR=$(CURDIR)/debian/cndrvcups-ufr2-uk); \
+		($(MAKE) install DESTDIR=$(CURDIR)/debian/cndrvcups-ufr2-us); \
+	done
+
+	dh_install -s
+	mkdir -p $(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	mkdir -p $(CURDIR)/debian/cndrvcups-lipslx/usr/bin
+	install -c libs/libcanonufr2.la $(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	install -c -s libs/libcanonufr2.so.1.0.0 $(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	install -c -s libs/libufr2filter.so.1.0.0 $(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	install -c -s libs/libEnoJBIG.so.1.0.0 $(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	install -c -s libs/cnpkbidi $(CURDIR)/debian/cndrvcups-lipslx/usr/bin
+	install -c -m 4755 libs/cnpkmoduleufr2 $(CURDIR)/debian/cndrvcups-lipslx/usr/bin
+	install -c -s libs/libcaiocnpkbidi.so.1.0.0 $(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	ln -sf /usr/lib/libcanonufr2.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libcanonufr2.so.1
+	ln -sf /usr/lib/libcanonufr2.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libcanonufr2.so
+	ln -sf /usr/lib/libufr2filter.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libufr2filter.so.1
+	ln -sf /usr/lib/libufr2filter.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libufr2filter.so
+	ln -sf /usr/lib/libEnoJBIG.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libEnoJBIG.so.1
+	ln -sf /usr/lib/libEnoJBIG.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libEnoJBIG.so
+	ln -sf /usr/lib/libcaiocnpkbidi.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libcaiocnpkbidi.so.1
+	ln -sf /usr/lib/libcaiocnpkbidi.so.1.0.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libcaiocnpkbidi.so
+	mkdir -p $(CURDIR)/debian/cndrvcups-lipslx/usr/share/caepcm
+	install -c -m 644 data/C*   $(CURDIR)/debian/cndrvcups-lipslx/usr/share/caepcm
+	mkdir -p $(CURDIR)/debian/cndrvcups-lipslx/usr/share/cnpkbidi
+	install -c -m 644 libs/cnpkbidi*   $(CURDIR)/debian/cndrvcups-lipslx/usr/share/cnpkbidi
+	rm -rf $(CURDIR)/debian/cndrvcups-lipslx/usr/share/cups/model/*ZK.ppd
+	rm -rf $(CURDIR)/debian/cndrvcups-lipslx/usr/share/cups/model/*ZS.ppd
+	rm -rf $(CURDIR)/debian/cndrvcups-lipslx/usr/share/cngplp/CN*ZK.res
+	rm -rf $(CURDIR)/debian/cndrvcups-lipslx/usr/share/cngplp/CN*ZS.res
+	mkdir -p $(CURDIR)/debian/cndrvcups-lipslx/usr/share/ufr2filter
+	install -c -m 644 libs/ThLB*   $(CURDIR)/debian/cndrvcups-lipslx/usr/share/ufr2filter
+	install -c -m 755 libs/libcnlbcm.so.1.0	$(CURDIR)/debian/cndrvcups-lipslx/usr/lib
+	ln -sf /usr/lib/libcnlbcm.so.1.0		$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libcnlbcm.so.1
+	ln -sf /usr/lib/libcnlbcm.so.1.0		$(CURDIR)/debian/cndrvcups-lipslx/usr/lib/libcnlbcm.so
+	
+	dh_install -s
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/bin
+	install -c libs/libcanonufr2.la $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	install -c -s libs/libcanonufr2.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	install -c -s libs/libufr2filter.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	install -c -s libs/libEnoJBIG.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	install -c -s libs/cnpkbidi $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/bin
+	install -c -m 4755 libs/cnpkmoduleufr2 $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/bin
+	install -c -s libs/libcaiocnpkbidi.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	ln -sf  /usr/lib/libcanonufr2.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libcanonufr2.so.1
+	ln -sf  /usr/lib/libcanonufr2.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libcanonufr2.so
+	ln -sf  /usr/lib/libufr2filter.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libufr2filter.so.1
+	ln -sf  /usr/lib/libufr2filter.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libufr2filter.so
+	ln -sf /usr/lib/libEnoJBIG.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libEnoJBIG.so.1
+	ln -sf /usr/lib/libEnoJBIG.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libEnoJBIG.so
+	ln -sf /usr/lib/libcaiocnpkbidi.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libcaiocnpkbidi.so.1
+	ln -sf /usr/lib/libcaiocnpkbidi.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libcaiocnpkbidi.so
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/caepcm
+	install -c -m 644 data/C*   $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/caepcm
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/cnpkbidi
+	install -c -m 644 libs/cnpkbidi*   $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/cnpkbidi
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/cups/model/*ZJ.ppd
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/cups/model/*ZS.ppd
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/cngplp/CN*ZJ.res
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/cngplp/CN*ZS.res
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/ufr2filter
+	install -c -m 644 libs/ThLB*   $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/ufr2filter
+	install -c -m 755 libs/libcnlbcm.so.1.0	$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib
+	ln -sf /usr/lib/libcnlbcm.so.1.0		$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libcnlbcm.so.1
+	ln -sf /usr/lib/libcnlbcm.so.1.0		$(CURDIR)/debian/cndrvcups-ufr2-uk/usr/lib/libcnlbcm.so
+
+	dh_install -s
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-us/usr/bin
+	install -c libs/libcanonufr2.la $(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	install -c -s libs/libcanonufr2.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	install -c -s libs/libufr2filter.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	install -c -s libs/libEnoJBIG.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	install -c -s libs/cnpkbidi $(CURDIR)/debian/cndrvcups-ufr2-us/usr/bin
+	install -c -m 4755 libs/cnpkmoduleufr2 $(CURDIR)/debian/cndrvcups-ufr2-us/usr/bin
+	install -c -s libs/libcaiocnpkbidi.so.1.0.0 $(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	ln -sf  /usr/lib/libcanonufr2.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libcanonufr2.so.1
+	ln -sf  /usr/lib/libcanonufr2.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libcanonufr2.so
+	ln -sf  /usr/lib/libufr2filter.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libufr2filter.so.1
+	ln -sf  /usr/lib/libufr2filter.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libufr2filter.so
+	ln -sf /usr/lib/libEnoJBIG.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libEnoJBIG.so.1
+	ln -sf /usr/lib/libEnoJBIG.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libEnoJBIG.so
+	ln -sf /usr/lib/libcaiocnpkbidi.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libcaiocnpkbidi.so.1
+	ln -sf /usr/lib/libcaiocnpkbidi.so.1.0.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libcaiocnpkbidi.so
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/caepcm
+	install -c -m 644 data/C*   $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/caepcm
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/cnpkbidi
+	install -c -m 644 libs/cnpkbidi*   $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/cnpkbidi
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/cups/model/*ZJ.ppd
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/cups/model/*ZK.ppd
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/cngplp/CN*ZJ.res
+	rm -rf $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/cngplp/CN*ZK.res
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/ufr2filter
+	install -c -m 644 libs/ThLB*   $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/ufr2filter
+	install -c -m 755 libs/libcnlbcm.so.1.0	$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib
+	ln -sf /usr/lib/libcnlbcm.so.1.0		$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libcnlbcm.so.1
+	ln -sf /usr/lib/libcnlbcm.so.1.0		$(CURDIR)/debian/cndrvcups-ufr2-us/usr/lib/libcnlbcm.so
+
+	dh_install -s
+	mkdir -p $(CURDIR)/debian/cndrvcups-lipslx/usr/share/doc/cndrvcups-lipslx
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	mkdir -p $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/doc/cndrvcups-ufr2-us
+
+	install LICENSE*lipslx*.txt $(CURDIR)/debian/cndrvcups-lipslx/usr/share/doc/cndrvcups-lipslx
+	install LICENSE*ufr2*.txt $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install LICENSE*ufr2*0E.txt $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/doc/cndrvcups-ufr2-us
+	install README $(CURDIR)/debian/cndrvcups-lipslx/usr/share/doc/cndrvcups-lipslx
+	install README $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install L*ufr2*FR.txt $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install L*ufr2*IT.txt $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install L*ufr2*DE.txt $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install L*ufr2*SP.txt $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install README $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/doc/cndrvcups-ufr2-us
+	install README*lipslx*.txt $(CURDIR)/debian/cndrvcups-lipslx/usr/share/doc/cndrvcups-lipslx
+	install README*ufr2*UK*.txt $(CURDIR)/debian/cndrvcups-ufr2-uk/usr/share/doc/cndrvcups-ufr2-uk
+	install README*ufr2*US*.txt $(CURDIR)/debian/cndrvcups-ufr2-us/usr/share/doc/cndrvcups-ufr2-us
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+#	dh_install
+#	dh_installmenu
+#	dh_installdebconf	
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+#	dh_installinfo
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_perl
+#	dh_python
+#	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

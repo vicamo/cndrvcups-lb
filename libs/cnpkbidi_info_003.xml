@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CNXML>
+	<target_medium_type><integer>0</integer></target_medium_type>
+	<input_data_depth><integer>8</integer></input_data_depth>
+	<output_data_depth><integer>8</integer></output_data_depth>
+	<halftone_output_data_depth><integer>1</integer></halftone_output_data_depth>
+</CNXML>

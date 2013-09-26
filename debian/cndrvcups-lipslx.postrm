@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -d /usr/share/ppd ] ; then
+	rm -rf /usr/share/ppd/CN*ZJ.ppd
+fi
+
+exit 0
+
+

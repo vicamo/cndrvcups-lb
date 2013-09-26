@@ -1,0 +1,21 @@
+;=====================================================================
+; Macintosh CUPS BDL Printer Driver
+; Printer DATA Text Threshold Data File for Mac OS X
+; Copyright CANON INC. 2009-2011
+; TnLB_28A.BIN
+;=====================================================================
+
+[CMYKThreshold]
+Fill=C0,C0,C0,C0
+TextLarge=80,80,80,80
+TextSmall=1,1,1,1
+LineThick=80,80,80,80
+LineThin=1,1,1,1
+BmpImg=C0,C0,C0,C0
+BmpEdge=C0,C0,C0,C0
+BmpIsolation=C0,C0,C0,C0
+
+[Threshold]
+Text=E
+Line=21
+Bmp=5F

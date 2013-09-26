@@ -1,0 +1,2416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-11 14:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gladestr.h:2
+#, no-c-format
+msgid "(0 to 200)%"
+msgstr ""
+
+#: gladestr.h:3
+msgid "(1 to 10000)"
+msgstr ""
+
+#: gladestr.h:4
+msgid "(1 to 9999)"
+msgstr ""
+
+#: gladestr.h:5
+msgid "(1 to 9999999)"
+msgstr ""
+
+#: gladestr.h:6
+msgid "(Max. 32 characters)"
+msgstr ""
+
+#: gladestr.h:7
+msgid "*"
+msgstr ""
+
+#: gladestr.h:8
+msgid "0 to 99"
+msgstr ""
+
+#: gladestr.h:9
+msgid "Adjust Trim Width by"
+msgstr ""
+
+#: gladestr.h:10
+msgid "Advanced Settings"
+msgstr ""
+
+#: gladestr.h:11
+msgid "Advanced Settings..."
+msgstr ""
+
+#: gladestr.h:12
+msgid "Advanced Smoothing:"
+msgstr ""
+
+#: gladestr.h:13
+msgid "Allow Password Setting"
+msgstr ""
+
+#: gladestr.h:14
+msgid "Apply Device Settings"
+msgstr ""
+
+#: gladestr.h:15
+msgid "Automatic Correction"
+msgstr ""
+
+#: gladestr.h:16 keystr.h:1734
+msgid "B & W Halftones:"
+msgstr ""
+
+#: gladestr.h:17
+msgid "Back Side"
+msgstr ""
+
+#: gladestr.h:18
+msgid "Banner"
+msgstr ""
+
+#: gladestr.h:19
+msgid "Binding Location:"
+msgstr ""
+
+#: gladestr.h:20
+msgid "Book Opening:"
+msgstr ""
+
+#: gladestr.h:21
+msgid "Booklet..."
+msgstr ""
+
+#: gladestr.h:22
+msgid "Brightness and Gamma"
+msgstr ""
+
+#: gladestr.h:23
+msgid "Brightness:"
+msgstr ""
+
+#: gladestr.h:24
+msgid "Cancel"
+msgstr ""
+
+#: gladestr.h:25
+msgid "Color Halftones:"
+msgstr ""
+
+#: gladestr.h:26
+msgid "Color Mode:"
+msgstr ""
+
+#: gladestr.h:27
+msgid "Copy Set Numbering"
+msgstr ""
+
+#: gladestr.h:28
+msgid "Correction Width:"
+msgstr ""
+
+#: gladestr.h:29
+msgid "Data Name"
+msgstr ""
+
+#: gladestr.h:30
+msgid "Detailed Settings for Booklet"
+msgstr ""
+
+#: gladestr.h:31
+msgid "Device Setting "
+msgstr ""
+
+#: gladestr.h:32
+msgid "Device Settings"
+msgstr ""
+
+#: gladestr.h:33
+msgid "Disable Job Accounting When B&W Print"
+msgstr ""
+
+#: gladestr.h:34
+msgid "Displacement Correction Method"
+msgstr ""
+
+#: gladestr.h:35
+msgid "Document Insertion Unit"
+msgstr ""
+
+#: gladestr.h:36
+msgid "Document Name:"
+msgstr ""
+
+#: gladestr.h:37 keystr.h:746 keystr.h:751 keystr.h:752 keystr.h:754
+#: keystr.h:756 keystr.h:757 keystr.h:761 keystr.h:762 keystr.h:763
+#: keystr.h:764 keystr.h:776 keystr.h:814 keystr.h:817 keystr.h:818
+msgid "Draft Mode:"
+msgstr ""
+
+#: gladestr.h:38
+msgid "End:"
+msgstr ""
+
+#: gladestr.h:39
+msgid "Enter Name"
+msgstr ""
+
+#: gladestr.h:40
+msgid "Face Up/Face Down:"
+msgstr ""
+
+#: gladestr.h:41
+msgid "Finishing"
+msgstr ""
+
+#: gladestr.h:42
+msgid "Finishing Details"
+msgstr ""
+
+#: gladestr.h:43
+msgid "Finishing Details..."
+msgstr ""
+
+#: gladestr.h:44
+msgid "Finishing:"
+msgstr ""
+
+#: gladestr.h:45
+msgid "Fold Details:"
+msgstr ""
+
+#: gladestr.h:46
+msgid "Fold:"
+msgstr ""
+
+#: gladestr.h:47
+msgid "Front Side"
+msgstr ""
+
+#: gladestr.h:48
+msgid "Front/Back Cover Settings"
+msgstr ""
+
+#: gladestr.h:49
+msgid "Front/Back Cover Settings..."
+msgstr ""
+
+#: gladestr.h:50
+msgid "Gamma:"
+msgstr ""
+
+#: gladestr.h:51
+msgid "General"
+msgstr ""
+
+#: gladestr.h:52
+msgid "Glossy Plain Paper Processing:"
+msgstr ""
+
+#: gladestr.h:53
+msgid "Gutter Settings"
+msgstr ""
+
+#: gladestr.h:54
+msgid "Gutter..."
+msgstr ""
+
+#: gladestr.h:55
+msgid "Gutter:"
+msgstr ""
+
+#: gladestr.h:56
+msgid "Hole Punch"
+msgstr ""
+
+#: gladestr.h:57
+msgid "ID/Password Settings"
+msgstr ""
+
+#: gladestr.h:58
+msgid "ID:"
+msgstr ""
+
+#: gladestr.h:59
+msgid "Image Refinement:"
+msgstr ""
+
+#: gladestr.h:60
+msgid "Insert Interleaf Sheets:"
+msgstr ""
+
+#: gladestr.h:61
+msgid "Job Accounting"
+msgstr ""
+
+#: gladestr.h:62
+msgid "Landscape"
+msgstr ""
+
+#: gladestr.h:63
+msgid "Line Control:"
+msgstr ""
+
+#: gladestr.h:64
+msgid "Line Refinement:"
+msgstr ""
+
+#: gladestr.h:65
+msgid "Long Edge:"
+msgstr ""
+
+#: gladestr.h:66
+msgid "Manual Correction"
+msgstr ""
+
+#: gladestr.h:67
+msgid "Manual Setting"
+msgstr ""
+
+#: gladestr.h:68
+msgid "Matching Method:"
+msgstr ""
+
+#: gladestr.h:69
+msgid "Name Setting"
+msgstr ""
+
+#: gladestr.h:70
+msgid "Name of Data to Hold"
+msgstr ""
+
+#: gladestr.h:71
+msgid "Name: "
+msgstr ""
+
+#: gladestr.h:72
+msgid "Number of Copies for Offset:  "
+msgstr ""
+
+#: gladestr.h:73
+msgid "OK"
+msgstr ""
+
+#: gladestr.h:74
+msgid "Offset"
+msgstr ""
+
+#: gladestr.h:75
+msgid "Orientation"
+msgstr ""
+
+#: gladestr.h:76
+msgid "Output Adjustment Mode:"
+msgstr ""
+
+#: gladestr.h:77
+msgid "Output Method:"
+msgstr ""
+
+#: gladestr.h:78
+msgid "Output Options:"
+msgstr ""
+
+#: gladestr.h:79
+msgid "Page Layout"
+msgstr ""
+
+#: gladestr.h:80
+msgid "Page Size:"
+msgstr ""
+
+#: gladestr.h:81
+msgid "Paper Folding Unit"
+msgstr ""
+
+#: gladestr.h:82
+msgid "Paper Output:"
+msgstr ""
+
+#: gladestr.h:83
+msgid "Paper Source"
+msgstr ""
+
+#: gladestr.h:84
+msgid "Paper Source  "
+msgstr ""
+
+#: gladestr.h:85
+msgid "Paper Source Options:"
+msgstr ""
+
+#: gladestr.h:86
+msgid "Paper Source:"
+msgstr ""
+
+#: gladestr.h:87
+msgid "Paper Type"
+msgstr ""
+
+#: gladestr.h:88
+msgid "Paper Type:"
+msgstr ""
+
+#: gladestr.h:89
+msgid "Password:"
+msgstr ""
+
+#: gladestr.h:90
+msgid "Portrait"
+msgstr ""
+
+#: gladestr.h:91
+msgid "Print Style:"
+msgstr ""
+
+#: gladestr.h:92
+msgid "Print on Interleaf Sheets"
+msgstr ""
+
+#: gladestr.h:93
+msgid "Print on:"
+msgstr ""
+
+#: gladestr.h:94
+msgid "Professional Puncher-C1"
+msgstr ""
+
+#: gladestr.h:95
+msgid "Profile Settings"
+msgstr ""
+
+#: gladestr.h:96
+msgid "Profile Settings..."
+msgstr ""
+
+#: gladestr.h:97
+msgid "Puncher Unit"
+msgstr ""
+
+#: gladestr.h:98
+msgid "Quality"
+msgstr ""
+
+#: gladestr.h:99
+msgid "RGB"
+msgstr ""
+
+#: gladestr.h:100
+msgid "Resolution:"
+msgstr ""
+
+#: gladestr.h:101
+msgid "Restore Defaults"
+msgstr ""
+
+#: gladestr.h:102
+msgid "Reverse Landscape"
+msgstr ""
+
+#: gladestr.h:103
+msgid "Reverse Portrait"
+msgstr ""
+
+#: gladestr.h:104
+msgid "Rotate"
+msgstr ""
+
+#: gladestr.h:105 keystr.h:1239
+msgid "Saddle Finisher-G1"
+msgstr ""
+
+#: gladestr.h:106
+msgid "Saddle Stitch Setting:"
+msgstr ""
+
+#: gladestr.h:107 keystr.h:1 keystr.h:3 keystr.h:5 keystr.h:7 keystr.h:9
+#: keystr.h:11 keystr.h:20 keystr.h:31 keystr.h:40 keystr.h:51 keystr.h:55
+#: keystr.h:63 keystr.h:75 keystr.h:89 keystr.h:103 keystr.h:117 keystr.h:130
+#: keystr.h:146 keystr.h:154 keystr.h:163 keystr.h:171 keystr.h:179
+#: keystr.h:187 keystr.h:195 keystr.h:197 keystr.h:199 keystr.h:259
+#: keystr.h:263 keystr.h:267 keystr.h:269 keystr.h:279 keystr.h:283
+#: keystr.h:758 keystr.h:1003 keystr.h:1059 keystr.h:1115 keystr.h:1169
+msgid "Secure Watermark Function of Device"
+msgstr ""
+
+#: gladestr.h:108
+msgid "Secured Print Settings"
+msgstr ""
+
+#: gladestr.h:109
+msgid "Select by"
+msgstr ""
+
+#: gladestr.h:110
+msgid "Set Back Cover"
+msgstr ""
+
+#: gladestr.h:111
+msgid "Set Front Cover"
+msgstr ""
+
+#: gladestr.h:112
+msgid "Settings..."
+msgstr ""
+
+#: gladestr.h:113
+msgid "Sharpness:"
+msgstr ""
+
+#: gladestr.h:114
+msgid "Shift the Position to Start Printing"
+msgstr ""
+
+#: gladestr.h:115
+msgid "Short Edge:"
+msgstr ""
+
+#: gladestr.h:116
+msgid "Small-size Curl Adjustment:"
+msgstr ""
+
+#: gladestr.h:117
+msgid "Source Profile:"
+msgstr ""
+
+#: gladestr.h:118
+msgid "Special Print Adjustment A:"
+msgstr ""
+
+#: gladestr.h:119
+msgid "Special Print Adjustment B:"
+msgstr ""
+
+#: gladestr.h:120 keystr.h:741 keystr.h:742 keystr.h:743 keystr.h:747
+#: keystr.h:753 keystr.h:755 keystr.h:837 keystr.h:838 keystr.h:839
+#: keystr.h:840 keystr.h:841 keystr.h:842 keystr.h:843 keystr.h:844
+#: keystr.h:882 keystr.h:883 keystr.h:884
+msgid "Special Print Mode:"
+msgstr ""
+
+#: gladestr.h:121
+msgid "Special Print Mode: "
+msgstr ""
+
+#: gladestr.h:122
+msgid "Special Smoothing Mode:"
+msgstr ""
+
+#: gladestr.h:123 keystr.h:1491
+msgid "Staple"
+msgstr ""
+
+#: gladestr.h:124
+msgid "Staple Position:"
+msgstr ""
+
+#: gladestr.h:125
+msgid "Start:"
+msgstr ""
+
+#: gladestr.h:126
+msgid "Starting Number:"
+msgstr ""
+
+#: gladestr.h:127
+msgid "Store Destination"
+msgstr ""
+
+#: gladestr.h:128
+msgid "Toner Density:"
+msgstr ""
+
+#: gladestr.h:129 keystr.h:73 keystr.h:74 keystr.h:144 keystr.h:602
+#: keystr.h:605 keystr.h:777 keystr.h:815 keystr.h:825 keystr.h:828
+#: keystr.h:831 keystr.h:834 keystr.h:857 keystr.h:860 keystr.h:862
+#: keystr.h:865 keystr.h:868 keystr.h:871 keystr.h:874 keystr.h:876
+#: keystr.h:879 keystr.h:895 keystr.h:902 keystr.h:910 keystr.h:918
+#: keystr.h:925 keystr.h:933 keystr.h:941 keystr.h:948 keystr.h:956
+#: keystr.h:964 keystr.h:971 keystr.h:979 keystr.h:987 keystr.h:989
+#: keystr.h:990 keystr.h:991 keystr.h:995 keystr.h:998 keystr.h:1001
+#: keystr.h:1002
+msgid "Toner Save:"
+msgstr ""
+
+#: gladestr.h:130
+msgid "Transparency Printing:"
+msgstr ""
+
+#: gladestr.h:131
+msgid "Trim Width:"
+msgstr ""
+
+#: gladestr.h:132
+msgid "Trimmer"
+msgstr ""
+
+#: gladestr.h:133
+msgid "Use Creep (Displacement) Correction"
+msgstr ""
+
+#: gladestr.h:134
+msgid "Use Document Insertion Unit"
+msgstr ""
+
+#: gladestr.h:135
+msgid "Use File Name"
+msgstr ""
+
+#: gladestr.h:136 keystr.h:2 keystr.h:4 keystr.h:6 keystr.h:8 keystr.h:10
+#: keystr.h:19 keystr.h:30 keystr.h:39 keystr.h:50 keystr.h:54 keystr.h:62
+#: keystr.h:70 keystr.h:87 keystr.h:101 keystr.h:115 keystr.h:129 keystr.h:142
+#: keystr.h:153 keystr.h:161 keystr.h:170 keystr.h:178 keystr.h:186
+#: keystr.h:194 keystr.h:196 keystr.h:198 keystr.h:200 keystr.h:262
+#: keystr.h:266 keystr.h:268 keystr.h:270 keystr.h:282 keystr.h:286
+#: keystr.h:759 keystr.h:1058 keystr.h:1114 keystr.h:1168 keystr.h:1222
+msgid "Use Secure Watermark Function of Device"
+msgstr ""
+
+#: gladestr.h:137
+msgid "User Inboxes:"
+msgstr ""
+
+#: gladestr.h:138
+msgid "User Name:"
+msgstr ""
+
+#: gladestr.h:139
+msgid "mm (-10.3 to 10.2)"
+msgstr ""
+
+#: gladestr.h:140
+msgid "mm (-50 to 50)"
+msgstr ""
+
+#: gladestr.h:141
+msgid "mm (0 to 30)"
+msgstr ""
+
+#: gladestr.h:142
+msgid "mm (0.00 to 10.00)"
+msgstr ""
+
+#: keystr.h:12 keystr.h:14 keystr.h:17 keystr.h:22 keystr.h:25 keystr.h:28
+#: keystr.h:32 keystr.h:34 keystr.h:37 keystr.h:42 keystr.h:45 keystr.h:48
+#: keystr.h:52 keystr.h:56 keystr.h:58 keystr.h:60 keystr.h:64 keystr.h:66
+#: keystr.h:68 keystr.h:260 keystr.h:264 keystr.h:271 keystr.h:273
+#: keystr.h:275 keystr.h:277 keystr.h:280 keystr.h:284 keystr.h:705
+#: keystr.h:707
+msgid "Drawer 1 "
+msgstr ""
+
+#: keystr.h:13 keystr.h:15 keystr.h:18 keystr.h:23 keystr.h:26 keystr.h:29
+#: keystr.h:33 keystr.h:35 keystr.h:38 keystr.h:43 keystr.h:46 keystr.h:49
+#: keystr.h:53 keystr.h:57 keystr.h:59 keystr.h:61 keystr.h:65 keystr.h:67
+#: keystr.h:69 keystr.h:261 keystr.h:265 keystr.h:272 keystr.h:274
+#: keystr.h:276 keystr.h:278 keystr.h:281 keystr.h:285 keystr.h:706
+#: keystr.h:708
+msgid "Drawer 2 "
+msgstr ""
+
+#: keystr.h:16 keystr.h:27 keystr.h:36 keystr.h:47
+msgid "Insertion Unit "
+msgstr ""
+
+#: keystr.h:21 keystr.h:24 keystr.h:41 keystr.h:44 keystr.h:1375 keystr.h:1432
+msgid "Letterhead"
+msgstr ""
+
+#: keystr.h:71 keystr.h:72 keystr.h:162 keystr.h:608 keystr.h:609 keystr.h:613
+#: keystr.h:615 keystr.h:616 keystr.h:617 keystr.h:618 keystr.h:619
+#: keystr.h:620 keystr.h:621 keystr.h:623 keystr.h:626 keystr.h:629
+#: keystr.h:893
+msgid "3-Hole Punch"
+msgstr ""
+
+#: keystr.h:76 keystr.h:84 keystr.h:90 keystr.h:98 keystr.h:104 keystr.h:112
+#: keystr.h:118 keystr.h:126 keystr.h:131 keystr.h:139 keystr.h:202
+#: keystr.h:211 keystr.h:216 keystr.h:225 keystr.h:231 keystr.h:240
+#: keystr.h:245 keystr.h:254 keystr.h:288 keystr.h:309 keystr.h:333
+#: keystr.h:354 keystr.h:379 keystr.h:400 keystr.h:430 keystr.h:451
+#: keystr.h:482 keystr.h:503 keystr.h:533 keystr.h:554 keystr.h:632
+#: keystr.h:637 keystr.h:642 keystr.h:647 keystr.h:653 keystr.h:658
+#: keystr.h:663 keystr.h:668 keystr.h:826 keystr.h:829 keystr.h:896
+#: keystr.h:903 keystr.h:911 keystr.h:919 keystr.h:926 keystr.h:934
+#: keystr.h:942 keystr.h:949 keystr.h:957 keystr.h:965 keystr.h:972
+#: keystr.h:980 keystr.h:992 keystr.h:996 keystr.h:999
+msgid "Plain Paper 1"
+msgstr ""
+
+#: keystr.h:77 keystr.h:85 keystr.h:91 keystr.h:99 keystr.h:105 keystr.h:113
+#: keystr.h:119 keystr.h:127 keystr.h:132 keystr.h:140 keystr.h:203
+#: keystr.h:212 keystr.h:217 keystr.h:226 keystr.h:232 keystr.h:241
+#: keystr.h:246 keystr.h:255 keystr.h:289 keystr.h:310 keystr.h:334
+#: keystr.h:355 keystr.h:380 keystr.h:401 keystr.h:431 keystr.h:452
+#: keystr.h:483 keystr.h:504 keystr.h:534 keystr.h:555 keystr.h:633
+#: keystr.h:638 keystr.h:643 keystr.h:648 keystr.h:654 keystr.h:659
+#: keystr.h:664 keystr.h:669 keystr.h:827 keystr.h:830 keystr.h:897
+#: keystr.h:904 keystr.h:912 keystr.h:920 keystr.h:927 keystr.h:935
+#: keystr.h:943 keystr.h:950 keystr.h:958 keystr.h:966 keystr.h:973
+#: keystr.h:981 keystr.h:993 keystr.h:997 keystr.h:1000
+msgid "Plain Paper 2"
+msgstr ""
+
+#: keystr.h:78 keystr.h:92 keystr.h:106 keystr.h:120 keystr.h:133 keystr.h:204
+#: keystr.h:218 keystr.h:233 keystr.h:247 keystr.h:293 keystr.h:338
+#: keystr.h:384 keystr.h:435 keystr.h:487 keystr.h:538 keystr.h:635
+#: keystr.h:645 keystr.h:656 keystr.h:666 keystr.h:674 keystr.h:682
+#: keystr.h:690 keystr.h:698 keystr.h:710 keystr.h:718 keystr.h:726
+#: keystr.h:734
+msgid "Tracing"
+msgstr ""
+
+#: keystr.h:79 keystr.h:86 keystr.h:93 keystr.h:100 keystr.h:107 keystr.h:114
+#: keystr.h:121 keystr.h:128 keystr.h:134 keystr.h:141 keystr.h:205
+#: keystr.h:213 keystr.h:219 keystr.h:227 keystr.h:234 keystr.h:242
+#: keystr.h:248 keystr.h:256 keystr.h:294 keystr.h:314 keystr.h:339
+#: keystr.h:359 keystr.h:385 keystr.h:405 keystr.h:436 keystr.h:456
+#: keystr.h:488 keystr.h:508 keystr.h:539 keystr.h:559 keystr.h:636
+#: keystr.h:639 keystr.h:646 keystr.h:649 keystr.h:657 keystr.h:660
+#: keystr.h:667 keystr.h:670 keystr.h:675 keystr.h:677 keystr.h:683
+#: keystr.h:685 keystr.h:691 keystr.h:693 keystr.h:699 keystr.h:701
+#: keystr.h:711 keystr.h:713 keystr.h:719 keystr.h:721 keystr.h:727
+#: keystr.h:729 keystr.h:735 keystr.h:737 keystr.h:1012 keystr.h:1040
+#: keystr.h:1068 keystr.h:1096
+msgid "Thin"
+msgstr ""
+
+#: keystr.h:80 keystr.h:94 keystr.h:108 keystr.h:122 keystr.h:135 keystr.h:206
+#: keystr.h:220 keystr.h:235 keystr.h:249 keystr.h:295 keystr.h:315
+#: keystr.h:340 keystr.h:360 keystr.h:386 keystr.h:406 keystr.h:437
+#: keystr.h:457 keystr.h:489 keystr.h:509 keystr.h:540 keystr.h:560
+#: keystr.h:1015 keystr.h:1041 keystr.h:1071 keystr.h:1097 keystr.h:1125
+#: keystr.h:1151 keystr.h:1179 keystr.h:1205
+msgid "1-sided Coated 1"
+msgstr ""
+
+#: keystr.h:81 keystr.h:95 keystr.h:109 keystr.h:123 keystr.h:136 keystr.h:207
+#: keystr.h:221 keystr.h:236 keystr.h:250 keystr.h:296 keystr.h:316
+#: keystr.h:341 keystr.h:361 keystr.h:387 keystr.h:407 keystr.h:438
+#: keystr.h:458 keystr.h:490 keystr.h:510 keystr.h:541 keystr.h:561
+#: keystr.h:1016 keystr.h:1042 keystr.h:1072 keystr.h:1098 keystr.h:1126
+#: keystr.h:1152 keystr.h:1180 keystr.h:1206
+msgid "1-sided Coated 2"
+msgstr ""
+
+#: keystr.h:82 keystr.h:96 keystr.h:110 keystr.h:124 keystr.h:137 keystr.h:208
+#: keystr.h:222 keystr.h:237 keystr.h:251 keystr.h:299 keystr.h:319
+#: keystr.h:344 keystr.h:364 keystr.h:390 keystr.h:410 keystr.h:441
+#: keystr.h:461 keystr.h:493 keystr.h:513 keystr.h:544 keystr.h:564
+#: keystr.h:1020 keystr.h:1046 keystr.h:1076 keystr.h:1102 keystr.h:1130
+#: keystr.h:1156 keystr.h:1184 keystr.h:1210
+msgid "2-sided Coated 1"
+msgstr ""
+
+#: keystr.h:83 keystr.h:97 keystr.h:111 keystr.h:125 keystr.h:138 keystr.h:209
+#: keystr.h:223 keystr.h:238 keystr.h:252 keystr.h:300 keystr.h:320
+#: keystr.h:345 keystr.h:365 keystr.h:391 keystr.h:411 keystr.h:442
+#: keystr.h:462 keystr.h:494 keystr.h:514 keystr.h:545 keystr.h:565
+#: keystr.h:1021 keystr.h:1047 keystr.h:1077 keystr.h:1103 keystr.h:1131
+#: keystr.h:1157 keystr.h:1185 keystr.h:1211
+msgid "2-sided Coated 2"
+msgstr ""
+
+#: keystr.h:88 keystr.h:102 keystr.h:116 keystr.h:143 keystr.h:229
+#: keystr.h:258 keystr.h:377 keystr.h:480 keystr.h:583 keystr.h:586
+#: keystr.h:589 keystr.h:591 keystr.h:604 keystr.h:607 keystr.h:611
+#: keystr.h:612 keystr.h:614 keystr.h:622 keystr.h:624 keystr.h:625
+#: keystr.h:627 keystr.h:628 keystr.h:630 keystr.h:651 keystr.h:672
+#: keystr.h:769 keystr.h:772 keystr.h:775 keystr.h:778 keystr.h:801
+#: keystr.h:813 keystr.h:816 keystr.h:833 keystr.h:836 keystr.h:859
+#: keystr.h:864 keystr.h:867 keystr.h:870 keystr.h:873 keystr.h:878
+#: keystr.h:881 keystr.h:886 keystr.h:888 keystr.h:890 keystr.h:892
+#: keystr.h:909 keystr.h:917 keystr.h:932 keystr.h:940 keystr.h:955
+#: keystr.h:963 keystr.h:978 keystr.h:986
+msgid "Envelope No.10 (COM10)"
+msgstr ""
+
+#: keystr.h:145 keystr.h:988 keystr.h:994
+msgid "Envelope NAGAGATA 3/YOUGATANAGA 3"
+msgstr ""
+
+#: keystr.h:147 keystr.h:150 keystr.h:155 keystr.h:158 keystr.h:164
+#: keystr.h:167 keystr.h:172 keystr.h:175 keystr.h:180 keystr.h:183
+#: keystr.h:188 keystr.h:191
+msgid "Plain Paper [Thin]"
+msgstr ""
+
+#: keystr.h:148 keystr.h:151 keystr.h:156 keystr.h:159 keystr.h:165
+#: keystr.h:168 keystr.h:173 keystr.h:176 keystr.h:181 keystr.h:184
+#: keystr.h:189 keystr.h:192
+msgid "Plain Paper [Standard]"
+msgstr ""
+
+#: keystr.h:149 keystr.h:152 keystr.h:157 keystr.h:160 keystr.h:166
+#: keystr.h:169 keystr.h:174 keystr.h:177 keystr.h:182 keystr.h:185
+#: keystr.h:190 keystr.h:193
+msgid "Plain Paper [Heavy]"
+msgstr ""
+
+#: keystr.h:201 keystr.h:215 keystr.h:230 keystr.h:244 keystr.h:287
+#: keystr.h:332 keystr.h:378 keystr.h:429 keystr.h:481 keystr.h:532
+#: keystr.h:631 keystr.h:641 keystr.h:652 keystr.h:662 keystr.h:673
+#: keystr.h:681 keystr.h:689 keystr.h:697 keystr.h:709 keystr.h:717
+#: keystr.h:725 keystr.h:733
+msgid "Secure Printing Function of Device"
+msgstr ""
+
+#: keystr.h:210 keystr.h:224 keystr.h:239 keystr.h:253 keystr.h:307
+#: keystr.h:327 keystr.h:329 keystr.h:352 keystr.h:372 keystr.h:374
+#: keystr.h:398 keystr.h:419 keystr.h:424 keystr.h:449 keystr.h:470
+#: keystr.h:475 keystr.h:501 keystr.h:522 keystr.h:527 keystr.h:552
+#: keystr.h:573 keystr.h:578 keystr.h:676 keystr.h:678 keystr.h:679
+#: keystr.h:684 keystr.h:686 keystr.h:687 keystr.h:692 keystr.h:694
+#: keystr.h:695 keystr.h:700 keystr.h:702 keystr.h:703 keystr.h:712
+#: keystr.h:714 keystr.h:715 keystr.h:720 keystr.h:722 keystr.h:723
+#: keystr.h:728 keystr.h:730 keystr.h:731 keystr.h:736 keystr.h:738
+#: keystr.h:739
+msgid "Drawer 5 "
+msgstr ""
+
+#: keystr.h:214 keystr.h:228 keystr.h:243 keystr.h:257 keystr.h:331
+#: keystr.h:376 keystr.h:428 keystr.h:479 keystr.h:531 keystr.h:582
+#: keystr.h:640 keystr.h:650 keystr.h:661 keystr.h:671 keystr.h:680
+#: keystr.h:688 keystr.h:696 keystr.h:704 keystr.h:716 keystr.h:724
+#: keystr.h:732 keystr.h:740
+msgid "Use Secure Printing Function of Device"
+msgstr ""
+
+#: keystr.h:290 keystr.h:311 keystr.h:335 keystr.h:356 keystr.h:381
+#: keystr.h:402 keystr.h:432 keystr.h:453 keystr.h:484 keystr.h:505
+#: keystr.h:535 keystr.h:556 keystr.h:1004 keystr.h:1032 keystr.h:1060
+#: keystr.h:1088 keystr.h:1116 keystr.h:1142 keystr.h:1170 keystr.h:1196
+msgid "Recycled Paper 1"
+msgstr ""
+
+#: keystr.h:291 keystr.h:312 keystr.h:336 keystr.h:357 keystr.h:382
+#: keystr.h:403 keystr.h:433 keystr.h:454 keystr.h:485 keystr.h:506
+#: keystr.h:536 keystr.h:557 keystr.h:1005 keystr.h:1033 keystr.h:1061
+#: keystr.h:1089 keystr.h:1117 keystr.h:1143 keystr.h:1171 keystr.h:1197
+msgid "Recycled Paper 2"
+msgstr ""
+
+#: keystr.h:292 keystr.h:313 keystr.h:337 keystr.h:358 keystr.h:383
+#: keystr.h:404 keystr.h:434 keystr.h:455 keystr.h:486 keystr.h:507
+#: keystr.h:537 keystr.h:558 keystr.h:634 keystr.h:644 keystr.h:655
+#: keystr.h:665 keystr.h:1010 keystr.h:1038 keystr.h:1066 keystr.h:1094
+#: keystr.h:1122 keystr.h:1148 keystr.h:1176 keystr.h:1202
+msgid "Heavy Paper 4"
+msgstr ""
+
+#: keystr.h:297 keystr.h:317 keystr.h:342 keystr.h:362 keystr.h:388
+#: keystr.h:408 keystr.h:439 keystr.h:459 keystr.h:491 keystr.h:511
+#: keystr.h:542 keystr.h:562 keystr.h:1017 keystr.h:1043 keystr.h:1073
+#: keystr.h:1099 keystr.h:1127 keystr.h:1153 keystr.h:1181 keystr.h:1207
+msgid "1-sided Coated 3"
+msgstr ""
+
+#: keystr.h:298 keystr.h:318 keystr.h:343 keystr.h:363 keystr.h:389
+#: keystr.h:409 keystr.h:440 keystr.h:460 keystr.h:492 keystr.h:512
+#: keystr.h:543 keystr.h:563 keystr.h:1018 keystr.h:1044 keystr.h:1074
+#: keystr.h:1100 keystr.h:1128 keystr.h:1154 keystr.h:1182 keystr.h:1208
+msgid "1-sided Coated 4"
+msgstr ""
+
+#: keystr.h:301 keystr.h:321 keystr.h:346 keystr.h:366 keystr.h:392
+#: keystr.h:412 keystr.h:443 keystr.h:463 keystr.h:495 keystr.h:515
+#: keystr.h:546 keystr.h:566 keystr.h:1022 keystr.h:1048 keystr.h:1078
+#: keystr.h:1104 keystr.h:1132 keystr.h:1158 keystr.h:1186 keystr.h:1212
+msgid "2-sided Coated 3"
+msgstr ""
+
+#: keystr.h:302 keystr.h:322 keystr.h:347 keystr.h:367 keystr.h:393
+#: keystr.h:413 keystr.h:444 keystr.h:464 keystr.h:496 keystr.h:516
+#: keystr.h:547 keystr.h:567 keystr.h:1023 keystr.h:1049 keystr.h:1079
+#: keystr.h:1105 keystr.h:1133 keystr.h:1159 keystr.h:1187 keystr.h:1213
+msgid "2-sided Coated 4"
+msgstr ""
+
+#: keystr.h:303 keystr.h:323 keystr.h:348 keystr.h:368 keystr.h:394
+#: keystr.h:414 keystr.h:445 keystr.h:465 keystr.h:497 keystr.h:517
+#: keystr.h:548 keystr.h:568 keystr.h:1025 keystr.h:1051 keystr.h:1081
+#: keystr.h:1107 keystr.h:1135 keystr.h:1161 keystr.h:1189 keystr.h:1215
+msgid "Texture Paper 1"
+msgstr ""
+
+#: keystr.h:304 keystr.h:324 keystr.h:349 keystr.h:369 keystr.h:395
+#: keystr.h:415 keystr.h:446 keystr.h:466 keystr.h:498 keystr.h:518
+#: keystr.h:549 keystr.h:569 keystr.h:1026 keystr.h:1052 keystr.h:1082
+#: keystr.h:1108 keystr.h:1136 keystr.h:1162 keystr.h:1190 keystr.h:1216
+msgid "Texture Paper 2"
+msgstr ""
+
+#: keystr.h:305 keystr.h:325 keystr.h:350 keystr.h:370 keystr.h:396
+#: keystr.h:416 keystr.h:447 keystr.h:467 keystr.h:499 keystr.h:519
+#: keystr.h:550 keystr.h:570 keystr.h:1027 keystr.h:1053 keystr.h:1083
+#: keystr.h:1109 keystr.h:1137 keystr.h:1163 keystr.h:1191 keystr.h:1217
+msgid "Texture Paper 3"
+msgstr ""
+
+#: keystr.h:306 keystr.h:326 keystr.h:351 keystr.h:371 keystr.h:397
+#: keystr.h:417 keystr.h:448 keystr.h:468 keystr.h:500 keystr.h:520
+#: keystr.h:551 keystr.h:571 keystr.h:1028 keystr.h:1054 keystr.h:1084
+#: keystr.h:1110 keystr.h:1138 keystr.h:1164 keystr.h:1192 keystr.h:1218
+msgid "Texture Paper 4"
+msgstr ""
+
+#: keystr.h:308 keystr.h:328 keystr.h:330 keystr.h:353 keystr.h:373
+#: keystr.h:375 keystr.h:399 keystr.h:420 keystr.h:425 keystr.h:450
+#: keystr.h:471 keystr.h:476 keystr.h:502 keystr.h:523 keystr.h:528
+#: keystr.h:553 keystr.h:574 keystr.h:579
+msgid "Drawer 5  "
+msgstr ""
+
+#: keystr.h:418 keystr.h:423 keystr.h:469 keystr.h:474 keystr.h:521
+#: keystr.h:526 keystr.h:572 keystr.h:577 keystr.h:1415
+msgid "Drawer 5"
+msgstr ""
+
+#: keystr.h:421 keystr.h:426 keystr.h:472 keystr.h:477 keystr.h:524
+#: keystr.h:529 keystr.h:575 keystr.h:580 keystr.h:1416
+msgid "Drawer 6"
+msgstr ""
+
+#: keystr.h:422 keystr.h:427 keystr.h:473 keystr.h:478 keystr.h:525
+#: keystr.h:530 keystr.h:576 keystr.h:581 keystr.h:1417
+msgid "Drawer 7"
+msgstr ""
+
+#: keystr.h:584 keystr.h:587 keystr.h:590 keystr.h:593 keystr.h:595
+#: keystr.h:597 keystr.h:599 keystr.h:601 keystr.h:603 keystr.h:606
+#: keystr.h:610 keystr.h:832 keystr.h:835 keystr.h:846 keystr.h:848
+#: keystr.h:850 keystr.h:852 keystr.h:854 keystr.h:856 keystr.h:858
+#: keystr.h:861 keystr.h:863 keystr.h:866 keystr.h:869 keystr.h:872
+#: keystr.h:875 keystr.h:877 keystr.h:880 keystr.h:885 keystr.h:887
+#: keystr.h:889 keystr.h:891 keystr.h:894
+msgid "Special Print Adjustment:"
+msgstr ""
+
+#: keystr.h:585 keystr.h:588
+msgid "Envelope Catalog Glove No.8"
+msgstr ""
+
+#: keystr.h:592 keystr.h:594 keystr.h:596 keystr.h:598 keystr.h:600
+#: keystr.h:845 keystr.h:847 keystr.h:849 keystr.h:851 keystr.h:853
+#: keystr.h:855 keystr.h:1385 keystr.h:1441
+msgid "Heavy Paper H"
+msgstr ""
+
+#: keystr.h:744 keystr.h:745 keystr.h:748 keystr.h:760 keystr.h:765
+#: keystr.h:766 keystr.h:770 keystr.h:773 keystr.h:779 keystr.h:790
+#: keystr.h:802
+msgid "Toner Save: "
+msgstr ""
+
+#: keystr.h:749 keystr.h:750 keystr.h:1380 keystr.h:1437
+msgid "Heavy Paper 1"
+msgstr ""
+
+#: keystr.h:767 keystr.h:768 keystr.h:771 keystr.h:774
+msgid "Special Print Mode (Plain Paper):"
+msgstr ""
+
+#: keystr.h:780 keystr.h:785 keystr.h:791 keystr.h:796 keystr.h:803
+#: keystr.h:808
+msgid "Plain Paper L2"
+msgstr ""
+
+#: keystr.h:781 keystr.h:786 keystr.h:792 keystr.h:797 keystr.h:804
+#: keystr.h:809 keystr.h:819 keystr.h:822
+msgid "Coated Paper 1"
+msgstr ""
+
+#: keystr.h:782 keystr.h:787 keystr.h:793 keystr.h:798 keystr.h:805
+#: keystr.h:810 keystr.h:820 keystr.h:823
+msgid "Coated Paper 2"
+msgstr ""
+
+#: keystr.h:783 keystr.h:788 keystr.h:794 keystr.h:799 keystr.h:806
+#: keystr.h:811 keystr.h:821 keystr.h:824
+msgid "Coated Paper 3"
+msgstr ""
+
+#: keystr.h:784 keystr.h:789 keystr.h:795 keystr.h:800 keystr.h:807
+#: keystr.h:812
+msgid "Coated Paper 4"
+msgstr ""
+
+#: keystr.h:898 keystr.h:905 keystr.h:913 keystr.h:921 keystr.h:928
+#: keystr.h:936 keystr.h:944 keystr.h:951 keystr.h:959 keystr.h:967
+#: keystr.h:974 keystr.h:982
+msgid "Glossy 1"
+msgstr ""
+
+#: keystr.h:899 keystr.h:906 keystr.h:914 keystr.h:922 keystr.h:929
+#: keystr.h:937 keystr.h:945 keystr.h:952 keystr.h:960 keystr.h:968
+#: keystr.h:975 keystr.h:983
+msgid "Glossy 2"
+msgstr ""
+
+#: keystr.h:900 keystr.h:907 keystr.h:915 keystr.h:923 keystr.h:930
+#: keystr.h:938 keystr.h:946 keystr.h:953 keystr.h:961 keystr.h:969
+#: keystr.h:976 keystr.h:984
+msgid "Glossy 3"
+msgstr ""
+
+#: keystr.h:901 keystr.h:908 keystr.h:916 keystr.h:924 keystr.h:931
+#: keystr.h:939 keystr.h:947 keystr.h:954 keystr.h:962 keystr.h:970
+#: keystr.h:977 keystr.h:985
+msgid "Glossy 4"
+msgstr ""
+
+#: keystr.h:1006 keystr.h:1034 keystr.h:1062 keystr.h:1090 keystr.h:1118
+#: keystr.h:1144 keystr.h:1172 keystr.h:1198
+msgid "Recycled Paper 3"
+msgstr ""
+
+#: keystr.h:1007 keystr.h:1035 keystr.h:1063 keystr.h:1091 keystr.h:1119
+#: keystr.h:1145 keystr.h:1173 keystr.h:1199
+msgid "Recycled Paper 4"
+msgstr ""
+
+#: keystr.h:1008 keystr.h:1036 keystr.h:1064 keystr.h:1092 keystr.h:1120
+#: keystr.h:1146 keystr.h:1174 keystr.h:1200
+msgid "Pre-punched Paper 1"
+msgstr ""
+
+#: keystr.h:1009 keystr.h:1037 keystr.h:1065 keystr.h:1093 keystr.h:1121
+#: keystr.h:1147 keystr.h:1175 keystr.h:1201
+msgid "Pre-punched Paper 2"
+msgstr ""
+
+#: keystr.h:1011 keystr.h:1039 keystr.h:1067 keystr.h:1095 keystr.h:1123
+#: keystr.h:1149 keystr.h:1177 keystr.h:1203
+msgid "Heavy Paper 5"
+msgstr ""
+
+#: keystr.h:1013 keystr.h:1069 keystr.h:1399 keystr.h:1443
+msgid "Tab Paper 1"
+msgstr ""
+
+#: keystr.h:1014 keystr.h:1070 keystr.h:1400 keystr.h:1444
+msgid "Tab Paper 2"
+msgstr ""
+
+#: keystr.h:1019 keystr.h:1045 keystr.h:1075 keystr.h:1101 keystr.h:1129
+#: keystr.h:1155 keystr.h:1183 keystr.h:1209
+msgid "1-sided Coated 5"
+msgstr ""
+
+#: keystr.h:1024 keystr.h:1050 keystr.h:1080 keystr.h:1106 keystr.h:1134
+#: keystr.h:1160 keystr.h:1188 keystr.h:1214
+msgid "2-sided Coated 5"
+msgstr ""
+
+#: keystr.h:1029 keystr.h:1055 keystr.h:1085 keystr.h:1111 keystr.h:1139
+#: keystr.h:1165 keystr.h:1193 keystr.h:1219
+msgid "Texture Paper 5"
+msgstr ""
+
+#: keystr.h:1030 keystr.h:1056 keystr.h:1086 keystr.h:1112 keystr.h:1140
+#: keystr.h:1166 keystr.h:1194 keystr.h:1220
+msgid "Texture Paper 6"
+msgstr ""
+
+#: keystr.h:1031 keystr.h:1057 keystr.h:1087 keystr.h:1113 keystr.h:1141
+#: keystr.h:1167 keystr.h:1195 keystr.h:1221
+msgid "Vellum 2"
+msgstr ""
+
+#: keystr.h:1124 keystr.h:1150 keystr.h:1178 keystr.h:1204
+msgid "Thin Paper"
+msgstr ""
+
+#: keystr.h:1223 keystr.h:1228 keystr.h:1534 keystr.h:1547 keystr.h:1716
+msgid "None "
+msgstr ""
+
+#: keystr.h:1224
+msgid "Paper Deck Unit-A1"
+msgstr ""
+
+#: keystr.h:1225
+msgid "Paper Deck Unit-B1"
+msgstr ""
+
+#: keystr.h:1226
+msgid "POD Deck Lite-A1"
+msgstr ""
+
+#: keystr.h:1227
+msgid "Multi Drawer Paper Deck-A1"
+msgstr ""
+
+#: keystr.h:1229
+msgid "Finisher-M1"
+msgstr ""
+
+#: keystr.h:1230
+msgid "Finisher-N1"
+msgstr ""
+
+#: keystr.h:1231
+msgid "Finisher-P1"
+msgstr ""
+
+#: keystr.h:1232
+msgid "Finisher-L1"
+msgstr ""
+
+#: keystr.h:1233
+msgid "Finisher-K1"
+msgstr ""
+
+#: keystr.h:1234
+msgid "Finisher-K2"
+msgstr ""
+
+#: keystr.h:1235
+msgid "Saddle Finisher-K3"
+msgstr ""
+
+#: keystr.h:1236
+msgid "Saddle Finisher-K3N"
+msgstr ""
+
+#: keystr.h:1237
+msgid "Saddle Finisher-K4"
+msgstr ""
+
+#: keystr.h:1238
+msgid "Stacker-A1"
+msgstr ""
+
+#: keystr.h:1240
+msgid "Finisher-J1"
+msgstr ""
+
+#: keystr.h:1241
+msgid "Finisher-V1/V1L"
+msgstr ""
+
+#: keystr.h:1242
+msgid "Finisher-V1/V1L + Perfect Binder-A1"
+msgstr ""
+
+#: keystr.h:1243
+msgid "Finisher-V1/V1L + High Capacity Stacker-A1 + Perfect Binder-A1"
+msgstr ""
+
+#: keystr.h:1244
+msgid "Saddle Finisher-V2/V2L"
+msgstr ""
+
+#: keystr.h:1245
+msgid "Saddle Finisher-V2/V2L + Perfect Binder-A1"
+msgstr ""
+
+#: keystr.h:1246
+msgid "Saddle Finisher-V2/V2L + High Capacity Stacker-A1 + Perfect Binder-A1"
+msgstr ""
+
+#: keystr.h:1247
+msgid "High Capacity Stacker-A1"
+msgstr ""
+
+#: keystr.h:1248
+msgid "High Capacity Stacker-A1 + Perfect Binder-A1"
+msgstr ""
+
+#: keystr.h:1249
+msgid "Perfect Binder-A1"
+msgstr ""
+
+#: keystr.h:1250
+msgid "Inner 2way Tray"
+msgstr ""
+
+#: keystr.h:1251
+msgid "Inner 2way Tray + Copy Tray"
+msgstr ""
+
+#: keystr.h:1252
+msgid "Inner 2way Tray-C1"
+msgstr ""
+
+#: keystr.h:1253
+msgid "Finisher-P1 + Copy Tray"
+msgstr ""
+
+#: keystr.h:1254
+msgid "Finisher-S1"
+msgstr ""
+
+#: keystr.h:1255
+msgid "Finisher-S1 + Copy Tray"
+msgstr ""
+
+#: keystr.h:1256
+msgid "Finisher-S1 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1257
+msgid "Finisher-S1 + Copy Tray + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1258
+msgid "Finisher-Q1"
+msgstr ""
+
+#: keystr.h:1259
+msgid "Finisher-Q1/Q3"
+msgstr ""
+
+#: keystr.h:1260
+msgid "Finisher-Q3"
+msgstr ""
+
+#: keystr.h:1261
+msgid "Finisher-Q3 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1262
+msgid "Saddle Finisher-Q2"
+msgstr ""
+
+#: keystr.h:1263
+msgid "Saddle Finisher-Q2/Q4"
+msgstr ""
+
+#: keystr.h:1264
+msgid "Saddle Finisher-Q4"
+msgstr ""
+
+#: keystr.h:1265
+msgid "Stapler Stacker"
+msgstr ""
+
+#: keystr.h:1266
+msgid "7-bin Sorter"
+msgstr ""
+
+#: keystr.h:1267
+msgid "Saddle Finisher-Q4 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1268
+msgid "Finisher-AE1"
+msgstr ""
+
+#: keystr.h:1269
+msgid "Finisher-AE1 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1270
+msgid "Saddle Finisher-AE2"
+msgstr ""
+
+#: keystr.h:1271
+msgid "Saddle Finisher-AE2 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1272
+msgid "Copy Tray"
+msgstr ""
+
+#: keystr.h:1273
+msgid "Multi Tray-3"
+msgstr ""
+
+#: keystr.h:1274
+msgid "Option Tray"
+msgstr ""
+
+#: keystr.h:1275
+msgid "Finisher-E1"
+msgstr ""
+
+#: keystr.h:1276
+msgid "Finisher-C1"
+msgstr ""
+
+#: keystr.h:1277
+msgid "Saddle Finisher-C2"
+msgstr ""
+
+#: keystr.h:1278
+msgid "Finisher-U1"
+msgstr ""
+
+#: keystr.h:1279
+msgid "Finisher Tray"
+msgstr ""
+
+#: keystr.h:1280
+msgid "Finisher-X1"
+msgstr ""
+
+#: keystr.h:1281
+msgid "Finisher-W1"
+msgstr ""
+
+#: keystr.h:1282
+msgid "Saddle Finisher-W2"
+msgstr ""
+
+#: keystr.h:1283
+msgid "Finisher-Z1"
+msgstr ""
+
+#: keystr.h:1284
+msgid "Finisher-Z1 + Copy Tray"
+msgstr ""
+
+#: keystr.h:1285
+msgid "Finisher-Y1"
+msgstr ""
+
+#: keystr.h:1286
+msgid "Saddle Finisher-Y2"
+msgstr ""
+
+#: keystr.h:1287
+msgid "Finisher-AD1"
+msgstr ""
+
+#: keystr.h:1288
+msgid "Saddle Finisher-AD2"
+msgstr ""
+
+#: keystr.h:1289
+msgid "Finisher-AA1"
+msgstr ""
+
+#: keystr.h:1290
+msgid "Saddle Finisher-AA2"
+msgstr ""
+
+#: keystr.h:1291
+msgid "Finisher-U2"
+msgstr ""
+
+#: keystr.h:1292
+msgid "Finisher-U2 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1293
+msgid "Finisher-R1"
+msgstr ""
+
+#: keystr.h:1294
+msgid "Finisher-R1 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1295
+msgid "Saddle Finisher-R2"
+msgstr ""
+
+#: keystr.h:1296
+msgid "Saddle Finisher-R2 + Finisher Tray"
+msgstr ""
+
+#: keystr.h:1297
+msgid "Finisher-AC1"
+msgstr ""
+
+#: keystr.h:1298
+msgid "Saddle Finisher-AC2"
+msgstr ""
+
+#: keystr.h:1299
+msgid "Saddle Finisher-N2"
+msgstr ""
+
+#: keystr.h:1300
+msgid "Finisher-F1"
+msgstr ""
+
+#: keystr.h:1301
+msgid "Saddle Finisher-F2"
+msgstr ""
+
+#: keystr.h:1302
+msgid "Finisher-T1"
+msgstr ""
+
+#: keystr.h:1303
+msgid "Saddle Finisher-T2"
+msgstr ""
+
+#: keystr.h:1304
+msgid "Shift Tray"
+msgstr ""
+
+#: keystr.h:1305
+msgid "Staple Finisher-A1"
+msgstr ""
+
+#: keystr.h:1306
+msgid "Booklet Finisher-A1"
+msgstr ""
+
+#: keystr.h:1307
+msgid "Staple Finisher-B1"
+msgstr ""
+
+#: keystr.h:1308
+msgid "Booklet Finisher-B1"
+msgstr ""
+
+#: keystr.h:1309
+msgid "Inner Finisher-A1"
+msgstr ""
+
+#: keystr.h:1310
+msgid "Inner Finisher-A1 + Copy Tray"
+msgstr ""
+
+#: keystr.h:1311
+msgid "Inner Finisher-A1 + Inner Finisher Additional Tray"
+msgstr ""
+
+#: keystr.h:1312
+msgid "Inner Finisher-A1 + Copy Tray + Inner Finisher Additional Tray"
+msgstr ""
+
+#: keystr.h:1313
+msgid "Staple Finisher-C1"
+msgstr ""
+
+#: keystr.h:1314
+msgid "Booklet Finisher-C1"
+msgstr ""
+
+#: keystr.h:1315
+msgid "Staple Finisher-D1"
+msgstr ""
+
+#: keystr.h:1316
+msgid "Booklet Finisher-D1"
+msgstr ""
+
+#: keystr.h:1317
+msgid "Staple Finisher-E1"
+msgstr ""
+
+#: keystr.h:1318
+msgid "Booklet Finisher-E1"
+msgstr ""
+
+#: keystr.h:1319
+msgid "Inner Finisher-B1"
+msgstr ""
+
+#: keystr.h:1320
+msgid "Inner Finisher-B1 + Inner Finisher Additional Tray"
+msgstr ""
+
+#: keystr.h:1321
+msgid "Staple Finisher-F1"
+msgstr ""
+
+#: keystr.h:1322
+msgid "Booklet Finisher-F1"
+msgstr ""
+
+#: keystr.h:1323
+msgid "Inner Finisher-C1"
+msgstr ""
+
+#: keystr.h:1324
+msgid "Inner Finisher-C1 + Copy Tray"
+msgstr ""
+
+#: keystr.h:1325
+msgid "Inner Finisher-C1 + Inner Finisher Additional Tray"
+msgstr ""
+
+#: keystr.h:1326
+msgid "Inner Finisher-C1 + Copy Tray + Inner Finisher Additional Tray"
+msgstr ""
+
+#: keystr.h:1327
+msgid "Inner Finisher-D1"
+msgstr ""
+
+#: keystr.h:1328
+msgid "Inner Finisher-D1 + Inner Finisher Additional Tray"
+msgstr ""
+
+#: keystr.h:1329
+msgid "Staple Finisher-G1"
+msgstr ""
+
+#: keystr.h:1330
+msgid "Booklet Finisher-G1"
+msgstr ""
+
+#: keystr.h:1331
+msgid "Staple Finisher-H1"
+msgstr ""
+
+#: keystr.h:1332
+msgid "1200 dpi"
+msgstr ""
+
+#: keystr.h:1333
+msgid "600 dpi"
+msgstr ""
+
+#: keystr.h:1334
+msgid "300 dpi"
+msgstr ""
+
+#: keystr.h:1335 keystr.h:1338 keystr.h:1354 keystr.h:1361 keystr.h:1362
+#: keystr.h:1366 keystr.h:1422 keystr.h:1464 keystr.h:1468 keystr.h:1475
+#: keystr.h:1519 keystr.h:1525 keystr.h:1528 keystr.h:1531 keystr.h:1564
+#: keystr.h:1568 keystr.h:1574 keystr.h:1579 keystr.h:1582 keystr.h:1589
+#: keystr.h:1607 keystr.h:1614 keystr.h:1622
+msgid "Printer Default"
+msgstr ""
+
+#: keystr.h:1336 keystr.h:1363 keystr.h:1470 keystr.h:1479 keystr.h:1512
+#: keystr.h:1529 keystr.h:1532
+msgid "On"
+msgstr ""
+
+#: keystr.h:1337 keystr.h:1339 keystr.h:1344 keystr.h:1364 keystr.h:1469
+#: keystr.h:1480 keystr.h:1511 keystr.h:1530 keystr.h:1533 keystr.h:1565
+msgid "Off"
+msgstr ""
+
+#: keystr.h:1340 keystr.h:1345 keystr.h:1466 keystr.h:1471 keystr.h:1583
+msgid "Mode 1"
+msgstr ""
+
+#: keystr.h:1341 keystr.h:1346 keystr.h:1467 keystr.h:1472 keystr.h:1584
+msgid "Mode 2"
+msgstr ""
+
+#: keystr.h:1342 keystr.h:1347 keystr.h:1473 keystr.h:1585
+msgid "Mode 3"
+msgstr ""
+
+#: keystr.h:1343 keystr.h:1474 keystr.h:1586
+msgid "Mode 4"
+msgstr ""
+
+#: keystr.h:1348
+msgid "sRGB v1.20 (Canon)"
+msgstr ""
+
+#: keystr.h:1349
+msgid "sRGB v3.0 (Canon)"
+msgstr ""
+
+#: keystr.h:1350
+msgid "Canon HDTV gamma 1.5 Monitor"
+msgstr ""
+
+#: keystr.h:1351
+msgid "Canon HDTV gamma 1.8 Monitor"
+msgstr ""
+
+#: keystr.h:1352
+msgid "Canon HDTV gamma 2.1 Monitor"
+msgstr ""
+
+#: keystr.h:1353
+msgid "Canon HDTV gamma 2.4 Monitor"
+msgstr ""
+
+#: keystr.h:1355
+msgid "Saturation"
+msgstr ""
+
+#: keystr.h:1356
+msgid "Perceptual (Monitor Color Matched)"
+msgstr ""
+
+#: keystr.h:1357
+msgid "Perceptual (Photographic)"
+msgstr ""
+
+#: keystr.h:1358
+msgid "Colorimetric"
+msgstr ""
+
+#: keystr.h:1359
+msgid "Vivid Photo"
+msgstr ""
+
+#: keystr.h:1360
+msgid "Standard"
+msgstr ""
+
+#: keystr.h:1365 keystr.h:1409 keystr.h:1421 keystr.h:1450
+msgid "Auto"
+msgstr ""
+
+#: keystr.h:1367 keystr.h:1423
+msgid "Plain Paper"
+msgstr ""
+
+#: keystr.h:1368
+msgid "Plain Paper L "
+msgstr ""
+
+#: keystr.h:1369 keystr.h:1424
+msgid "Plain Paper L"
+msgstr ""
+
+#: keystr.h:1370 keystr.h:1425
+msgid "Plain Paper H"
+msgstr ""
+
+#: keystr.h:1371 keystr.h:1426
+msgid "Plain Paper 3"
+msgstr ""
+
+#: keystr.h:1372 keystr.h:1427
+msgid "Recycled Paper"
+msgstr ""
+
+#: keystr.h:1373 keystr.h:1428
+msgid "Color Paper"
+msgstr ""
+
+#: keystr.h:1374 keystr.h:1433
+msgid "Pre-punched Paper"
+msgstr ""
+
+#: keystr.h:1376 keystr.h:1434
+msgid "Letterhead (Plain)"
+msgstr ""
+
+#: keystr.h:1377 keystr.h:1435
+msgid "Letterhead (Heavy)"
+msgstr ""
+
+#: keystr.h:1378 keystr.h:1429
+msgid "Bond Paper"
+msgstr ""
+
+#: keystr.h:1379 keystr.h:1436
+msgid "Heavy Paper"
+msgstr ""
+
+#: keystr.h:1381 keystr.h:1438
+msgid "Heavy Paper 2"
+msgstr ""
+
+#: keystr.h:1382 keystr.h:1439
+msgid "Heavy Paper 3"
+msgstr ""
+
+#: keystr.h:1383 keystr.h:1440
+msgid "Heavy Paper L"
+msgstr ""
+
+#: keystr.h:1384
+msgid "Heavy Paper L "
+msgstr ""
+
+#: keystr.h:1386 keystr.h:1388
+msgid "Transparency"
+msgstr ""
+
+#: keystr.h:1387
+msgid "Heavy Paper "
+msgstr ""
+
+#: keystr.h:1389 keystr.h:1393 keystr.h:1637
+msgid "Postcard"
+msgstr ""
+
+#: keystr.h:1390 keystr.h:1430
+msgid "Labels"
+msgstr ""
+
+#: keystr.h:1391 keystr.h:1394
+msgid "Envelope"
+msgstr ""
+
+#: keystr.h:1392
+msgid "Glossy Film"
+msgstr ""
+
+#: keystr.h:1395
+msgid "Postcard L"
+msgstr ""
+
+#: keystr.h:1396
+msgid "Envelope H"
+msgstr ""
+
+#: keystr.h:1397
+msgid "Heavy/HeavyL"
+msgstr ""
+
+#: keystr.h:1398
+msgid "Tab Paper"
+msgstr ""
+
+#: keystr.h:1401 keystr.h:1431
+msgid "Tracing Paper"
+msgstr ""
+
+#: keystr.h:1402
+msgid "Coated Paper"
+msgstr ""
+
+#: keystr.h:1403 keystr.h:1445
+msgid "Rough Paper"
+msgstr ""
+
+#: keystr.h:1404 keystr.h:1446
+msgid "Rough Paper 1"
+msgstr ""
+
+#: keystr.h:1405 keystr.h:1447
+msgid "Rough Paper 2"
+msgstr ""
+
+#: keystr.h:1406 keystr.h:1448
+msgid "Rough Paper 3"
+msgstr ""
+
+#: keystr.h:1407 keystr.h:1442
+msgid "Glossy Paper"
+msgstr ""
+
+#: keystr.h:1408 keystr.h:1449
+msgid "Washi (Japanese Paper)"
+msgstr ""
+
+#: keystr.h:1410 keystr.h:1538 keystr.h:1551
+msgid "Multi-purpose Tray "
+msgstr ""
+
+#: keystr.h:1411 keystr.h:1539 keystr.h:1552
+msgid "Drawer 1"
+msgstr ""
+
+#: keystr.h:1412 keystr.h:1540 keystr.h:1553
+msgid "Drawer 2"
+msgstr ""
+
+#: keystr.h:1413 keystr.h:1541 keystr.h:1554
+msgid "Drawer 3"
+msgstr ""
+
+#: keystr.h:1414 keystr.h:1542 keystr.h:1555
+msgid "Drawer 4"
+msgstr ""
+
+#: keystr.h:1418 keystr.h:1543 keystr.h:1556
+msgid "Side Paper Deck"
+msgstr ""
+
+#: keystr.h:1419
+msgid "Envelope Feeder"
+msgstr ""
+
+#: keystr.h:1420
+msgid "Envelope Feeder "
+msgstr ""
+
+#: keystr.h:1451
+msgid "Tray A"
+msgstr ""
+
+#: keystr.h:1452
+msgid "Tray B"
+msgstr ""
+
+#: keystr.h:1453
+msgid "Tray C"
+msgstr ""
+
+#: keystr.h:1454
+msgid "Stack Compartment"
+msgstr ""
+
+#: keystr.h:1455
+msgid "Output Tray"
+msgstr ""
+
+#: keystr.h:1456
+msgid "Sub-output Tray"
+msgstr ""
+
+#: keystr.h:1457
+msgid "Bin 1"
+msgstr ""
+
+#: keystr.h:1458
+msgid "Bin 2"
+msgstr ""
+
+#: keystr.h:1459
+msgid "Bin 3"
+msgstr ""
+
+#: keystr.h:1460
+msgid "Bin 4"
+msgstr ""
+
+#: keystr.h:1461
+msgid "Bin 5"
+msgstr ""
+
+#: keystr.h:1462
+msgid "Bin 6"
+msgstr ""
+
+#: keystr.h:1463
+msgid "Bin 7"
+msgstr ""
+
+#: keystr.h:1465 keystr.h:1476 keystr.h:1580 keystr.h:1624 keystr.h:1710
+msgid "Off "
+msgstr ""
+
+#: keystr.h:1477
+msgid "Special Settings 1"
+msgstr ""
+
+#: keystr.h:1478
+msgid "Special Settings 2"
+msgstr ""
+
+#: keystr.h:1481 keystr.h:1664
+msgid "Long Edge (Left)"
+msgstr ""
+
+#: keystr.h:1482 keystr.h:1663
+msgid "Long Edge (Right)"
+msgstr ""
+
+#: keystr.h:1483 keystr.h:1666
+msgid "Short Edge (Top)"
+msgstr ""
+
+#: keystr.h:1484 keystr.h:1665
+msgid "Short Edge (Bottom)"
+msgstr ""
+
+#: keystr.h:1485
+msgid "OFF"
+msgstr ""
+
+#: keystr.h:1486 keystr.h:1674
+msgid "Left Binding"
+msgstr ""
+
+#: keystr.h:1487 keystr.h:1673
+msgid "Right Binding"
+msgstr ""
+
+#: keystr.h:1488
+msgid "Off  "
+msgstr ""
+
+#: keystr.h:1489
+msgid "Collate "
+msgstr ""
+
+#: keystr.h:1490
+msgid "Group"
+msgstr ""
+
+#: keystr.h:1492
+msgid "Staple & Collate"
+msgstr ""
+
+#: keystr.h:1493
+msgid "Staple & Group"
+msgstr ""
+
+#: keystr.h:1494 keystr.h:1677 keystr.h:1686 keystr.h:1695
+msgid "No Stapling"
+msgstr ""
+
+#: keystr.h:1495 keystr.h:1683 keystr.h:1694 keystr.h:1698
+msgid "Upper Left (Single)"
+msgstr ""
+
+#: keystr.h:1496 keystr.h:1681 keystr.h:1693 keystr.h:1700
+msgid "Top (Double)"
+msgstr ""
+
+#: keystr.h:1497 keystr.h:1678 keystr.h:1692 keystr.h:1703
+msgid "Upper Right (Single)"
+msgstr ""
+
+#: keystr.h:1498 keystr.h:1684 keystr.h:1691 keystr.h:1697
+msgid "Left (Double)"
+msgstr ""
+
+#: keystr.h:1499 keystr.h:1679 keystr.h:1690 keystr.h:1702
+msgid "Right (Double)"
+msgstr ""
+
+#: keystr.h:1500 keystr.h:1685 keystr.h:1689 keystr.h:1696
+msgid "Lower Left (Single)"
+msgstr ""
+
+#: keystr.h:1501 keystr.h:1682 keystr.h:1688 keystr.h:1699
+msgid "Bottom (Double)"
+msgstr ""
+
+#: keystr.h:1502 keystr.h:1680 keystr.h:1687 keystr.h:1701
+msgid "Lower Right (Single)"
+msgstr ""
+
+#: keystr.h:1503 keystr.h:1507 keystr.h:1560
+msgid "Face Down + Portrait"
+msgstr ""
+
+#: keystr.h:1504 keystr.h:1510 keystr.h:1563
+msgid "Face Up + Landscape"
+msgstr ""
+
+#: keystr.h:1505
+msgid "Portrait "
+msgstr ""
+
+#: keystr.h:1506
+msgid "Landscape "
+msgstr ""
+
+#: keystr.h:1508 keystr.h:1561
+msgid "Face Down + Landscape"
+msgstr ""
+
+#: keystr.h:1509 keystr.h:1562
+msgid "Face Up + Portrait"
+msgstr ""
+
+#: keystr.h:1513
+msgid "2 Holes"
+msgstr ""
+
+#: keystr.h:1514
+msgid "2/3 Holes"
+msgstr ""
+
+#: keystr.h:1515
+msgid "2 Holes (French)"
+msgstr ""
+
+#: keystr.h:1516
+msgid "4 Holes (French)"
+msgstr ""
+
+#: keystr.h:1517
+msgid "4 Holes (Swedish)"
+msgstr ""
+
+#: keystr.h:1518
+msgid "Multi Holes"
+msgstr ""
+
+#: keystr.h:1520
+msgid "Face Up (Reverse Output Order)"
+msgstr ""
+
+#: keystr.h:1521
+msgid "Face Down (Normal Output Order)"
+msgstr ""
+
+#: keystr.h:1522
+msgid "Auto Detect"
+msgstr ""
+
+#: keystr.h:1523
+msgid "Color"
+msgstr ""
+
+#: keystr.h:1524
+msgid "Black and White"
+msgstr ""
+
+#: keystr.h:1526
+msgid "Transmissive Projector"
+msgstr ""
+
+#: keystr.h:1527
+msgid "Reflective Projector"
+msgstr ""
+
+#: keystr.h:1535 keystr.h:1548
+msgid "Only Front Side"
+msgstr ""
+
+#: keystr.h:1536 keystr.h:1549
+msgid "Only Back Side"
+msgstr ""
+
+#: keystr.h:1537 keystr.h:1550
+msgid "Both Sides"
+msgstr ""
+
+#: keystr.h:1544 keystr.h:1557
+msgid "Insertion Unit"
+msgstr ""
+
+#: keystr.h:1545 keystr.h:1558
+msgid "Inserter 1"
+msgstr ""
+
+#: keystr.h:1546 keystr.h:1559
+msgid "Inserter 2"
+msgstr ""
+
+#: keystr.h:1566
+msgid "Smooth 1"
+msgstr ""
+
+#: keystr.h:1567
+msgid "Smooth 2"
+msgstr ""
+
+#: keystr.h:1569 keystr.h:1575
+msgid "Resolution"
+msgstr ""
+
+#: keystr.h:1570 keystr.h:1576
+msgid "Gradation"
+msgstr ""
+
+#: keystr.h:1571 keystr.h:1577
+msgid "Color Tone"
+msgstr ""
+
+#: keystr.h:1572
+msgid "Pattern 1"
+msgstr ""
+
+#: keystr.h:1573
+msgid "Pattern 2"
+msgstr ""
+
+#: keystr.h:1578
+msgid "None (Solid)"
+msgstr ""
+
+#: keystr.h:1581 keystr.h:1623
+msgid "On "
+msgstr ""
+
+#: keystr.h:1587
+msgid "Mode 5"
+msgstr ""
+
+#: keystr.h:1588
+msgid "Mode 6"
+msgstr ""
+
+#: keystr.h:1590
+msgid "-8 (Light)"
+msgstr ""
+
+#: keystr.h:1591
+msgid "-7 (Light)"
+msgstr ""
+
+#: keystr.h:1592
+msgid "-6 (Light)"
+msgstr ""
+
+#: keystr.h:1593
+msgid "-5 (Light)"
+msgstr ""
+
+#: keystr.h:1594
+msgid "-4 (Light)"
+msgstr ""
+
+#: keystr.h:1595
+msgid "-3 (Light)"
+msgstr ""
+
+#: keystr.h:1596
+msgid "-2 (Light)"
+msgstr ""
+
+#: keystr.h:1597
+msgid "-1 (Light)"
+msgstr ""
+
+#: keystr.h:1598 keystr.h:1618
+msgid "0 (Standard)"
+msgstr ""
+
+#: keystr.h:1599
+msgid "1 (Dark)"
+msgstr ""
+
+#: keystr.h:1600
+msgid "2 (Dark)"
+msgstr ""
+
+#: keystr.h:1601
+msgid "3 (Dark)"
+msgstr ""
+
+#: keystr.h:1602
+msgid "4 (Dark)"
+msgstr ""
+
+#: keystr.h:1603
+msgid "5 (Dark)"
+msgstr ""
+
+#: keystr.h:1604
+msgid "6 (Dark)"
+msgstr ""
+
+#: keystr.h:1605
+msgid "7 (Dark)"
+msgstr ""
+
+#: keystr.h:1606
+msgid "8 (Dark)"
+msgstr ""
+
+#: keystr.h:1608
+msgid "Resolution Priority"
+msgstr ""
+
+#: keystr.h:1609
+msgid "Gradation Priority"
+msgstr ""
+
+#: keystr.h:1610
+msgid "Print"
+msgstr ""
+
+#: keystr.h:1611
+msgid "Secured Print"
+msgstr ""
+
+#: keystr.h:1612
+msgid "Store"
+msgstr ""
+
+#: keystr.h:1613
+msgid "Hold"
+msgstr ""
+
+#: keystr.h:1615
+msgid "-3 (Low)"
+msgstr ""
+
+#: keystr.h:1616
+msgid "-2 (Low)"
+msgstr ""
+
+#: keystr.h:1617
+msgid "-1 (Low)"
+msgstr ""
+
+#: keystr.h:1619
+msgid "1 (High)"
+msgstr ""
+
+#: keystr.h:1620
+msgid "2 (High)"
+msgstr ""
+
+#: keystr.h:1621
+msgid "3 (High)"
+msgstr ""
+
+#: keystr.h:1625
+msgid "Letter"
+msgstr ""
+
+#: keystr.h:1626
+msgid "11x17"
+msgstr ""
+
+#: keystr.h:1627
+msgid "11x17 "
+msgstr ""
+
+#: keystr.h:1628
+msgid "Legal"
+msgstr ""
+
+#: keystr.h:1629
+msgid "Statement"
+msgstr ""
+
+#: keystr.h:1630
+msgid "Executive"
+msgstr ""
+
+#: keystr.h:1631
+msgid "A6"
+msgstr ""
+
+#: keystr.h:1632
+msgid "A5"
+msgstr ""
+
+#: keystr.h:1633
+msgid "B5"
+msgstr ""
+
+#: keystr.h:1634
+msgid "A4"
+msgstr ""
+
+#: keystr.h:1635
+msgid "B4"
+msgstr ""
+
+#: keystr.h:1636
+msgid "A3"
+msgstr ""
+
+#: keystr.h:1638
+msgid "Reply Postcard"
+msgstr ""
+
+#: keystr.h:1639
+msgid "4 on 1 Postcard"
+msgstr ""
+
+#: keystr.h:1640
+msgid "Envelope YOUGATA 2"
+msgstr ""
+
+#: keystr.h:1641
+msgid "Envelope YOUGATA 4"
+msgstr ""
+
+#: keystr.h:1642
+msgid "Envelope YOUGATANAGA 3"
+msgstr ""
+
+#: keystr.h:1643
+msgid "Envelope KAKUGATA 2"
+msgstr ""
+
+#: keystr.h:1644
+msgid "Envelope KAKUGATA 4"
+msgstr ""
+
+#: keystr.h:1645
+msgid "Envelope NAGAGATA 2"
+msgstr ""
+
+#: keystr.h:1646
+msgid "Envelope NAGAGATA 3"
+msgstr ""
+
+#: keystr.h:1647
+msgid "Envelope Monarch"
+msgstr ""
+
+#: keystr.h:1648
+msgid "Envelope COM10"
+msgstr ""
+
+#: keystr.h:1649
+msgid "Envelope DL"
+msgstr ""
+
+#: keystr.h:1650
+msgid "Envelope C5"
+msgstr ""
+
+#: keystr.h:1651
+msgid "Envelope B5"
+msgstr ""
+
+#: keystr.h:1652
+msgid "SRA3"
+msgstr ""
+
+#: keystr.h:1653
+msgid "12x18"
+msgstr ""
+
+#: keystr.h:1654
+msgid "13x19"
+msgstr ""
+
+#: keystr.h:1655
+msgid "Foolscap"
+msgstr ""
+
+#: keystr.h:1656
+msgid "Index Card"
+msgstr ""
+
+#: keystr.h:1657
+msgid "16K"
+msgstr ""
+
+#: keystr.h:1658
+msgid "8K"
+msgstr ""
+
+#: keystr.h:1659 keystr.h:1668
+msgid "Long Edge (Top)"
+msgstr ""
+
+#: keystr.h:1660 keystr.h:1667
+msgid "Long Edge (Bottom)"
+msgstr ""
+
+#: keystr.h:1661 keystr.h:1670
+msgid "Short Edge (Right)"
+msgstr ""
+
+#: keystr.h:1662 keystr.h:1669
+msgid "Short Edge (Left)"
+msgstr ""
+
+#: keystr.h:1671 keystr.h:1676
+msgid "Top Binding"
+msgstr ""
+
+#: keystr.h:1672 keystr.h:1675
+msgid "Bottom Binding"
+msgstr ""
+
+#: keystr.h:1704
+msgid "1 Page per Sheet"
+msgstr ""
+
+#: keystr.h:1705
+msgid "2 Pages per Sheet"
+msgstr ""
+
+#: keystr.h:1706
+msgid "4 Pages per Sheet"
+msgstr ""
+
+#: keystr.h:1707
+msgid "6 Pages per Sheet"
+msgstr ""
+
+#: keystr.h:1708
+msgid "9 Pages per Sheet"
+msgstr ""
+
+#: keystr.h:1709
+msgid "16 Pages per Sheet"
+msgstr ""
+
+#: keystr.h:1711
+msgid "Z-fold"
+msgstr ""
+
+#: keystr.h:1712
+msgid "C-fold"
+msgstr ""
+
+#: keystr.h:1713
+msgid "Half Fold"
+msgstr ""
+
+#: keystr.h:1714
+msgid "Accordion Z-fold"
+msgstr ""
+
+#: keystr.h:1715
+msgid "Double Parallel Fold"
+msgstr ""
+
+#: keystr.h:1717
+msgid "Fold Only"
+msgstr ""
+
+#: keystr.h:1718
+msgid "Fold + Saddle Stitch"
+msgstr ""
+
+#: keystr.h:1719
+msgid "Fold + Saddle Stitch + Trim"
+msgstr ""
+
+#: keystr.h:1720
+msgid "Saddle Stitch"
+msgstr ""
+
+#: keystr.h:1721
+msgid "Saddle Stitch + Trim"
+msgstr ""
+
+#: keystr.h:1722
+msgid "1-sided Printing"
+msgstr ""
+
+#: keystr.h:1723
+msgid "2-sided Printing"
+msgstr ""
+
+#: keystr.h:1724
+msgid "Booklet Printing"
+msgstr ""
+
+#: keystr.h:1725
+#, c-format
+msgid "mm (%d to %d)"
+msgstr ""
+
+#: keystr.h:1726
+#, c-format
+msgid "mm (%.1f to %.1f)"
+msgstr ""
+
+#: keystr.h:1727
+#, c-format
+msgid "mm (%.2f to %.2f)"
+msgstr ""
+
+#: keystr.h:1728
+#, c-format
+msgid "0 to %d"
+msgstr ""
+
+#: keystr.h:1729
+#, c-format
+msgid "in (0.0 to %.1f)"
+msgstr ""
+
+#: keystr.h:1730
+#, c-format
+msgid "mm (0 to %d)"
+msgstr ""
+
+#: keystr.h:1731
+#, c-format
+msgid "(1 to %d)"
+msgstr ""
+
+#: keystr.h:1732
+#, c-format
+msgid "mm (%.1f to %.1f) "
+msgstr ""
+
+#: keystr.h:1733
+msgid "Halftones:"
+msgstr ""

@@ -1,0 +1,2073 @@
+<?xml version="1.0"?>
+<configuration>
+	<special>
+		<!--<special-widget name="MainDlg" type="dialog"/>!-->
+		<special-widget name="PropertiesDlg" type="dialog" parent="MainDlg">
+			<button name="PropOK_button" type="OK"/>
+			<button name="PropRestore_button" type="Restore"/>
+			<button name="PropCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="BookletDlg" type="dialog" parent="PropertiesDlg">
+			<button name="BookletDlgOK_button" type="OK"/>
+			<button name="BookletDlgCancel_button" type="Cancel"/>
+			<ui-conflict id="ID_BOOKLET" value="True">
+				<widget name="BookletDlgOpening_combo" type="combo">
+					<property name="update" id="ID_BOOKLET_DLG"/>
+				</widget>
+			</ui-conflict>
+		</special-widget>
+		<special-widget name="BoxIdDlg" type="dialog" parent="PropertiesDlg">
+			<button name="BoxIDOK_button" type="OK"/>
+			<button name="BoxIDCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="FinDetail_dialog" type="dialog" parent="PropertiesDlg">
+			<button name="FinDetail_OK_button" type="OK"/>
+			<button name="FinDetail_Cancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="AdvancedSettingsDlg" type="dialog" parent="PropertiesDlg">
+			<button name="AdvancedSettingsOK_button" type="OK"/>
+			<button name="AdvancedSettingsCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="IdPassWdDlg" type="dialog" parent="PropertiesDlg">
+			<button name="IdPassWdOK_button" type="OK"/>
+			<button name="IdPassWdCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="GutterSettingDlg" type="dialog" parent="PropertiesDlg">
+			<button name="GutterSettingOK_button" type="OK"/>
+			<button name="GutterSettingCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="HoldQueueDlg" type="dialog" parent="PropertiesDlg">
+			<button name="HoldQueue_OK_Button" type="OK"/>
+			<button name="HoldQueue_Cancel_Button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="ProfileSettingsDlg" type="dialog" parent="PropertiesDlg">
+			<button name="ProfileDlgOK_button" type="OK"/>
+			<button name="ProfileDlgCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="FrontBackCvrSetDlg" type="dialog" parent="PropertiesDlg">
+			<button name="FrontBackCvrSetDlgOK_button" type="OK"/>
+			<button name="FrontBackCvrSetDlgCancel_button" type="Cancel"/>
+		</special-widget>
+		<special-widget name="JobAccountDlg" type="dialog" parent="PropertiesDlg">
+			<button name="JobAccountOK_button" type="OK"/>
+			<button name="JobAccountCancel_button" type="Cancel"/>
+			<ui-conflict widget="AllowPasswd_checkbutton" value="True">
+				<widget name="JobAccountPassWD_label" type="label">
+					<property name="visible" value="True"/>
+				</widget>
+				<widget name="JobAccountPassWD_entry" type="entry">
+					<property name="visible" value="True"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict widget="AllowPasswd_checkbutton" value="False">
+				<widget name="JobAccountPassWD_label" type="label">
+					<property name="visible" value="False"/>
+				</widget>
+				<widget name="JobAccountPassWD_entry" type="entry">
+					<property name="visible" value="False"/>
+				</widget>
+			</ui-conflict>
+		</special-widget>
+		<special-widget name="PropDlg_notebook" type="notebook"></special-widget>
+	</special>
+	<function name="FinDetail">
+		<ID name="ID_CNFINDETAILS" value="1"/>
+		<show-widget name="FinDetail_hbox"/>
+		<widget name="FinDetail_button" type="button">
+			<signal name="clicked" widget="FinDetail_dialog"/>
+		</widget>
+	</function>
+	<function name="BoxID">
+		<ID name="ID_DATANAME"/>
+		<widget name="EnterName_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" id="ID_DATANAME" update="0"/>
+			</signal>
+		</widget>
+		<widget name="UseFileName_radiobutton" type="radiobutton" func="SpecialFunction">
+			<signal name="toggled">
+				<condition value="True" id="ID_DATANAME" update="1"/>
+			</signal>
+		</widget>
+		<widget name="BoxID_spinbutton" type="spinbutton">
+			<property name="digit" value="0"/>
+			<property name="max" id="ID_MAX_BOXIDNUM" def="99"/>
+			<property name="text" id="ID_BOXIDNUM" def="0"/>
+			<signal name="value_changed" id="ID_BOXIDNUM"/>
+		</widget>
+		<widget name="EnterName_entry" type="entry">
+			<property name="text" id="ID_ENTERNAME"/>
+			<property name="numeric" value="False"/>
+			<property name="length" value="24"/>
+			<signal name="changed" id="ID_ENTERNAME"/>
+			<signal name="focus_out_event" id="ID_ENTERNAME"/>
+		</widget>
+		<widget name="BoxID_label" type="label">
+			<property name="digit" value="int"/>
+			<property name="max" id="ID_MAX_BOXIDNUM" def="99"/>
+			<property name="text" res="BoxID"/>
+		</widget>
+		<ui-conflict id="ID_DATANAME" value="1">
+			<widget name="EnterName_entry" type="entry">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StoreDestinationName_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_DATANAME" value="0">
+			<widget name="EnterName_entry" type="entry">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="StoreDestinationName_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="HoldQueue">
+		<ID name="ID_HOLDQUEUE_DATANAME"/>
+		<widget name="HoldQueue_EnterName_RadioButton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" id="ID_HOLDQUEUE_DATANAME" update="0"/>
+			</signal>
+		</widget>
+		<widget name="HoldQueue_UseFileName_RadioButton" type="radiobutton" func="SpecialFunction">
+			<signal name="toggled">
+				<condition value="True" id="ID_HOLDQUEUE_DATANAME" update="1"/>
+			</signal>
+		</widget>
+		<widget name="HoldQueue_EnterName_Entry" type="entry">
+			<property name="text" id="ID_HOLD_NAME"/>
+			<property name="numeric" value="False"/>
+			<property name="length" value="24"/>
+			<signal name="changed" id="ID_HOLD_NAME"/>
+			<signal name="focus_out_event" id="ID_HOLD_NAME"/>
+		</widget>
+		<ui-conflict id="ID_HOLDQUEUE_DATANAME" value="1">
+			<widget name="HoldQueue_EnterName_Entry" type="entry">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="HoldQueue_Name_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_HOLDQUEUE_DATANAME" value="0">
+			<widget name="HoldQueue_EnterName_Entry" type="entry">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="HoldQueue_Name_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="BookletDlgOpening">
+		<ID name="ID_BOOKLET_DLG"/>
+		<widget name="BookletDlgOpening_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="PrintStyle">
+		<ID name="ID_CNPRINTSTYLE"/>
+		<widget name="PrintStyle_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNPRINTSTYLE" value="1-sided Printing">
+			<widget name="table30" type="table">
+				<property name="visible" value="True"/>
+			</widget>
+			<widget name="vbox84" type="vbox">
+				<property name="visible" value="False"/>
+			</widget>
+			<widget name="BookletSetting_button" type="button">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNPRINTSTYLE" value="2-sided Printing">
+			<widget name="table30" type="table">
+				<property name="visible" value="True"/>
+			</widget>
+			<widget name="vbox84" type="vbox">
+				<property name="visible" value="False"/>
+			</widget>
+			<widget name="BookletSetting_button" type="button">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNPRINTSTYLE" value="Booklet Printing">
+			<widget name="table30" type="table">
+				<property name="visible" value="False"/>
+			</widget>
+			<widget name="vbox84" type="vbox">
+				<property name="visible" value="True"/>
+			</widget>
+			<widget name="BookletSetting_button" type="button">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="BookletSetting">
+		<ID name="ID_BOOKLET"/>
+		<show-widget name="BookletSetting_button"/>
+		<widget name="BookletSetting_button" type="button">
+			<signal name="clicked" widget="BookletDlg"/>
+		</widget>
+	</function>
+	<function name="HolePunch">
+		<ID name="ID_CNPUNCH"/>
+		<show-widget name="FinHolePanch_checkbutton"/>
+		<widget name="FinHolePanch_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+		<ui-conflict id="ID_CNPUNCH" value="True">
+			<widget name="FinMultiPunch_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNMULTIPUNCH"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNPUNCH" value="True" type="no">
+			<widget name="FinMultiPunch_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FinMultiPunch_combo_entry" type="entry">
+				<property name ="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Multipunch">
+		<ID name="ID_CNMULTIPUNCH" value="On,Off" type="other"/>
+		<key name="ID_CNPUNCH"/>
+		<show-widget name="FinMultiPunch_combo"/>
+		<widget name="FinMultiPunch_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNPUNCH" value="True">
+			<widget name="FinMultiPunch_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNMULTIPUNCH"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNPUNCH" value="True" type="no">
+			<widget name="FinMultiPunch_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FinMultiPunch_combo_entry" type="entry">
+				<property name ="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Offset">
+		<ID name="ID_CNOUTPUTPARTITION" value="offset" type="include"/>
+		<show-widget name="FinOffset_checkbutton"/>
+		<widget name="FinOffset_checkbutton" type="checkbutton">
+			<signal name="toggled">
+				<condition value="True" update="offset"/>
+				<condition value="False" update="None"/>
+			</signal>
+		</widget>
+		<ui-conflict id="ID_CNOUTPUTPARTITION" value="offset">
+			<widget name="FinOffset_checkbutton" type="checkbutton">
+				<property name ="toggled" value="True"/>
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FinRotate_checkbutton" type="checkbutton">
+				<property name ="toggled" value="False"/>
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="OffsetCopyNum_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="OffsetCopyNum_hbox" type="hbox">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNOUTPUTPARTITION" value="offset" type="no">
+			<widget name="FinOffset_checkbutton" type="checkbutton">
+				<property name ="toggled" value="False"/>
+			</widget>
+			<widget name="OffsetCopyNum_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="OffsetCopyNum_hbox" type="hbox">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Rotate">
+		<ID name="ID_CNOUTPUTPARTITION" value="rotation" type="include"/>
+		<show-widget name="FinRotate_checkbutton"/>
+		<widget name="FinRotate_checkbutton" type="checkbutton">
+			<signal name="toggled">
+				<condition value="True" update="rotation"/>
+				<condition value="False" update="None"/>
+			</signal>
+		</widget>
+		<ui-conflict id="ID_CNOUTPUTPARTITION" value="rotation">
+			<widget name="FinOffset_checkbutton" type="checkbutton">
+				<property name ="toggled" value="False"/>
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FinRotate_checkbutton" type="checkbutton">
+				<property name ="toggled" value="True"/>
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNOUTPUTPARTITION" value="rotation" type="no">
+			<widget name="FinRotate_checkbutton" type="checkbutton">
+				<property name ="toggled" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Fold">
+		<ID name="ID_CNFOLDSETTING"/>
+		<show-widget name="Fold_label"/>
+		<show-widget name="Fold_combo"/>
+		<widget name="Fold_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNFOLDSETTING" value="None">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo_entry" type="entry">
+				<property name ="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Z-fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo_entry" type="entry">
+				<property name ="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="C-fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNCFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Half Fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNHALFFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Accordion Z-fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNACCORDIONZFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Double Parallel Fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNDOUBLEPARALLELFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="FoldDetail">
+		<ID name="ID_CNFOLDDETAIL"/>
+		<show-widget name="FoldDetails_label"/>
+		<show-widget name="FoldDetails_combo"/>
+		<widget name="FoldDetails_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNFOLDSETTING" value="None">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo_entry" type="entry">
+				<property name ="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Z-fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FoldDetails_combo_entry" type="entry">
+				<property name ="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="C-fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNCFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Half Fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNHALFFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Accordion Z-fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNACCORDIONZFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNFOLDSETTING" value="Double Parallel Fold">
+			<widget name="FoldDetails_label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FoldDetails_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNDOUBLEPARALLELFOLDSETTING"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="BindEdge">
+		<ID name="ID_BINDEDGE"/>
+		<show-widget name="BindingLocation_label"/>
+		<show-widget name="BindingLocation_combo"/>
+		<show-widget name="Gutter_button"/>
+		<widget name="BindingLocation_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<widget name="Gutter_button" type="button">
+			<signal name="clicked" widget="GutterSettingDlg"/>
+		</widget>
+	</function>
+	<function name="GutterSpinbutton">
+		<ID name="ID_GUTTER"/>
+		<widget name="GutterSettingDlg_spinbutton" type="spinbutton">
+			<property name="digit" id="ID_USTYPE" value="1"/>
+			<property name="max" id="ID_MAX_GUTTER" def="30"/>
+			<property name="text" id="ID_GUTTER" def="0"/>
+			<signal name="value_changed" id="ID_GUTTER"/>
+		</widget>
+		<widget name="GutterValue_label" type="label">
+			<property name="digit" id="ID_USTYPE"/>
+			<property name="max" id="ID_MAX_GUTTER" def="30"/>
+			<property name="text" value="int" res="GutterValue"/>
+			<property name="text" value="double" res="GutterValue_d"/>
+		</widget>
+	</function>
+	<function name="OffsetCopyNum">
+		<ID name="ID_CNOFFSETNUM"/>
+		<key name="ID_ENABLECNOFFSETNUM" value="True"/>
+		<show-widget name="OffsetCopyNum_label"/>
+		<show-widget name="OffsetCopyNum_hbox"/>
+		<widget name="OffsetCopyNum_spinbutton" type="spinbutton">
+			<property name="digit" value="0"/>
+			<property name="max" id="ID_CNUIOFFSETMAX" def="9999"/>
+			<property name="text" id="ID_CNOFFSETNUM" def="1"/>
+			<signal name="value_changed" id="ID_CNOFFSETNUM"/>
+		</widget>
+		<widget name="OffsetCopyNumRange_label" type="label">
+			<property name="digit" value="int"/>
+			<property name="max" id="ID_CNUIOFFSETMAX" def="9999"/>
+			<property name="text" res="OffsetRange"/>
+		</widget>
+	</function>
+	<function name="SaddleSetting">
+		<ID name="ID_CNSADDLESETTING"/>
+		<show-widget name="SaddleSetting_hbox"/>
+		<widget name="SaddleSetting_combo" type="combo" func="SpecialFunction">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNSADDLESETTING" value="None">
+			<widget name="TrimWidthAdjusting_frame" type="Frame">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSADDLESETTING" value="Fold Only">
+			<widget name="TrimWidthAdjusting_frame" type="Frame">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSADDLESETTING" value="Fold + Saddle Stitch">
+			<widget name="TrimWidthAdjusting_frame" type="Frame">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSADDLESETTING" value="Saddle Stitch">
+			<widget name="TrimWidthAdjusting_frame" type="Frame">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSADDLESETTING" value="Fold + Saddle Stitch + Trim">
+			<widget name="TrimWidthAdjusting_frame" type="Frame">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSADDLESETTING" value="Saddle Stitch + Trim">
+			<widget name="TrimWidthAdjusting_frame" type="Frame">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="TrimWidth">
+		<ID name="ID_CNADJUSTTRIM"/>
+		<key name="ID_CNTRIMMING"/>
+		<show-widget name="TrimWidthAdjusting_frame"/>
+		<show-widget name="TrimWidth_hbox"/>
+		<widget name="TrimDeviceSetting_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="None"/>
+			</signal>
+		</widget>
+		<widget name="TrimManualSetting_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="Manual"/>
+			</signal>
+		</widget>
+		<widget name="TrimWidth_spinbutton" type="spinbutton" func="SpecialFunction">
+			<property name="digit" value="1"/>
+			<property name="min" id="ID_CNUITRIMVALMIN" def="2.0"/>
+			<property name="max" id="ID_CNUITRIMVALMAX" def="10.2"/>
+			<property name="text" id="ID_CNADJUSTTRIMNUM" def="2.0"/>
+			<signal name="value_changed" id="ID_CNADJUSTTRIMNUM"/>
+		</widget>
+		<widget name="TrimRange_label" type="label">
+			<property name="digit" value="double"/>
+			<property name="min" id="ID_CNUITRIMVALMIN" def="2.0"/>
+			<property name="max" id="ID_CNUITRIMVALMAX" def="10.2"/>
+			<property name="text" res="TrimRange"/>
+		</widget>
+		<ui-conflict id="ID_CNADJUSTTRIM" value="None">
+			<widget name="TrimDeviceSetting_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNADJUSTTRIM" value="Manual">
+			<widget name="TrimManualSetting_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="StartPrint">
+		<ID name="ID_CNSHIFTSTARTPRINTPOSITION"/>
+		<show-widget name="AdvancedSettings_hbox"/>
+		<widget name="ShiftPosition_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+		<widget name="AdvancedSettings_button" type="button">
+			<signal name="clicked" widget="AdvancedSettingsDlg"/>
+		</widget>
+		<widget name="FrontLong_spinbutton" type="spinbutton">
+			<property name="digit" id="CNEnableDetailShiftPosition" value="1"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" id="ID_CNSHIFTFRLONGEDGE" def="0"/>
+			<signal name="value_changed" id="ID_CNSHIFTFRLONGEDGE"/>
+		</widget>
+		<widget name="FrontLongEdge_label" type="label">
+			<property name="digit" id="CNEnableDetailShiftPosition"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" value="int" res="ShiftRange"/>
+			<property name="text" value="double" res="ShiftRange_d"/>
+		</widget>
+		<widget name="FrontShort_spinbutton" type="spinbutton">
+			<property name="digit" id="CNEnableDetailShiftPosition" value="1"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" id="ID_CNSHIFTFRSHORTEDGE" def="0"/>
+			<signal name="value_changed" id="ID_CNSHIFTFRSHORTEDGE"/>
+		</widget>
+		<widget name="FrontShortEdge_label" type="label">
+			<property name="digit" id="CNEnableDetailShiftPosition"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" value="int" res="ShiftRange"/>
+			<property name="text" value="double" res="ShiftRange_d"/>
+		</widget>
+		<widget name="BackLong_spinbutton" type="spinbutton">
+			<property name="digit" id="CNEnableDetailShiftPosition" value="1"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" id="ID_CNSHIFTBKLONGEDGE" def="0"/>
+			<signal name="value_changed" id="ID_CNSHIFTBKLONGEDGE"/>
+		</widget>
+		<widget name="BackLongEdge_label" type="label">
+			<property name="digit" id="CNEnableDetailShiftPosition"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" value="int" res="ShiftRange"/>
+			<property name="text" value="double" res="ShiftRange_d"/>
+		</widget>
+		<widget name="BackShort_spinbutton" type="spinbutton">
+			<property name="digit" id="CNEnableDetailShiftPosition" value="1"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" id="ID_CNSHIFTBKSHORTEDGE" def="0"/>
+			<signal name="value_changed" id="ID_CNSHIFTBKSHORTEDGE"/>
+		</widget>
+		<widget name="BackShortEdge_label" type="label">
+			<property name="digit" id="CNEnableDetailShiftPosition"/>
+			<property name="min" id="ID_CNSHIFTPOSITIONMIN" def="-50"/>
+			<property name="max" id="ID_CNSHIFTPOSITIONMAX" def="50"/>
+			<property name="text" value="int" res="ShiftRange"/>
+			<property name="text" value="double" res="ShiftRange_d"/>
+		</widget>
+		<ui-conflict id="ID_CNSHIFTSTARTPRINTPOSITION" value="True">
+			<widget name="table24" type="table">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSHIFTSTARTPRINTPOSITION" value="False">
+			<widget name="table24" type="table">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="CopyNumbering">
+		<ID name="ID_CNCOPYSETNUMBERING"/>
+		<show-widget name="CopyNumbering_table"/>
+		<widget name="CopyNumbering_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+		<widget name="StartNumber_spinbutton" type="spinbutton">
+			<property name="digit" value="0"/>
+			<property name="text" id="ID_STARTNUM" def="1"/>
+			<signal name="value_changed" id="ID_STARTNUM"/>
+		</widget>
+		<ui-conflict id="ID_CNCOPYSETNUMBERING" value="True">
+			<widget name="StartNumberTitle_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="StartNumber_spinbutton" type="spinbutton">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="StartNumberRange_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNCOPYSETNUMBERING" value="False">
+			<widget name="StartNumberTitle_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StartNumber_spinbutton" type="spinbutton">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StartNumberRange_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="EnableTrustPrint">
+		<ID name="ID_CNENABLETRUSTPRINT"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="EnableTrustPrint_checkbutton"/>
+		<widget name="EnableTrustPrint_checkbutton" type="checkbutton">
+			<property name="text" res="CNEnableTrustPrint"/>
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="TrustPrint">
+		<ID name="ID_CNTRUSTPRINT"/>
+		<show-widget name="TrustPrint_checkbutton"/>
+		<widget name="TrustPrint_checkbutton" type="checkbutton">
+			<property name="text" res="CNTrustPrint"/>
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="PlainPaperCurlCorrect">
+		<ID name="ID_CNPLAINPAPERCURLCORRECT"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="SpecialPrintMode_label"/>
+		<show-widget name="SpecialPrintMode_combo"/>
+		<widget name="SpecialPrintMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<widget name="SpecialPrintMode_label" type="label">
+			<property name="text" res="CNPlainPaperCurlCorrect"/>
+		</widget>
+	</function>
+	<function name="SpecialPrintMode">
+		<ID name="ID_CNSPECIALPRINTINGMODE"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="SpecialPrintMode_label"/>
+		<show-widget name="SpecialPrintMode_combo"/>
+		<widget name="SpecialPrintMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<widget name="SpecialPrintMode_label" type="label">
+			<property name="text" res="CNSpecialPrintMode"/>
+		</widget>
+	</function>
+	<function name="SpecialPrintAdjustmentA">
+		<ID name="ID_CNSPECIALPRINTADJUSTMENTA"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="SpecialPrintAdjustmentA_label"/>
+		<show-widget name="SpecialPrintAdjustmentA_combo"/>
+		<widget name="SpecialPrintAdjustmentA_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SpecialPrintAdjustmentB">
+		<ID name="ID_CNSPECIALPRINTADJUSTMENTB"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="SpecialPrintAdjustmentB_label"/>
+		<show-widget name="SpecialPrintAdjustmentB_combo"/>
+		<widget name="SpecialPrintAdjustmentB_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SpecialSmooth">
+		<ID name="ID_CNSPECIALSMOOTH"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="SpecialSmoothMode_label"/>
+		<show-widget name="SpecialSmoothMode_combo"/>
+		<widget name="SpecialSmoothMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="GlossyPlainPaperProc">
+		<ID name="ID_CNGLOSSYPLAINPAPERPROC"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="GlossyPlainPaperProc_label"/>
+		<show-widget name="GlossyPlainPaperProc_combo"/>
+		<widget name="GlossyPlainPaperProc_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="OutputAdjustmentMode">
+		<ID name="ID_CNOUTPUTADJUSTMENT"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="OutputAdjustmentMode_label"/>
+		<show-widget name="OutputAdjustmentMode_combo"/>
+		<widget name="OutputAdjustmentMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SpecialPrintAdjustment">
+		<ID name="ID_CNSPECIALPRINTADJUSTMENT"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="SpecialPrintAdjustment_label"/>
+		<show-widget name="SpecialPrintAdjustment_combo"/>
+		<widget name="SpecialPrintAdjustment_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="OutputBin">
+		<ID name="ID_OUTPUTBIN"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="PaperOutput_label"/>
+		<show-widget name="PaperDisti_combo"/>
+		<widget name="PaperDisti_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="OHPPrintMode">
+		<ID name="ID_CNOHPPRINTMODE"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="OHPPrintMode_label"/>
+		<show-widget name="OHPPrintMode_combo"/>
+		<widget name="OHPPrintMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_MEDIATYPE" value="OHP">
+			<widget name="OHPPrintMode_combo" type="combo">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="OHPPrintMode_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_MEDIATYPE" value="OHP" type="no">
+			<widget name="OHPPrintMode_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="OHPPrintMode_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="OHPPrintMode_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="OutputSide">
+		<ID name="ID_CNOUTPUTFACE"/>
+		<show-widget name="scrolledwindow1"/>
+		<show-widget name="FaceUpDown_label"/>
+		<show-widget name="OutputSide_combo"/>
+		<widget name="OutputSide_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="Collate">
+		<ID name="ID_COLLATE"/>
+		<show-widget name="FinCollate_combo"/>
+		<show-widget name="Finishing_label"/>
+		<widget name="FinCollate_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_COLLATE" value="True">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="False">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="Group">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="Staple">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_STAPLELOCATION"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="StapleCollate">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_STAPLELOCATION"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="StapleGroup">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_STAPLELOCATION"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="StapleLocation">
+		<ID name="ID_STAPLELOCATION"/>
+		<show-widget name="StaplePosition_label"/>
+		<show-widget name="StaplePosition_combo"/>
+		<widget name="StaplePosition_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_COLLATE" value="True">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="False">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="Group">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="StaplePosition_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="Staple">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_STAPLELOCATION"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="StapleCollate">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_STAPLELOCATION"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLLATE" value="StapleGroup">
+			<widget name="StaplePosition_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_STAPLELOCATION"/>
+			</widget>
+			<widget name="StaplePosition_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="PaperType">
+		<ID name="ID_MEDIATYPE"/>
+		<show-widget name="PaperType_hbox"/>
+		<widget name="PaperType_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_MEDIATYPE" value="OHP">
+			<widget name="OHPPrintMode_combo" type="combo">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="OHPPrintMode_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_MEDIATYPE" value="OHP" type="no">
+			<widget name="OHPPrintMode_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="OHPPrintMode_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="OHPPrintMode_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="PaperSource">
+		<ID name="ID_INPUTSLOT"/>
+		<show-widget name="PaperSource_hbox"/>
+		<widget name="PaperSource_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="PaperSize">
+		<ID name="ID_PAGESIZE"/>
+		<show-widget name="PaperSize_combo" type="combo"/>
+		<widget name="PaperSize_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SelectBy">
+		<ID name="ID_SELECTBY" value="0" type="no"/>
+		<show-widget name="SelectBy_frame"/>
+		<widget name="PaperSource_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="1"/>
+			</signal>
+		</widget>
+		<widget name="PaperType_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="2"/>
+			</signal>
+		</widget>
+		<ui-conflict id="ID_SELECTBY" value="1">
+			<widget name="PaperSource_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+			<widget name="PaperSource_hbox" type="hbox">
+				<property name="visible" value="True"/>
+			</widget>
+			<widget name="PaperType_hbox" type="hbox">
+				<property name="visible" value="False"/>
+			</widget>
+			<widget name="PrintInterleaf_checkbutton" type="checkbutton">
+				<property name="toggled" value="False"/>
+			</widget>
+			<widget name="Interleaf_checkbutton" type="checkbutton">
+				<property name="toggled" value="False"/>
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="PaperSource_combo" type="combo">
+				<property name="update" id="ID_INPUTSLOT"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_SELECTBY" value="2">
+			<widget name="PaperType_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+			<widget name="PaperSource_hbox" type="hbox">
+				<property name="visible" value="False"/>
+			</widget>
+			<widget name="PaperType_hbox" type="hbox">
+				<property name="visible" value="True"/>
+			</widget>
+			<widget name="PaperType_combo" type="combo">
+				<property name="update" id="ID_MEDIATYPE"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_SELECTBY" value="0">
+			<widget name="Interleaf_checkbutton" type="checkbutton">
+				<property name="update" id="ID_CNINTERLEAFSHEET"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Interleaf">
+		<ID name="ID_CNINTERLEAFSHEET"/>
+		<show-widget name="Interleaf_checkbutton"/>
+		<widget name="Interleaf_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+		<ui-conflict id="ID_CNINTERLEAFSHEET" value="True">
+			<widget name="InterleafMediaType_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_CNINTERLEAFMEDIATYPE"/>
+			</widget>
+			<widget name="FrontBackCvrSet_button" type="button">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNINTERLEAFSHEET" value="False">
+			<widget name="InterleafMediaType_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="InterleafMediaType_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="FrontBackCvrSet_button" type="button">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="InterleafMediaType">
+		<ID name="ID_CNINTERLEAFMEDIATYPE"/>
+		<show-widget name="InterleafMediaType_combo"/>
+		<widget name="InterleafMediaType_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNINTERLEAFSHEET" value="True">
+			<widget name="InterleafMediaType_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_CNINTERLEAFMEDIATYPE"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNINTERLEAFSHEET" value="False">
+			<widget name="InterleafMediaType_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="InterleafMediaType_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="PrintInterleaf">
+		<ID name="ID_CNINTERLEAFPRINT"/>
+		<show-widget name="PrintInterleaf_checkbutton"/>
+		<widget name="PrintInterleaf_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="Inserter">
+		<ID name="ID_CNINSERTER"/>
+		<show-widget name="Inserter_checkbutton"/>
+		<widget name="Inserter_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="FrontBackSeting">
+		<key name="ID_CNSET_FRONT_COVER" type="or"/>
+		<key name="ID_CNFRONT_PAPER_SRC" type="or"/>
+		<key name="ID_CNFRONT_PRINT_SHEET" type="or"/>
+		<key name="ID_CNSET_BACK_COVER" type="or"/>
+		<key name="ID_CNBACK_PAPER_SRC" type="or"/>
+		<key name="ID_CNBACK_PRINT_SHEET" type="or"/>
+		<show-widget name="FrontBackCoverSettings_hbox"/>
+		<widget name="FrontBackCvrSet_button" type= "button">
+			<signal name="clicked" widget="FrontBackCvrSetDlg"/>
+		</widget>
+	</function>
+	<function name="FrontSetting">
+		<ID name="ID_CNSET_FRONT_COVER"/>
+		<key name="ID_CNFRONT_PAPER_SRC"/>
+		<key name="ID_CNFRONT_PRINT_SHEET"/>
+		<show-widget name="FrontCvr_checkbutton"/>
+		<widget name="FrontCvr_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+		<ui-conflict id="ID_CNSET_FRONT_COVER" value="True">
+			<widget name="FrontCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNFRONT_PAPER_SRC"/>
+			</widget>
+			<widget name="FrontCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNFRONT_PRINT_SHEET"/>
+			</widget>
+			<widget name="FrontCvr_PrintOn_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="FrontCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSET_FRONT_COVER" value="False">
+			<widget name="FrontCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FrontCvrPaperSrc_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="FrontCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FrontCvrPrintSide_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="FrontCvr_PrintOn_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FrontCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="FrontSetting_src">
+		<ID name="ID_CNFRONT_PAPER_SRC"/>
+		<show-widget name="FrontCvrPaperSrc_combo"/>
+		<show-widget name="FrontCvrPaperSrcTitle_Label"/>
+		<widget name="FrontCvrPaperSrc_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNSET_FRONT_COVER" value="True">
+			<widget name="FrontCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNFRONT_PAPER_SRC"/>
+			</widget>
+			<widget name="FrontCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSET_FRONT_COVER" value="False">
+			<widget name="FrontCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FrontCvrPaperSrc_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="FrontCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="FrontSetting_sheet">
+		<ID name="ID_CNFRONT_PRINT_SHEET"/>
+		<show-widget name="FrontCvrPrintSide_combo"/>
+		<show-widget name="FrontCvr_PrintOn_Label"/>
+		<widget name="FrontCvrPrintSide_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNSET_FRONT_COVER" value="True">
+			<widget name="FrontCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNFRONT_PRINT_SHEET"/>
+			</widget>
+			<widget name="FrontCvr_PrintOn_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSET_FRONT_COVER" value="False">
+			<widget name="FrontCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="FrontCvrPrintSide_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="FrontCvr_PrintOn_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="BackSetting">
+		<ID name="ID_CNSET_BACK_COVER"/>
+		<key name="ID_CNBACK_PAPER_SRC"/>
+		<key name="ID_CNBACK_PRINT_SHEET"/>
+		<show-widget name="BackCvr_checkbutton"/>
+		<widget name="BackCvr_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+		<ui-conflict id="ID_CNSET_BACK_COVER" value="True">
+			<widget name="BackCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNBACK_PAPER_SRC"/>
+			</widget>
+			<widget name="BackCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNBACK_PRINT_SHEET"/>
+			</widget>
+			<widget name="BackCvrPrintSideTitle_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+			<widget name="BackCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSET_BACK_COVER" value="False">
+			<widget name="BackCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="BackCvrPaperSrc_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="BackCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="BackCvrPrintSide_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="BackCvrPrintSideTitle_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="BackCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="BackSetting_src">
+		<ID name="ID_CNBACK_PAPER_SRC"/>
+		<show-widget name="BackCvrPaperSrc_combo"/>
+		<show-widget name="BackCvrPaperSrcTitle_Label"/>
+		<widget name="BackCvrPaperSrc_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNSET_BACK_COVER" value="True">
+			<widget name="BackCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNBACK_PAPER_SRC"/>
+			</widget>
+			<widget name="BackCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSET_BACK_COVER" value="False">
+			<widget name="BackCvrPaperSrc_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="BackCvrPaperSrc_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="BackCvrPaperSrcTitle_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="BackSetting_sheet">
+		<ID name="ID_CNBACK_PRINT_SHEET"/>
+		<show-widget name="BackCvrPrintSide_combo"/>
+		<show-widget name="BackCvrPrintSideTitle_Label"/>
+		<widget name="BackCvrPrintSide_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNSET_BACK_COVER" value="True">
+			<widget name="BackCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="True"/>
+				<property name ="update" id="ID_CNBACK_PRINT_SHEET"/>
+			</widget>
+			<widget name="BackCvrPrintSideTitle_Label" type="label">
+				<property name ="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNSET_BACK_COVER" value="False">
+			<widget name="BackCvrPrintSide_combo" type="combo">
+				<property name ="sensitive" value="False"/>
+			</widget>
+			<widget name="BackCvrPrintSide_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="BackCvrPrintSideTitle_Label" type="label">
+				<property name ="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Creep">
+		<ID name="ID_CNCREEP"/>
+		<key name="ID_CNDISPLACEMENTCORRECTION"/>
+		<show-widget name="CreepUse_checkbutton"/>
+		<widget name="CreepUse_checkbutton" type="checkbutton" func="SpecialFunction">
+			<signal name="toggled"/>
+		</widget>
+		<ui-conflict id="ID_CNCREEP" value="True">
+			<widget name="Creep_frame" type="frame">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNCREEP" value="False">
+			<widget name="Creep_frame" type="frame">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="DisplacementCorrection">
+		<ID name="ID_CNDISPLACEMENTCORRECTION"/>
+		<key name="ID_CNCREEP"/>
+		<show-widget name="Creep_frame"/>
+		<show-widget name="hbox82"/>
+		<widget name="CorrectWidth_spinbutton" type="spinbutton" func="SpecialFunction">
+			<property name="digit" value="2"/>
+			<property name="min" id="ID_MIN_GUTTER_SHIFT_NUM" def="0.0"/>
+			<property name="max" id="ID_MAX_GUTTER_SHIFT_NUM" def="10.0"/>
+			<property name="text" id="ID_CNGUTTERSHIFTNUM" def="0.0"/>
+			<signal name="value_changed" id="ID_CNGUTTERSHIFTNUM"/>
+		</widget>
+		<widget name="CorrectRange_label" type="label">
+			<property name="digit" value="double"/>
+			<property name="min" id="ID_MIN_GUTTER_SHIFT_NUM" def="0.0"/>
+			<property name="max" id="ID_MAX_GUTTER_SHIFT_NUM" def="10.0"/>
+			<property name="text" res="CorrectRange"/>
+		</widget>
+		<widget name="DeviceSetting_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="Device"/>
+			</signal>
+		</widget>
+		<widget name="Auto_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="Auto"/>
+			</signal>
+		</widget>
+		<widget name="Manual_radiobutton" type="radiobutton">
+			<signal name="toggled">
+				<condition value="True" update="Manual"/>
+			</signal>
+		</widget>
+		<ui-conflict id="ID_CNDISPLACEMENTCORRECTION" value="Device">
+			<widget name="DeviceSetting_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNDISPLACEMENTCORRECTION" value="Auto">
+			<widget name="Auto_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNDISPLACEMENTCORRECTION" value="Manual">
+			<widget name="Manual_radiobutton" type="radiobutton">
+				<property name="toggled" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="Resolution">
+		<ID name="ID_RESOLUTION"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="Resolution_label"/>
+		<show-widget name="QualityReso_combo"/>
+		<widget name="QualityReso_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="ColorMode">
+		<ID name="ID_CNCOLORMODE"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="ColorMode_label"/>
+		<show-widget name="ColorMode_combo"/>
+		<widget name="ColorMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNCOLORMODE" value="mono">
+			<widget name="ColorHalftones_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="QualityClrHalftone_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="BWHalftones_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="QualityHalftone_combo" type="combo">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="ProfileDlgSourceProfile_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="ProfileDlgSourceProfile_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+			<widget name="ProfileDlgMatchingMethod_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="ProfileDlgMatchingMethod_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNCOLORMODE" value="mono" type="no">
+			<widget name="ColorHalftones_label" type="label">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="QualityClrHalftone_combo" type="combo">
+				<property name="sensitive" value="True"/>
+			</widget>
+			<widget name="BWHalftones_label" type="label">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="QualityHalftone_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="ProfileDlgSourceProfile_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_CNMONITORPROFILE"/>
+			</widget>
+			<widget name="ProfileDlgMatchingMethod_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_CNMATCHINGMETHOD"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="ColorHalftone">
+		<ID name="ID_CNCOLORHALFTONE"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="ColorHalftones_label"/>
+		<show-widget name="QualityClrHalftone_combo"/>
+		<widget name="QualityClrHalftone_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="Halftone">
+		<ID name="ID_CNHALFTONE"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="BWHalftones_label"/>
+		<show-widget name="QualityHalftone_combo"/>
+		<widget name="QualityHalftone_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_COLOR_MODE" value="1">
+			<widget name="BWHalftones_label" type="label">
+				<property name="text" res="BWHalftone"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_COLOR_MODE" value="0">
+			<widget name="BWHalftones_label" type="label">
+				<property name="text" res="Halftone"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="TonerSave">
+		<ID name="ID_CNTONERSAVING"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="TonerSave_label"/>
+		<show-widget name="QualityTonerSave_combo"/>
+		<widget name="QualityTonerSave_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<widget name="TonerSave_label" type="label">
+			<property name="text" res="CNTonerSaving"/>
+		</widget>
+	</function>
+	<function name="DraftMode">
+		<ID name="ID_CNDRAFTMODE"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="QualityDraftMode_label"/>
+		<show-widget name="QualityDraftMode_combo"/>
+		<widget name="QualityDraftMode_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<widget name="QualityDraftMode_label" type="label">
+			<property name="text" res="CNDraftMode"/>
+		</widget>
+	</function>
+	<function name="AdvancedSmooth">
+		<ID name="ID_CNADVANCEDSMOOTHING"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="AdvancedSmooth_combo"/>
+		<show-widget name="AdvancedSmooth_label"/>
+		<widget name="AdvancedSmooth_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="LineControl">
+		<ID name="ID_CNLINECONTROL"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="LineControl_label"/>
+		<show-widget name="LineControl_combo"/>
+		<widget name="LineControl_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="ImageRefinement">
+		<ID name="ID_CNIMAGEREFINEMENT"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="ImageRefinement_label"/>
+		<show-widget name="QualityImgRefine_combo"/>
+		<widget name="QualityImgRefine_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="TonerDensity">
+		<ID name="ID_CNTONERDENSITY"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="TonerDensity_label"/>
+		<show-widget name="TonerDensity_combo"/>
+		<widget name="TonerDensity_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="LineRefinement">
+		<ID name="ID_CNLINEREFINEMENT"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="LineRefinement_label"/>
+		<show-widget name="QualityLineRefine_combo"/>
+		<widget name="QualityLineRefine_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SmallSizeCurl">
+		<ID name="ID_CNSMALLSIZECURL"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="QualitySmallSizeCurl_label"/>
+		<show-widget name="QualitySmallSizeCurl_combo"/>
+		<widget name="QualitySmallSizeCurl_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="Sharpness">
+		<ID name="ID_CNSHARPNESS"/>
+		<show-widget name="scrolledwindow2"/>
+		<show-widget name="Sharpness_label"/>
+		<show-widget name="Sharpness_combo"/>
+		<widget name="Sharpness_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SecuredPrint">
+		<ID name="ID_SECURED_USRNAME"/>
+		<show-widget name="UsrName_ID_label"/>
+		<show-widget name="Passwd_label"/>
+		<show-widget name="ID_entry"/>
+		<show-widget name="PassWd_entry"/>
+		<show-widget name="UsrName_ID_Text_label"/>
+		<show-widget name="PasswdText_label"/>
+		<widget name="ID_entry" type="entry">
+			<property name="text" id="ID_SECURED_USRNAME"/>
+			<property name="length" id="ID_DOC_LENGTH" def="32"/>
+			<property name="numeric" value="False"/>
+			<signal name="changed" id="ID_SECURED_USRNAME"/>
+			<signal name="focus_out_event" id="ID_SECURED_USRNAME"/>
+		</widget>
+		<widget name="PassWd_entry" type="entry" func="SpecialFunction">
+			<property name="text" id="ID_SECURED_PASSWD"/>
+			<property name="length" value="7"/>
+			<property name="numeric" value="True"/>
+			<signal name="changed" id="ID_SECURED_PASSWD"/>
+			<signal name="focus_out_event" id="ID_SECURED_PASSWD"/>
+		</widget>
+		<widget name="DocName_entry" type="entry">
+			<property name="text" id="ID_SECURED_DOCNAME"/>
+			<property name="length" id="ID_DOC_LENGTH" def="32"/>
+			<property name="numeric" value="False"/>
+			<signal name="changed" id="ID_SECURED_DOCNAME"/>
+			<signal name="focus_out_event" id="ID_SECURED_DOCNAME"/>
+		</widget>
+	</function>
+	<function name="OutputMethod">
+		<ID name="ID_CNJOBEXECMODE"/>
+		<show-widget name="OutputMethod_combo"/>
+		<show-widget name="OutputMethod_label"/>
+		<show-widget name="OutputMethod_button"/>
+		<widget name="OutputMethod_combo" type="combo">
+                        <signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<widget name="OutputMethod_button" type="button">
+			<signal name="clicked">
+				<condition value="secured" widget="IdPassWdDlg"/>
+				<condition value="store" widget="BoxIdDlg"/>
+				<condition value="hold" widget="HoldQueueDlg"/>
+			</signal>
+		</widget>
+		<ui-conflict id="ID_CNJOBEXECMODE" value="print">
+			<widget name="OutputMethod_button" type="button">
+				<property name="sensitive" value="False"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNJOBEXECMODE" value="secured">
+			<widget name="OutputMethod_button" type="button">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNJOBEXECMODE" value="store">
+			<widget name="OutputMethod_button" type="button">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNJOBEXECMODE" value="hold">
+			<widget name="OutputMethod_button" type="button">
+				<property name="sensitive" value="True"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="OutputOption">
+		<ID name="ID_CNFINISHER"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="OutputOptions_label"/>
+		<show-widget name="OutputOption_combo"/>
+		<widget name="OutputOption_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="SourceOption">
+		<ID name="ID_CNSRCOPTION"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="SourceOption_label"/>
+		<show-widget name="SourceOption_combo"/>
+		<widget name="SourceOption_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+	</function>
+	<function name="PaperFolding">
+		<ID name="ID_CNFOLDER"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="PaperFolding_checkbutton"/>
+		<widget name="PaperFolding_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="PuncherUnit">
+		<ID name="ID_CNPUNCHER"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="PuncherUnit_checkbutton"/>
+		<widget name="PuncherUnit_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="TrimmerUnit">
+		<ID name="ID_CNTRIMMER"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="TrimmerUnit_checkbutton"/>
+		<widget name="TrimmerUnit_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="ProPuncher">
+		<ID name="ID_CNPROPUNCHER"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="ProPuncher_checkbutton"/>
+		<widget name="ProPuncher_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="DocInsertUnit">
+		<ID name="ID_CNINSERTUNIT"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="DocInsertUnit_checkbutton"/>
+		<widget name="DocInsertUnit_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="Staple">
+		<ID name="ID_CNOPTIONSTAPLE"/>
+		<show-widget name="DeviceSetting_frame"/>
+		<show-widget name="Staple_checkbutton"/>
+		<widget name="Staple_checkbutton" type="checkbutton">
+			<signal name="toggled"/>
+		</widget>
+	</function>
+	<function name="JobAccount">
+		<ID name="ID_JOBACCOUNT"/>
+		<key name="ID_SPECIAL_FUNC" value="1"/>
+		<show-widget name="JobAccouting_checkbutton"/>
+		<show-widget name="JobAccount_button"/>
+		<show-widget name="AllowPasswd_checkbutton"/>
+		<widget name="JobAccouting_checkbutton" type="checkbutton" func="SpecialFunction">
+			<signal name="toggled" id="ID_JOBACCOUNT"/>
+		</widget>
+		<widget name="JobAccount_button" type="button">
+			<signal name="clicked" widget="JobAccountDlg"/>
+		</widget>
+	</function>
+	<function name="DisableJobAccount">
+		<ID name="ID_SHOW_DISABLE_JOBACCOUNT_BW" value="1"/>
+		<show-widget name="DisableJobAccountingBW_checkbutton"/>
+		<widget name="DisableJobAccountingBW_checkbutton" type="checkbutton" func="SpecialFunction">
+			<signal name="toggled" id="ID_DISABLE_JOBACCOUNT_BW"/>
+		</widget>
+		<ui-conflict id="ID_DISABLE_JOBACCOUNT_BW" value="1">
+			<widget name="DisableJobAccountingBW_checkbutton" type="checkbutton">
+				<property name="toggle" value="True"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_DISABLE_JOBACCOUNT_BW" value="0">
+			<widget name="DisableJobAccountingBW_checkbutton" type="checkbutton">
+				<property name="toggle" value="False"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="JobAccountDlg">
+		<ID name="ID_JOBACCOUNT_ID"/>
+		<show-widget name="JobAccountID_label"/>
+		<show-widget name="JobAccountID_entry"/>
+		<widget name="JobAccountID_entry" type="entry">
+			<property name="text" id="ID_JOBACCOUNT_ID"/>
+			<property name="length" value="7"/>
+			<property name="numeric" value="True"/>
+			<signal name="changed" id="ID_JOBACCOUNT_ID"/>
+			<signal name="focus_out_event" id="ID_JOBACCOUNT_ID"/>
+		</widget>
+		<widget name="JobAccountPassWD_entry" type="entry" func="SpecialFunction">
+			<property name="text" id="ID_JOBACCOUNT_PASSWD"/>
+			<property name="length" value="7"/>
+			<property name="numeric" value="True"/>
+			<signal name="changed" id="ID_JOBACCOUNT_PASSWD"/>
+			<signal name="focus_out_event" id="ID_JOBACCOUNT_PASSWD"/>
+		</widget>
+	</function>
+	<function name="Profile setting">
+		<key name="ID_CNMONITORPROFILE" type="or"/>
+		<key name="ID_CNMATCHINGMETHOD" type="or"/>
+		<show-widget name="ProfileSettings_hbox"/>
+		<widget name="ProfileSettings_button" type="button">
+			<signal name="clicked" widget="ProfileSettingsDlg"/>
+		</widget>
+	</function>
+	<function name="monitorprofile">
+		<ID name="ID_CNMONITORPROFILE"/>
+		<show-widget name="ProfileDlgSourceProfile_combo"/>
+		<show-widget name="ProfileDlgSourceProfileTitle_label"/>
+		<show-widget name="ProfileDlgRGB_frame"/>
+		<widget name="ProfileDlgSourceProfile_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNCOLORMODE" value="mono">
+			<widget name="ProfileDlgSourceProfile_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="ProfileDlgSourceProfile_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNCOLORMODE" value="mono" type="no">
+			<widget name="ProfileDlgSourceProfile_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_CNMONITORPROFILE"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<function name="matchingmethod">
+		<ID name="ID_CNMATCHINGMETHOD"/>
+		<show-widget name="ProfileDlgMatchingMethod_combo"/>
+		<show-widget name="ProfileDlgMatchingMethodTitle_label"/>
+		<show-widget name="ProfileDlgRGB_frame"/>
+		<widget name="ProfileDlgMatchingMethod_combo" type="combo">
+			<signal name="changed"/>
+			<signal name="event"/>
+			<signal name="down-up"/>
+		</widget>
+		<ui-conflict id="ID_CNCOLORMODE" value="mono">
+			<widget name="ProfileDlgMatchingMethod_combo" type="combo">
+				<property name="sensitive" value="False"/>
+			</widget>
+			<widget name="ProfileDlgMatchingMethod_combo_entry" type="entry">
+				<property name="text" value="------------"/>
+			</widget>
+		</ui-conflict>
+		<ui-conflict id="ID_CNCOLORMODE" value="mono" type="no">
+			<widget name="ProfileDlgMatchingMethod_combo" type="combo">
+				<property name="sensitive" value="True"/>
+				<property name="update" id="ID_CNMATCHINGMETHOD"/>
+			</widget>
+		</ui-conflict>
+	</function>
+	<common>
+		<function name="Orientation">
+			<ID name="ID_ORIENTATION_REQUESTED"/>
+			<widget name="Landscape_radiobutton" type="radiobutton">
+				<signal name="toggled">
+					<condition value="True" update="4"/>
+				</signal>
+			</widget>
+			<widget name="Portrait_radiobutton" type="radiobutton">
+				<signal name="toggled">
+					<condition value="True" update="3"/>
+				</signal>
+			</widget>
+			<widget name="ReversePortrait_radiobutton" type="radiobutton">
+				<signal name="toggled">
+					<condition value="True" update="6"/>
+				</signal>
+			</widget>
+			<widget name="ReverseLandscape_radiobutton" type="radiobutton">
+				<signal name="toggled">
+					<condition value="True" update="5"/>
+				</signal>
+			</widget>
+			<ui-conflict id="ID_ORIENTATION_REQUESTED" value="4">
+				<widget name="Landscape_radiobutton" type="radiobutton">
+					<property name="toggled" value="True"/>
+				</widget>
+				<widget name="BindingLocation_combo" type="combo">
+					<property name="update" id="ID_BINDEDGE"/>
+				</widget>
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_ORIENTATION_REQUESTED" value="3">
+				<widget name="Portrait_radiobutton" type="radiobutton">
+					<property name="toggled" value="True"/>
+				</widget>
+				<widget name="BindingLocation_combo" type="combo">
+					<property name="update" id="ID_BINDEDGE"/>
+				</widget>
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_ORIENTATION_REQUESTED" value="6">
+				<widget name="ReversePortrait_radiobutton" type="radiobutton">
+					<property name="toggled" value="True"/>
+				</widget>
+				<widget name="BindingLocation_combo" type="combo">
+					<property name="update" id="ID_BINDEDGE"/>
+				</widget>
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_ORIENTATION_REQUESTED" value="5">
+				<widget name="ReverseLandscape_radiobutton" type="radiobutton">
+					<property name="toggled" value="True"/>
+				</widget>
+				<widget name="BindingLocation_combo" type="combo">
+					<property name="update" id="ID_BINDEDGE"/>
+				</widget>
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_COLLATE" value="True">
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="sensitive" value="False"/>
+				</widget>
+				<widget name="StaplePosition_label" type="label">
+					<property name="sensitive" value="False"/>
+				</widget>
+				<widget name="StaplePosition_combo_entry" type="entry">
+					<property name="text" value="------------"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_COLLATE" value="False">
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="sensitive" value="False"/>
+				</widget>
+				<widget name="StaplePosition_label" type="label">
+					<property name="sensitive" value="False"/>
+				</widget>
+				<widget name="StaplePosition_combo_entry" type="entry">
+					<property name="text" value="------------"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_COLLATE" value="Group">
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="sensitive" value="False"/>
+				</widget>
+				<widget name="StaplePosition_label" type="label">
+					<property name="sensitive" value="False"/>
+				</widget>
+				<widget name="StaplePosition_combo_entry" type="entry">
+					<property name="text" value="------------"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_COLLATE" value="Staple">
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="sensitive" value="True"/>
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+				<widget name="StaplePosition_label" type="label">
+					<property name="sensitive" value="True"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_COLLATE" value="StapleCollate">
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="sensitive" value="True"/>
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+				<widget name="StaplePosition_label" type="label">
+					<property name="sensitive" value="True"/>
+				</widget>
+			</ui-conflict>
+			<ui-conflict id="ID_COLLATE" value="StapleGroup">
+				<widget name="StaplePosition_combo" type="combo">
+					<property name="sensitive" value="True"/>
+					<property name="update" id="ID_STAPLELOCATION"/>
+				</widget>
+				<widget name="StaplePosition_label" type="label">
+					<property name="sensitive" value="True"/>
+				</widget>
+			</ui-conflict>
+		</function>
+		<function name="Nup">
+			<ID name="ID_NUMBER_UP"/>
+			<widget name="Nup_combo" type="combo">
+				<signal name="changed"/>
+				<signal name="event"/>
+				<signal name="down-up"/>
+			</widget>
+		</function>
+		<function name="Brightness">
+			<ID name="ID_BRIGHTNESS"/>
+			<widget name="Brightness_spinbutton" type="spinbutton">
+				<property name="digit" value="0"/>
+				<property name="text" id="ID_BRIGHTNESS" def="100"/>
+				<signal name="value_changed"/>
+			</widget>
+		</function>
+		<function name="Gamma">
+			<ID name="ID_GAMMA"/>
+			<widget name="Gamma_spinbutton" type="spinbutton">
+				<property name="digit" value="0"/>
+				<property name="text" id="ID_GAMMA" def="1000"/>
+				<signal name="value_changed"/>
+			</widget>
+		</function>
+		<function name="BannerStart">
+			<ID name="ID_JOB_SHEETS_START"/>
+			<widget name="BannerStart_combo" type="combo">
+				<signal name="changed"/>
+				<signal name="event"/>
+				<signal name="down-up"/>
+			</widget>
+		</function>
+		<function name="BannerEnd">
+			<ID name="ID_JOB_SHEETS_END"/>
+			<widget name="BannerEnd_combo" type="combo">
+				<signal name="changed"/>
+				<signal name="event"/>
+				<signal name="down-up"/>
+			</widget>
+		</function>
+	</common>
+</configuration>

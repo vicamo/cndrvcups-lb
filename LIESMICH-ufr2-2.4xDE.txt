@@ -1,0 +1,722 @@
+=================================================================================
+Canon UFR II Printer Driver for Linux Version 2.40
+
+LESEN SIE SICH DIESES DOKUMENT SORGFÄLTIG DURCH
+=================================================================================
+
+
+---------------------------------------------------------------------------------
+Marken
+
+Adobe, Acrobat, Acrobat Reader, PostScript und PostScript 3 sind Marken von 
+Adobe Systems Incorporated.
+Linux ist eine Marke von Linus Torvalds.
+OpenOffice.org and the OpenOffice.org logo are trademarks or registered 
+trademarks of Oracle and/or its affiliates.
+HP-GL ist eine Marke der Hewlett-Packard Company.
+UNIX ist eine Marke von The Open Group in den Vereinigten Staaten und anderen 
+Ländern.
+Andere Produkt- und Firmennamen sind möglicherweise Marken ihrer jeweiligen 
+Eigentümer.
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+INHALT
+
+Bevor Sie beginnen
+1. Einleitung
+2. Dateistruktur der Bereitstellung von Canon UFR II Printer Driver for Linux
+3. Hardwareanforderungen
+4. Warnungen, Einschränkungen und Beschränkungen
+---------------------------------------------------------------------------------
+
+
+1. Einleitung -------------------------------------------------------------------
+Vielen Dank, dass Sie sich für den Canon UFR II/UFR II LT Printer Driver for 
+Linux entschieden haben. Dieser Druckertreiber stellt Druckfunktionen für 
+Canon-Produkte der Serien LBP/imageRUNNER ADVANCE/Color 
+imageRUNNER/imageRUNNER/imagePRESS/MF in CUPS-Umgebungen (Common Unix Printing 
+System), einem Drucksystem für Linux-Betriebssysteme, bereit.
+
+
+2. Dateistruktur der Bereitstellung von Canon UFR II Printer Driver for Linux ---
+Im Folgenden wird die Dateistruktur der Bereitstellung von Canon UFR II Printer 
+Driver for Linux dargestellt:
+Die Dateinamen für das gemeinsame Modul der CUPS-Treiber und das 
+Druckertreibermodul können je nach Version voneinander abweichen.
+
+- LIESMICH-ufr2-2.4xDE.txt (dieses Dokument)
+Enthält grundlegende Informationen zum Canon UFR II Printer Driver for Linux.
+
+- LICENSE-ufr2drv-2.4xDE.txt
+Enthält die User License Agreement für Canon UFR II Printer Driver for Linux.
+
+- guide-ufr2-2.4xDE.tar.gz
+Onlinebenutzerhandbuch, in dem die Verwendung von Canon UFR II Printer Driver 
+for Linux erläutert wird.
+Dies beinhaltet Systemanforderungen, Installation und Verwendung von Canon UFR 
+II Printer Driver for Linux.
+Da es sich um ein komprimiertes Dateiformat handelt, muss die Datei vor dem 
+Lesen in das entsprechende Verzeichnis entpackt werden.
+
+- cndrvcups-common-2.40-X.i386.rpm (für 32-bit)
+- cndrvcups-common-2.40-X.x86_64.rpm (für 64-bit)
+- cndrvcups-common_2.40-X_i386.deb (für Debian 32-bit)
+Installationspaket für das gemeinsame Modul des CUPS-Treibers, der von Canon 
+UFR II Printer Driver for Linux verwendet wird.
+
+- cndrvcups-ufr2-uk-2.40-X.i386.rpm (für 32-bit)
+- cndrvcups-ufr2-uk-2.40-X.x86_64.rpm (für 64-bit)
+- cndrvcups-ufr2-uk_2.40-X_i386.deb (für Debian 32-bit)
+Installationspaket für Canon UFR II Printer Driver for Linux.
+
+- cndrvcups-common-2.40-X.tar.gz
+Quelldatei für das gemeinsame Modul des CUPS-Treibers, der vom Canon UFR II 
+Printer Driver for Linux verwendet wird.
+
+- cndrvcups-lb-2.40-X.tar.gz
+Quelldatei für den Canon UFR II Printer Driver for Linux.
+
+
+3. Hardwareanforderungen -------------------------------------------------------
+Dieser Druckertreiber kann in den folgenden Hardwareumgebungen verwendet werden.
+
+Hardware: Computer, auf dem Linux ausgeführt werden kann, mit x86-kompatibler 
+          CPU
+          (32-bit oder 64-bit)
+
+Gebräuchliche Betriebssysteme:
+          Fedora 15  32-bit/64-bit
+          Ubuntu 11.04 Desktop 32-bit
+
+Zuvor gebräuchliche Betriebssysteme:
+          Turbolinux 10 Desktop  32-bit
+          Turbolinux 10 F...  32-bit
+          Turbolinux 10 S  32-bit
+          Turbolinux Version 11 FUJI  32-bit
+          Turbolinux Home  32-bit
+          Turbolinux 10 Server x64 Edition  64-bit
+          MIRACLE LINUX V3.0 (Asianux Inside)  32-bit/64-bit
+          MIRACLE LINUX V4.0 (Asianux Inside)  32-bit/64-bit
+          Red Hat 9  32-bit
+          Red Hat Professional Workstation  32-bit
+          Red Hat Enterprise Linux v.4  32-bit/64-bit
+          Red Hat Enterprise Linux v.5  32-bit/64-bit
+          Mandriva Linux One 2008  32-bit
+          Mandriva Linux One 2008 Spring  32-bit
+          Mandriva Linux PowerPack 2008  32-bit/64-bit
+          Mandriva Linux PowerPack 2008 Spring  32-bit/64-bit
+          Mandriva Linux One 2009  32-bit
+          SUSE LINUX PROFESSIONAL 9.3  32-bit
+          Novell Linux Desktop 9  32-bit
+          SUSE Linux 10.0 (openSUSE)  32-bit/64-bit
+          SUSE Linux 10.1 (openSUSE)  32-bit/64-bit
+          SUSE Linux 10.2 (openSUSE)  32-bit/64-bit
+          SUSE Linux 10.3 (openSUSE)  32-bit/64-bit
+          SUSE Linux 11.0 (openSUSE)  32-bit/64-bit
+          SUSE Linux 11.1 (openSUSE)  32-bit/64-bit
+          Fedora Core 4  32-bit/64-bit
+          Fedora Core 5  32-bit/64-bit
+          Fedora Core 6  32-bit/64-bit
+          Fedora 7  32-bit/64-bit
+          Fedora 8  32-bit/64-bit
+          Fedora 9  32-bit/64-bit
+          Fedora 10  32-bit/64-bit
+          Fedora 11  32-bit/64-bit
+          Fedora 12  32-bit/64-bit
+          Fedora 13  32-bit/64-bit
+          Fedora 14  32-bit/64-bit
+          Ubuntu 7.04 Desktop  32-bit
+          Ubuntu 7.10 Desktop  32-bit
+          Ubuntu 8.04 Desktop  32-bit
+          Ubuntu 8.10 Desktop  32-bit
+          Ubuntu 9.04 Desktop  32-bit
+          Ubuntu 9.10 Desktop  32-bit
+          Ubuntu 10.04 Desktop  32-bit
+          Ubuntu 10.10 Desktop  32-bit
+          Debian GNU/Linux 3.1 rev2  32-bit
+          Debian GNU/Linux 4.0  32-bit
+          Debian GNU/Linux 4.0r6 etchnhalf  32-bit
+          Debian GNU/Linux 5.02  32-bit
+          Vine Linux 3.1/3.1CR  32-bit
+          Vine Linux 4.1  32-bit
+          Vine Linux 4.2  32-bit
+          CentOS 5.3  32-bit/64-bit
+
+Unterstützter Drucker: LBP3360
+                   LBP3370
+                   LBP3460
+                   LBP5360
+                   LBP5960
+                   LBP5970
+                   LBP5975
+                   LBP6650dn
+                   LBP6750/3560
+                   LBP7660C
+                   LBP7680C/5280
+                   LBP7750C
+                   imageRUNNER ADVANCE C2020/2030
+                   imageRUNNER ADVANCE C2020/2030i
+                   imageRUNNER ADVANCE C2020/2030L
+                   imageRUNNER ADVANCE C2025
+                   imageRUNNER ADVANCE C5030/C5030i/C5035/C5035i
+                   imageRUNNER ADVANCE C5051/C5051i/C5045/C5045i
+                   imageRUNNER ADVANCE C7055/C7065
+                   imageRUNNER ADVANCE C9060/C9070 PRO
+                   imageRUNNER ADVANCE C9065/C9075 PRO
+                   imageRUNNER ADVANCE 6055/6055i/6065/6065i
+                   imageRUNNER ADVANCE 6075/6075i
+                   imageRUNNER ADVANCE 8085/8095
+                   imageRUNNER ADVANCE 8105
+                   imageRUNNER1730/1740/1750
+                   imageRUNNER2520/2520i
+                   imageRUNNER2525/2525i/2530/2530i
+                   imageRUNNER2535/2535i/2545/2545i
+                   iR105+
+                   iR1018
+                   iR1020
+                   iR1022
+                   iR1024/1024A/1024F/1024i/1024iF
+                   iR1133
+                   iR2016/2016i
+                   iR2018/2018i
+                   iR2020/2020i
+                   iR2022
+                   iR2025
+                   iR2030
+                   iR2230
+                   iR2270
+                   iR2318L
+                   iR2320L/2320N
+                   iR2420D/2420L
+                   iR2422D/2422J/2422L/2422N
+                   iR2830
+                   iR2870
+                   iR3025
+                   iR3030
+                   iR3035
+                   iR3045
+                   iR3225/3225N
+                   iR3230/3230A/3230N
+                   iR3235/3235A/3235N
+                   iR3245/3245A/3245N
+                   iR3530
+                   iR3570
+                   iR4530
+                   iR4570
+                   iR5055
+                   iR5065
+                   iR5075
+                   iR5570
+                   iR6570
+                   iR7086
+                   iR7095/7095P
+                   iR7105
+                   iR8070
+                   iR85+
+                   iR9070
+                   iR C1021/C1021i
+                   iR C1028/C1030
+                   iR C2380i
+                   iR C2550/C2550i
+                   iR C2580i
+                   iR C2880/C2880i
+                   iR C3080/C3080i
+                   iR C3180/C3180i
+                   iR 3180C/3180Ci
+                   iR C3380/C3380i
+                   iR C3580/C3580i
+                   iR C4080
+                   iR C4580
+                   iR C5180
+                   iR C5185
+                   iR C5870
+                   iR C5880/C5880i
+                   iR 5880C/5880Ci
+                   iR C6870
+                   iR C6880/C6880i
+                   iR 6880C/6880Ci
+                   imagePRESS C1
+                   imagePRESS C1+
+                   D400-450
+                   D460-490
+                   D500 Series
+                   D1100 Series
+                   D1300/MF6700
+                   MF3010
+                   MF4010 Series
+                   MF4100 Series
+                   MF4200 Series
+                   MF4320-4350
+                   MF4360-4390
+                   MF4400w
+                   MF4400 Series
+                   MF4500w
+                   MF4500 Series
+                   MF4600 Series
+                   MF5800 Series
+                   MF5900 Series
+                   MF6500 Series
+                   MF6600 Series
+                   MF7100 Series
+                   MF8000C
+                   MF8000 Series
+                   MF8300C
+                   MF8300 Series
+                   MF8400 Series
+                   MF9100 Series
+                   MF9200 Series
+                   MF9300 Series
+                   L160
+                   L3000 Series
+
+Informationen zu den Installationsmethoden und der Verwendung finden Sie im 
+Onlinehandbuch.
+
+
+4. Warnungen, Einschränkungen und Beschränkungen ------------------------------
+
+- Stellen Sie bei der Installation des Pakets "cndrvcups-common" Version 2.40 
+  sicher, dass Sie die entsprechende Version des Pakets "cndrvcups-ufr2"
+  installieren, also 2.40.
+
+- Die Installation von Aktualisierungen ist nicht möglich, wenn eine 
+  Aktualisierung auf Version 1.40 oder höher durchgeführt wird, da die 
+  Dateinamen nicht mit den älteren Versionen übereinstimmen. Wenn sich auf 
+  Ihrem Computer eine ältere Version befindet, muss der ältere Treiber 
+  deinstalliert und der neue Treiber installiert werden.
+
+- Wenn mehr als zwei Treiber mithilfe der Treiberinstallationspakete von 
+  LIPSLX, UFRII (US) und UFRII (DE) installiert wurden und nur einer dieser 
+  Treiber aktualisiert wurde, tritt ein Fehler auf. Dieses Problem kann durch 
+  die gemeinsame Aktualisierung der installierten Treiber gelöst werden.
+
+- Wenn auf der Registerkarte [Allgemein] für ein zu druckendes, mit 
+  StarSuite7/OpenOffice erstelltes Dokument mehrere Seiten/Kopien für 
+  [Seitenlayout] angegeben werden, können die Einstellungen aufgrund der 
+  Funktionsweise des CUPS-Moduls den Seiten und der Ausgabe nicht richtig 
+  zugewiesen werden.
+
+- Auf PostScript-Dateien, die mit einer in OpenOffice.org oder StarSuite 
+  angegebenen Anzahl von Kopien erstellt wurden, wirkt sich statt des im 
+  Dialogfeld [cngplp] (der Treiberbenutzeroberfläche) unter [Kopien] 
+  angegebenen Werts die Anzahl der Kopien aus, die beim Erstellen der 
+  PostScript-Datei festgelegt wurde.
+
+- Wenn Einstellungen der Treiberbenutzeroberfläche während des Druckvorgangs 
+  geändert werden, erfolgt der Druck mit den geänderten Einstellungen.
+
+- Wenn auf der Registerkarte [Allgemein] einer Anwendung wie OpenOffice.org, 
+  GIMP oder Acrobat Reader v.5.0 [Helligkeit und Gamma] angegeben werden, sind 
+  diese Einstellungen ungültig.
+
+- PDF-Dokumente können nicht unmittelbar durch die Angabe vom Desktop oder der 
+  Befehlszeile aus gedruckt werden. Für den Druck von PDF-Dokumenten wird die 
+  Verwendung von Acrobat Reader oder Adobe Reader empfohlen.
+
+- Aufgrund der Spezifikationen von CUPS dürfen sich in der Druckwarteschlange 
+  höchstens 500 Dateien befinden. Weitere Dateien werden ignoriert.
+
+- Bei der Verwendung von SUSE LINUX Professional 9.3 werden auf der 
+  Treiberbenutzeroberfläche möglicherweise unleserliche Zeichen angezeigt. 
+  Dieses Problem kann folgendermaßen behoben werden.
+  1) Melden Sie sich als "root" an.
+  2) Führen Sie den folgenden Befehl aus, um die Umgebungseinstellungen für 
+     GTK+ zu ändern.
+     # cd /etc/
+     # ln -s opt/gnome/gtk ./
+
+- Bei der Verwendung von SUSE LINUX Professional 9.3 wird beim Aktivieren der 
+  Treiberbenutzeroberfläche möglicherweise eine Warnung angezeigt. Dieses 
+  Problem kann folgendermaßen behoben werden.
+  1) Öffnen Sie [K Menu] -> [Control Center].
+  2) Wählen Sie [Appearance & Themes] aus.
+  3) Wählen Sie [Colors] aus.
+  4) Deaktivieren Sie [Apply colors to non-KDE applications].
+  5) Schließen Sie [Control Center].
+
+- Beim Drucken mit OpenOffice.org werden einige Endverarbeitungsfunktionen wie 
+  [Drehen] möglicherweise nicht richtig ausgeführt, wenn auf der 
+  Treiberbenutzeroberfläche für [Kopien] mehrere Kopien angegeben wurden.
+
+- Bei der Verwendung von SUSE Linux 9.3 oder SUSE Linux 10.0 und dem Drucken 
+  mithilfe der Dialogfelds [Print] von Mozilla oder FireFox kann unabhängig von 
+  der getroffenen Einstellung nur eine Kopie gedruckt werden, da die 
+  Einstellung für mehrere Kopien nicht aktiviert ist. Dieses Problem kann 
+  behoben werden, indem Sie in der Datei "/etc/cups/mime.convs" die folgende 
+  Zeile ändern.
+  [Vor dem Ändern]
+   application/mozilla-ps application/postscript 33 pswrite
+  [Nach dem Ändern]
+   application/mozilla-ps application/postscript 33 pstops
+
+- Beim Bannerdruck unter Fedora 8 oder Fedora 9 wird die Druckwarteschlange 
+  angehalten, wenn auf der Registerkarte [Allgemein] unter [Banner] für [Ende] 
+  eine andere Einstellung als [Kein] festgelegt wird.
+
+- Wenn Sie versuchen, mit einem Color iR/LBP-Drucker, der diesen Treiber 
+  verwendet, in einer 64-Bit-Systemumgebung von Fedora 9, Fedora 10, Fedora 11, 
+  Fedora 12, Fedora 13, Fedora 14 oder Fedora 15 zu drucken, sind die 
+  Druckergebnisse möglicherweise nicht zufriedenstellend. 
+  Die Ursache hierfür ist, dass bei der standardmäßigen Installationsmethode 
+  die 64-Bit-Pakete installiert wurden, jedoch nicht die 
+  32-Bit-JPEG-Bibliothek. 
+  Dieses Problem kann durch Installieren des Pakets als Zusatzinstallation 
+  gelöst werden.
+  Führen Sie den folgenden Befehl aus.
+    <Fedora 9/10> # yum install libjpeg.i386
+    <Fedora 11>   # yum install libjpeg.i586
+    <Fedora 12/13>   # yum install libjpeg.i686
+    <Fedora 14/15>   # yum install libjpeg-turbo.i686
+
+- Zum Installieren des allgemeinen Moduls in der 64-Bit-Version von Fedora 10, 
+  Fedora 11, Fedora 12, Fedora 13, Fedora 14 oder Fedora 15 benötigen Sie die 
+  32-Bit-Version der glibc-Bibliothek.
+  Sie können die glibc-Bibliothek durch Ausführen des folgenden Befehls starten:
+    <Fedora 10> # yum install glibc.i386
+    <Fedora 11> # yum install glibc.i586
+    <Fedora 12/13/14/15> # yum install glibc.i686
+
+  Druckertreiber ab Version 1.90 erfordern außerdem die 32-Bit-Version der 
+  xml2-Bibliothek.
+  Sie können die Druckfunktion durch Ausführen des folgenden Befehls aktivieren:
+    <Fedora 10> # yum install libxml2.i386
+    <Fedora 11> # yum install libxml2.i586
+    <Fedora 12/13/14/15> # yum install libxml2.i686
+
+- Wenn Sie mit Fedora 11 arbeiten und nach Abbruch eines Druckauftrags mit 
+  angehaltener Druckwarteschlange drucken, wird der Druckauftrag ausgesetzt. 
+  Klicken Sie in diesem Fall in der CUPSWeb-Benutzeroberfläche unter "Drucker" 
+  auf die Schaltfläche [Maintenance], und wählen Sie [Resume Printer], um den 
+  mit [pending since] gekennzeichneten Auftrag wieder zu aktivieren.
+  Wenn die Schaltfläche [Maintenance] nicht zu finden ist, können Sie [Resume 
+  Printer] wählen, indem Sie [Pause Printer] wählen.
+
+- Bei der Verwendung von OpenSUSE 10.2 oder SLED10SP1 mit Ghostscript Version 
+  8.15.3 können einige Dokumente möglicherweise nicht gedruckt werden. 
+  Installieren Sie eine andere Version von Ghostscript, um das Problem zu lösen.
+
+- Wenn Sie OpenSUSE 11.0 mit Ghostscript Version 8.6.x verwenden, dauert das 
+  Drucken von Evince, GIMP oder anderen Anwendungen möglicherweise etwas länger.
+
+- Okular ist zwar der standardmäßige Dokument-Viewer in der OpenSUSE 11.1 
+  KDE-Umgebung, die Druckertreiberfunktionen können jedoch damit nicht korrekt 
+  ausgeführt werden.
+  Sie können dieses Problem beheben, indem Sie eine andere Anwendung wie z. B. 
+  Acrobat Reader verwenden.
+
+- Wenn Sie mit Ubuntu 7.04/7.10/8.04/8.10/9.04 oder Debian 3.1/4.0/5.0 
+  arbeiten, benötigen Sie zur Installation des allgemeinen Moduls die 
+  libcupsys2-Bibliothek.
+  Sie können die libcupsys2-Bibliothek durch Ausführen des folgenden Befehls 
+  starten:
+    # apt-get install libcupsys2
+
+- Wenn Sie Ubuntu 8.10, Ubuntu 9.04, Ubuntu 9.10, Ubuntu 10.04, Ubuntu 10.10 
+  oder Ubuntu 11.04 verwenden, druckt der Drucker mit der 
+  Standard-Papierausgabemethode, unabhängig davon, ob Sie eine 
+  Papierausgabemethode angegeben haben.
+  Sie können dieses Problem beheben, indem Sie die Papierausgabemethode in den 
+  CUPS-Druckereinstellungen (Web) ändern.
+
+- Wenn Sie Ubuntu 8.10 verwenden, hat die Angabe einer umgekehrten 
+  Druckreihenfolge keine Auswirkung auf das Druckergebnis.
+  Dieses Problem kann durch die Aktualisierung von CUPS gelöst werden.
+
+- Wenn Sie Ubuntu 8.10, Ubuntu 9.04, Ubuntu 9.10, Ubuntu 10.04, Ubuntu 10.10 
+  oder Ubuntu 11.04 verwenden, haben die Einstellungen zur Helligkeit oder 
+  Gammakorrektur beim Drucken von PDF-Daten oder PS-Daten möglicherweise keine 
+  Auswirkung auf das Druckergebnis.
+
+- Bei der Verwendung von Adobe Reader 7.0.x werden Optionen für Seitenformat, 
+  Papierzufuhr, Duplex-Druck usw. automatisch zum Druckerbefehl hinzugefügt, 
+  wenn diese im Druckdialogfenster geändert werden. Diese Einstellungen werden 
+  jedoch ignoriert, da sie nicht als Befehlsoptionen erkannt werden. Trennen 
+  Sie die einzelnen Befehloptionen mit "-o", um dieses Problem zu beheben.
+     [vorher]  -o InputSlot=Manual,Duplex=DuplexNotumble 
+     [nachher] -o InputSlot=Manual -o Duplex=DuplexNoTumble
+
+- Beim Drucken von PDF-Dateien mit Adobe Reader 8 werden unter Umständen einige 
+  Bilddaten nicht gedruckt.
+  Dieses Problem kann durch Drucken mit Adobe Reader 7 bzw. 9 
+  oder Festlegen von Level 3 in den PostScript-Optionen behoben werden.
+
+- Beim doppelseitigen Drucken mit Adobe Reader 8.1.2 wird das Dokument auf 
+  beiden Seiten mit der Bindung an der langen Seite gedruckt, wenn in den 
+  Druckeigenschaften für Adobe Reader 8.1.2 [ON (Short-edged Binding)] für 
+  [Duplex Printing] angegeben wurde.
+  Dieses Problem lässt sich umgehen, indem Sie das Dokument über die 
+  Benutzeroberfläche des Druckertreibers drucken.
+
+- Bei der Verwendung von Vine Linux 3.1 kann es unter Umständen lange dauern, 
+  bis von Adobe Reader 7.0.9 gedruckt wird. Möglicherweise können einige 
+  Dokumente nicht gedruckt werden.
+
+- Beim Drucken von PDF-Dateien mit japanischen Zeichen mithilfe der 
+  Befehlszeile von Vine Linux 4.1 wird Ghostscript möglicherweise unerwartet 
+  beendet und der Druck beendet.
+  Verwenden Sie zum Drucken von PDF-Dateien Adobe Reader, um dieses Problem zu 
+  lösen.
+
+- Beim Drucken von PDF-Dateien Adobe Reader 8 unter Vine Linux 4.1 wird 
+  Ghostscript möglicherweise unerwartet beendet und die Druckwarteschlange 
+  angehalten.
+  Der Grund hierfür ist, dass Ghostscript (7.07) keine mit Adobe Reader 8 
+  erstellten PS-Dateien analysieren kann und daher vorzeitig beendet wird und 
+  den Filtervorgang anhält.
+  Verwenden Sie Adobe Reader 7, um dieses Problem zu lösen.
+
+- Beim Drucken von Textdateien im Querformat mit Vine Linux 4.1, Vine Linux 
+  4.2, Fedora 8, Fedora 9 oder Red Hat Enterprise Linux v.5 wird das Dokument 
+  in manchen Fällen im Hochformat ausgegeben und nicht der vollständige Text 
+  auf die Seite gedruckt.
+  Dies wird durch den von Ihrer Bereitstellung verwendeten CUPS-Filter 
+  verursacht, der einen PS-Befehl erzeugt, der bereits auf Hochformat 
+  eingestellt ist. 
+  Einige der Funktionen im CUPS-Standardfilter "texttops" sind unter Umständen 
+  nicht einwandfrei verfügbar.
+  Dieses Problem kann durch Ändern des CUPS-Filternamens in der Zeile 
+  "text/plain" der CUPS-Einstellungsdatei "mime.convs" in den 
+  CUPS-Standardfilter "texttops" vermieden werden. Dies führt jedoch dazu, dass 
+  japanische Zeichen falsch gedruckt werden. In diesem Fall muss daher ein mit 
+  einem Texteditor oder einem Text-/PostScript-Konvertierungsprogramm wie paps 
+  erstellter PS-Befehl gedruckt werden.
+
+- Wenn Sie im Druckdialogfeld von Anwendungen wie Writer von OpenOffice.org 
+  Einstellungen für die Papierzufuhr vornehmen, werden die Einstellungen der 
+  Anwendungen mit den Einstellungen der Treiberbenutzeroberfläche 
+  überschrieben. Geben Sie die Papierzufuhr vorab mithilfe der 
+  Benutzeroberfläche des Druckertreibers an, um aus der gewünschten 
+  Papierzufuhr zu drucken, oder drucken Sie mithilfe der Befehlszeile.
+
+- Wenn Sie Debian GNU/Linux 4.0 verwenden, kann beim Registrieren des Druckers 
+  (PPD) mit dem Drucker-Spooler ein PPD-Dateifehler auftreten. Zum Beheben 
+  dieses Problems verwenden Sie "-P (vollständiger Pfad zur PPD)" anstatt "-m", 
+  wenn Sie die PPD über die Befehlszeile angeben.
+    Beispiel: /usr/sbin/lpadmin -p iRC5180
+              -P /usr/share/cups/model/CNCUPSIRC5180ZK.ppd
+              -v lpd://192.168.1.10/iRC5180 -E
+
+- Unter Ubuntu 10.10, Ubuntu 11.04, Fedora 14 und Fedora 15 wird beim 
+  Registrieren eines Druckers als Standard-Dokumentenformat eventuell nicht das 
+  zur Sprach-/Regionseinstellung des Betriebssystems passende Format 
+  eingestellt. Dieses Problem können Sie umgehen, indem Sie den Drucker nach 
+  der folgenden Methode registrieren.
+  [Methode 1]
+   Geben Sie als Option für den PPD-Dateinamen im Befehl "lpadmin" den 
+   Parameter "-P" statt "-m" an.
+   Wenn Sie "-P" für die PPD-Datei angeben, geben Sie einen vollständig 
+   qualifizierten Pfad oder relativen Pfad zur betreffenden PPD-Datei an.
+   Beispiel)
+   # /usr/sbin/lpadmin -p [Druckername für Registrierung] -P [PPD Dateipfad] -v 
+   lpd:[Gerät-URI] -E
+  [Methode 2]
+   1) Fügen Sie der Datei "/etc/cups/cupsd.conf" die Option "DefaultPaperSize 
+      Auto" hinzu und starten Sie CUPS neu.
+   2) Registrieren Sie den Drucker.
+
+- Wenn Sie Debian GNU/Linux 4.0 verwenden, kann der Druck über Evince lange 
+  dauern oder unter Umständen nicht möglich sein. Zum Beheben dieses Problems 
+  können Sie das Dokument über eine andere Anwendung drucken.
+
+- Bei Verwendung von Debian GNU/Linux 4.0 r6 und Drucken einer Textdatei über 
+  die Benutzeroberfläche des Druckertreibers schlägt der Druckvorgang fehl, 
+  wenn EUC-JP als Gebietsschema festgelegt ist.
+  Dieses Problem kann durch Drucken eines PS-Befehls, der mit einem Texteditor 
+  oder Text-/PostScript-Konvertierungsprogramm wie paps erstellt wurde, behoben 
+  werden.
+
+- Wenn Sie Debian GNU/Linux 5.0.2 verwenden, benötigen Sie zur Installation des 
+  allgemeinen Moduls das gs-esp-Modul.
+  Sie können das gs-esp-Modul mit folgendem Befehl starten:
+    # apt-get install gs-esp
+
+- Je nach verwendeter Bereitstellung schlägt der Druck möglicherweise fehl und 
+  der Fehler wird "Printer not Connected" wird angezeigt, wenn beim 
+  Registrieren des USB-Druckers mit dem Druck-Spooler /dev/usb/lp* als [Device 
+  URI] angegeben wird. Geben Sie den angezeigten druckerspezifischen Namen 
+  mithilfe des folgenden Befehls als [Device URI] an, um dieses Problem zu 
+  lösen.
+    Beispiel) Bei der Verwendung von MF4600 Series
+    1) Zeigen Sie die [Device URI] an.
+      # /usr/sbin/lpinfo -v
+      direct usb://Canon/MF4600%20Series%20(FAX)
+      direct usb://Canon/MF4600%20Series%20(PCL5e)
+      direct usb://Canon/MF4600%20Series%20(PCL6)
+      direct usb://Canon/MF4600%20Series%20(UFRII%20LT)
+    2) Registrieren Sie den Drucker.
+      #lpadmin -p MF4600_USB -m CNCUPSMF4600ZK.ppd 
+                  -v usb://Canon/MF4600%20Series%20(UFRII%20LT) -E
+
+- Beim Drucken von PDF-Dateien von Adobe Reader unter allen Versionen von 
+  Mandriva wird Ghostscript möglicherweise unerwartet beendet und die 
+  Druckwarteschlange angehalten.
+  Der Grund hierfür ist, dass Ghostscript (8.60) keine mithilfe von PS-Dateien 
+  mit Sicherheitseinstellungen erstellten PS-Befehle analysieren kann und daher 
+  vorzeitig beendet wird und den Filtervorgang anhält.
+  Verwenden Sie, um dieses Problem zu lösen, zum Drucken von PDF-Dateien mit 
+  Sicherheitseinstellungen nicht Adobe Reader.
+
+- Wenn Sie Mandriva One 2008 Spring oder Mandriva 2008 PowerPack mit CUPS 
+  Version 1.3.6 verwenden, können auch beim Drucken mit den standardmäßigen 
+  CUPS-Druckfunktionen möglicherweise unvorhergesehene Druckergebnisse 
+  auftreten.
+  Dieses Problem kann durch die Aktualisierung von CUPS gelöst werden.
+
+- Mit der Ghostscript-Version 8.6.x können einige Dokumente möglicherweise 
+  nicht gedruckt werden.
+
+- Im manchen Fällen kann mit MF4270- oder L90/L160/L230-Druckern, je nach 
+  Umgebung und Typ der Druckdaten, aufgrund eines Druckerdatenfehler seitens 
+  des Geräts nicht gedruckt werden.
+  Der Grund hierfür ist ein Zeitüberschreitungsfehler seitens des Geräts.
+  Legen Sie die Einstellung für den Zeitüberschreitungsfehler des Geräts auf 
+  "Aus" fest, um dieses Problem zu beheben.
+
+- Wenn der Finisher-Q3 oder Sattel-Finisher-Q4 angebracht ist und Sie A4, 
+  Letter oder Legal als Seitenformat angeben, wird das Dokument nicht korrekt 
+  gedruckt, wenn auf der Registerkarte [Endverarbeitung] die Option [Bindung] 
+  auf [Kurze Seite (oben)] und [Heftposition] auf [Oben (Doppelt)] gesetzt ist 
+  oder [Bindung] auf [Kurze Seite (unten)] und [Heftposition] auf [Unten 
+  (Doppelt)] gesetzt ist.
+
+- Wenn Sie eines der Druckermodelle iR C1021/C1021i, MF8400 Series, MF9100 
+  Series oder MF9300 Series verwenden, wird nur IPv4 als Netzwerkverbindung 
+  unterstützt, auch wenn IPv6 über das Bedienfeld des Druckers eingestellt 
+  werden kann.
+
+- Wenn Sie CentOS 5.3 verwenden, können Sie nicht die Anzahl an Exemplaren 
+  drucken, die Sie in Evince festgelegt hatten.
+  Dieses Problem lässt sich lösen, indem Sie aus anderen PDF-Viewern, wie etwa 
+  Adobe Reader drucken, oder auf eine der folgenden Methoden ausweichen.
+  1) Stellen Sie die Anzahl der Exemplare auf 1, und wählen Sie einen PS-Befehl 
+     für das Ausgabeziel in Evince, damit eine Datei ausgegeben wird.
+  2) Drucken Sie die Ausgabe des PS-Befehls als Datei, nachdem Sie in cngplp 
+     die Anzahl der Exemplare festgelegt haben.
+
+- Wenn Sie Ubuntu 9.04 verwenden und die CUPS-Version auf "1.3.9-17ubuntu3.2" 
+  aktualisieren, schlägt der Druckvorgang wegen ungültiger PS-Daten fehl.
+  Dieses Problem lässt sich mit einem Downgrade der CUPS-Version auf 
+  "1.3.9-17ubuntu3.1" vermeiden.
+    - Führen Sie den folgenden Befehl aus:
+        # apt-get install cups=1.3.9-17ubuntu3.1
+
+- Wenn Sie Ubuntu 9.04, Ubuntu 9.10, Ubuntu 10.04, Ubuntu 10.10, Ubuntu 11.04, 
+  Fedora 11, Fedora 12, Fedora 13, Fedora 14 oder Fedora 15 verwenden und 
+  Bannerseiten drucken, wird die angegebene Anzahl von Bannerseiten gedruckt.
+
+- Wenn Sie unter Fedora 15 oder Ubuntu 11.04 mit einer Helligkeitseinstellung 
+  zwischen 0 und 9 % drucken, wird diese Einstellung nicht angewendet. Das 
+  Dokument wird stattdessen so ausgedruckt, als ob die Helligkeit auf 100 % 
+  eingestellt wäre.
+
+- Wenn Sie die 32- oder 64-Bit-Version von Fedora 13, Fedora 14 oder Fedora 15 
+  verwenden und eine TIFF- oder JPEG-Datei über die Benutzeroberfläche des 
+  Treibers oder die Befehlszeile drucken, wird das Bild im Ausdruck 
+  möglicherweise zerteilt. Dieses Problem können Sie beheben, indem Sie die 
+  Datei über eine Anwendung wie GIMP als PostScript-Datei ausgeben und diese 
+  dann über die Befehlszeile ausdrucken, indem Sie nach [cngplp] den 
+  PostScript-Befehl zur Ausgabe der Datei eingeben.
+
+- Wenn Sie ein TIFF- oder JPEG-Bild über die Benutzeroberfläche des Treibers 
+  oder die Befehlszeile drucken, wird die Druckausgabe möglicherweise über 
+  mehrere Seiten aufgeteilt. Dieses Problem können Sie beheben, indem Sie die 
+  Datei über eine Anwendung wie GIMP als PostScript-Datei ausgeben und diese 
+  dann über die Benutzeroberfläche des Treibers oder die Befehlszeile 
+  ausdrucken.
+
+- Wenn Sie Fedora 13, Fedora 14 oder Fedora 15 verwenden und die Helligkeits- 
+  und Gamma-Einstellungen über die Benutzeroberfläche des Treibers oder die 
+  Befehlszeile festlegen, werden diese Einstellungen nur für die erste 
+  Druckseite angewendet, nicht jedoch für die folgenden Seiten.
+  Grund hierfür ist, dass diese Funktionen nicht aktiviert werden, weil 
+  Ghostscript die von der Anwendung erzeugten PostScript-Daten nicht korrekt 
+  erkennt.
+
+- Wenn Sie die Ausgabemethode auf [Drucken] umstellen, nachdem Sie
+  [Geschützter Druck] als Ausgabemethode eingegeben haben und auf [Drucken und
+  Einstellungen speichern] im Treiber-UI ([cngplp]-Befehl) geklickt haben,
+  wird der Name des Dokuments das Sie mit [Geschützter Druck] ausgeben, im
+  Auftragslog des Druckers angezeigt. Dieses Problem kann behoben werde, indem
+  Sie die Schaltfläche [Drucken und Einstellungen speichern] anstelle der
+  Schaltfläche [Drucken] zum Drucken verwenden, wenn Sie die Ausgabemethode
+  von [Geschützter Druck] auf [Drucken] umstellen.
+
+- Wenn Sie einen Eintrag oder Textwert festlegen und anschließend das 
+  Dialogfeld über die Schaltfläche [X] oben rechts schließen, wird der Wert 
+  genau wie beim Klicken auf [OK] als gültiger Wert interpretiert. Wenn Sie den 
+  eingestellten Wert verwerfen möchten, klicken Sie stattdessen auf [Abbrechen].
+
+- Die folgenden Zeichen werden je nach CUPS-Version unterschiedlich 
+  interpretiert, weshalb von ihrer Verwendung abgeraten wird.
+  "#"
+  Ab Version 1.4 wird das Zeichen "#" als Anfang eines Kommentars 
+  interpretiert. Bei der Verwendung in einer Befehlszeile werden die darauf 
+  folgenden Zeichen daher nicht als Befehle erkannt.
+  "\"
+  Wenn Sie "\\\123" eingeben, wird der Befehl je nach CUPS-Version wie folgt 
+  interpretiert:
+  CUPS V1.1.22: \123
+  CUPS V1.4.3: \\123
+
+- Je nach Version des GTK (GIMP Toolkit) sind manche der auf dem Bildschirm 
+  angezeigten Zeichen unleserlich, aber dies stellt kein ein Problem in Bezug 
+  auf Funktionen und Werte dar. Aktualisieren Sie den entsprechenden 
+  Textbereich, um dieses Problem zu beheben.
+
+- Wenn Sie bei Verwendung von Fedora 12 oder Ubuntu 9.10 die standardmäßigen 
+  Optionen über die CUPS Web-Schnittstelle ändern, werden die Standardwerte 
+  auch dann gespeichert, wenn ein Konflikt zwischen den Einstellungen für die 
+  einzelnen Funktionen besteht. Sobald die Einstellungen mit einem Konflikt 
+  gespeichert wurden, können Sie die Einstellungen nicht erneut speichern. Sie 
+  können sie auch nicht mehr über die Web-Schnittstelle zu den korrekten Werten 
+  ändern, bei denen kein Konflikt besteht.
+  Wenn Sie in dieser Situation das Dialogfeld [cngplp] anzeigen, kann ein 
+  ungültiger Vorgang auftreten.
+  Sie können dieses Problem mithilfe der folgenden Methoden beheben:
+  [Methode 1] Fedora 12 (32-Bit/64-Bit) und Ubuntu 9.10
+   Registrieren Sie den Drucker, der den ungültigen Vorgang ausgeführt hat, 
+   erneut.
+  [Methode 2] Fedora 12 (32-Bit/64-Bit)
+   Führen Sie den folgenden Befehl aus, um CUPS zu aktualisieren:
+    <Für Fedora 12 (32-Bit)> # yum update cups.i686
+    <Für Fedora 12 (64-Bit)> # yum update cups.x86_64
+
+- Wenn Sie diesen Treiber in einer 64-Bit-Umgebung verwenden und einen Treiber 
+  der Version 2.00, 2.10 oder 2.20 auf Version 2.30 oder höher aktualisieren, 
+  können beim Drucken Fehler auftreten. Dieses Problem lässt sich beheben, 
+  indem Sie den neuen Treiber deinstallieren (rpm -e [Treiber]) und 
+  anschließend erneut installieren (rpm -i [Treiber]).
+  Alternativ können Sie auch den alten Treiber deinstallieren (rpm -e 
+  [Treiber]), anstatt ihn zu aktualisieren, und anschließend den neuen Treiber 
+  installieren (rpm -i [Treiber]).
+
+- Wenn Sie beim Drucken einen Dokumentnamen angeben, der länger als 32 Byte 
+  ist, wird die Zeichenkette ab dem 33. Byte vom Treiber abgeschnitten. Auf dem 
+  Gerät werden daher nur die ersten 32 Byte des Dokumentnamens angezeigt.
+
+- Zur Verwendung dieses Druckertreibers benötigen Sie Ghostscript 
+  einschließlich der gemeinsam genutzten APIs.
+  Vergewissern Sie sich vor der Installation des Treibers, dass Ghostscript 
+  installiert ist. Hierzu können Sie in einem Terminalprogramm wie dem 
+  GNOME-Terminal den folgenden Befehl eingeben:
+    % gs -h | grep opvp
+  Wenn im Ergebnis "opvp" und "oprp" angezeigt werden, ist Ghostscript 
+  einschließlich der gemeinsam genutzten APIs installiert. Wenn keine 
+  Ergebnisse angezeigt werden, können Sie Ghostscript von der folgenden URL 
+  herunterladen:
+  http://opfc.sourceforge.jp/index.html.en (Seite in Englisch)
+
+=================================================================================
+Support
+=================================================================================
+Diese Software und die zugehörigen Informationen wurden von Canon eigenständig 
+entwickelt und werden von Ihrem regionalen Canon-Unternehmen vertrieben. Canon 
+(als Hersteller von Druckern, die diese Software und die zugehörigen Informationen
+unterstützen) und Ihr regionales Canon-Unternehmen (als Vertriebsstelle) können 
+Anfragen zu dieser Software oder den zugehörigen Informationen leider nicht 
+beantworten. Bei Fragen zu Druckerreparaturen, Verbrauchsmaterialien und den 
+Geräten selbst wenden Sie sich bitte an Ihr lokales Canon-Unternehmen.
+=================================================================================
+                                                      Copyright CANON INC. 2011

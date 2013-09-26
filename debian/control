@@ -1,0 +1,34 @@
+Source: cndrvcups-lb
+Section: net
+Priority: optional
+Maintainer: Canon Inc. <sup-debian@list.canon.co.jp>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.1
+
+Package: cndrvcups-ufr2-uk
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, cndrvcups-common (>= 2.40)
+Replaces: cndrvcups-ufr2-us, cndrvcups-lipslx, cndrvcups-capt, cndrvcups-lips4, cndrvcups-ps3-uk
+Description: Canon UFR2 Printer Driver for Linux
+ Canon UFR2 Printer Driver for Linux.
+ This UFR2 printer driver provides printing functions for Canon LBP/iR
+ printers operating under the CUPS (Common UNIX Printing System) environment.
+
+Package: cndrvcups-ufr2-us
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, cndrvcups-common (>= 2.40)
+Replaces: cndrvcups-ufr2-uk, cndrvcups-lipslx, cndrvcups-capt, cndrvcups-lips4, cndrvcups-ps3-uk
+Description: Canon UFR2 Printer Driver for Linux
+ Canon UFR2 Printer Driver for Linux.
+ This UFR2 printer driver provides printing functions for Canon LBP/iR
+ printers operating under the CUPS (Common UNIX Printing System) environment.
+
+Package: cndrvcups-lipslx
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, cndrvcups-common (>= 2.40)
+Replaces: cndrvcups-ufr2-us, cndrvcups-ufr2-uk, cndrvcups-capt, cndrvcups-lips4, cndrvcups-ps3-uk
+Description: Canon LIPSLX Printer Driver for Linux
+ Canon LIPSLX Printer Driver for Linux.
+ This LIPSLX printer driver provides printing functions for Canon LBP/iR
+ printers operating under the CUPS (Common UNIX Printing System) environment.
+
